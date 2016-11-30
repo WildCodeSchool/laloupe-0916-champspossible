@@ -1,0 +1,16 @@
+.navbar-yellow {
+    background-color: #FFF94D;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+}
+.navbar-brand img {
+    max-height: 100%;
+    transition: 0.8s;
+}
+.navbar-brand:hover img {
+    transform: rotate(360deg);
+}
