@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Les Champs du Possible
-=======
 # [MEAN](http://mean.io/) Starter kit
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
@@ -44,4 +41,3 @@ nodemon --exec npm start
 ```bash
 SECRET_TOKEN='secretToken' MONGODB_URI='mongodb://localhost:27017/mean-starter-es6' npm start
 ```
->>>>>>> c37a20ee2f6bc742c9c2eb3e1484287d5c3f73f9
