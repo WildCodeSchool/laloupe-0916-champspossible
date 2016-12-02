@@ -1,4 +1,3 @@
-
 Les Champs du Possible
 
 # [MEAN](http://mean.io/) Starter kit

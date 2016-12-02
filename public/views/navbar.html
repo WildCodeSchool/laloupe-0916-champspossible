@@ -1,32 +1,30 @@
-<nav class="navbar navbar-inverse navbar-yellow" role="navigation" ng-controller='navbarController as vm'>
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/"><img src="assets/img/logo.png"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active" ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-book"></span>&nbsp;Todos</a>
+<div class="navbar-fixed">
+    <nav class="navbar navbar-inverse navbar-black" role="navigation" ng-controller='navbarController as vm'>
+        <div class="nav-wrapper">
+            <a href="img/logo.png" class="brand-logo" id=""></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a href="">Accueil</a>
                 </li>
-                <li class='disabled' ng-show='vm.sessionFactory.user.isAdmin'>
-                    <a href="#/"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Admin</a>
+                <li>
+                    <a href="">Campus</a>
                 </li>
-                <li class='disabled' ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-user"></span>&nbsp;My account</a>
+                <li>
+                    <a href="">Actualités</a>
                 </li>
-                <li ng-show='vm.isLogged'>
-                    <a href="" ng-click='vm.logout()'><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign out</a>
+                <li>
+                    <a href="">Notre offre</a>
                 </li>
-                <li class='active' ng-hide='vm.isLogged'>
-                    <a href="#/login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign in</a>
+                <li>
+                    <a href="">Appel à candidature</a>
+                </li>
+                <li>
+                    <a href="">Résidents et Habitants</a>
+                </li>
+                <li>
+                    <a href="" class="waves-effect waves-light btn">Rejoignez-Nous</a>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>
