@@ -1,5 +1,5 @@
 Les Champs du Possible
-
+>>>>>>> loulappe
 # [MEAN](http://mean.io/) Starter kit
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
