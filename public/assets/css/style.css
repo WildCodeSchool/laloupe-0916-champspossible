@@ -1,1 +1,17 @@
+.navbar-yellow {
+    background-color: #FFF94D;
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+}
 
+.navbar-brand img {
+    height: 190px;
+    left: -40px;
+    position: relative;
+    top: -70px;
+    width: 200px;
+}
