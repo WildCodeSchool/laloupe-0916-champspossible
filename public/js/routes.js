@@ -2,12 +2,34 @@ const routes = ($routeProvider, $httpProvider) => {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/main.html',
+            templateUrl: 'views/accueil.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
+        .when('/campus', {
+            templateUrl: 'views/campus.html',
+            controller: 'mainController',
+            controllerAs: 'vm'
+        })
+        .when('/offre', {
+            templateUrl: 'views/offre.html',
             controller: 'mainController',
             controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
+        })
+        .when('/partenaires', {
+            templateUrl: 'views/partenaires.html',
+            controller: 'mainController',
+            controllerAs: 'vm',
+        })
+        .when('/candidatures', {
+            templateUrl: 'views/candidatures.html',
+            controller: 'mainController',
+            controllerAs: 'vm',
+        })
+        .when('/rejoindre', {
+            templateUrl: 'views/rejoindre.html',
+            controller: 'mainController',
+            controllerAs: 'vm',
         })
         .when('/login', {
             templateUrl: 'views/login.html',
@@ -19,25 +41,35 @@ const routes = ($routeProvider, $httpProvider) => {
         })
 
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
-        return {
-            request(config) {
+        retur.when('/deletePartenaire', {
+                templateUrl: 'views/admin/deletePartenaire.html',
+                controller: 'deletePartenaire',
+                controllerAs: 'vm',
+                resolve: {
+                    connected: checkIsConnected
+                }
+            })
+            .otherwise({
+                redirectTo: '/'
+            }) n {
+                request(config) {
 
-                config.headers = config.headers || {};
-                if ($window.localStorage.token) {
-                    sessionFactory.token = $window.localStorage.token
-                    sessionFactory.user = JSON.parse($window.localStorage.getItem('currentUser'));
-                    config.headers.authorization = $window.localStorage.token
-                }
-                return config
-            },
-            responseError(response) {
-                if (response.status === 401 || response.status === 403) {
-                    $rootScope.$emit('loginStatusChanged', false);
-                    $location.path('/login')
-                }
-                return $q.reject(response)
+                        config.headers = config.headers || {};
+                        if ($window.localStorage.token) {
+                            sessionFactory.token = $window.localStorage.token
+                            sessionFactory.user = JSON.parse($window.localStorage.getItem('currentUser'));
+                            config.headers.authorization = $window.localStorage.token
+                        }
+                        return config
+                    },
+                    responseError(response) {
+                        if (response.status === 401 || response.status === 403) {
+                            $rootScope.$emit('loginStatusChanged', false);
+                            $location.path('/login')
+                        }
+                        return $q.reject(response)
+                    }
             }
-        }
     })
 
 }
