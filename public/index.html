@@ -10,7 +10,7 @@
 
         <title>MEAN Starter ES6</title>
 
-        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/materialize/dist/css/materialize.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
@@ -22,9 +22,10 @@
             <ng-view></ng-view>
         </div>
 
-        <script src="vendor/jquery/dist/jquery.min.js"></script>
-        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <ng-include src="'views/footer.html'"></ng-include>
 
+        <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <script src="vendor/materialize/dist/js/materialize.min.js"></script>
         <script src="vendor/angular/angular.min.js"></script>
         <script src="vendor/angular-route/angular-route.min.js"></script>
 
@@ -36,6 +37,7 @@
         <script src="js/controllers/mainController.js"></script>
         <script src="js/controllers/navbarController.js"></script>
         <script src="js/controllers/loginController.js"></script>
+        <script src="js/controllers/footerController.js"></script>
 
         <script src="js/routes.js"></script>
 
