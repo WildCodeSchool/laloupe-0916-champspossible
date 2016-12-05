@@ -16,7 +16,7 @@ const routes = ($routeProvider, $httpProvider) => {
         controller: 'mainController',
         controllerAs: 'vm'
     })
-    .when('/offre', {
+    .when('/offres', {
         templateUrl: 'views/offres.html',
         controller: 'mainController',
         controllerAs: 'vm',
