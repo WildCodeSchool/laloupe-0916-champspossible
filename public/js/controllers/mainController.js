@@ -27,5 +27,5 @@ function mainController(todoService) {
         });
     };
 
-    this.load();
+    //this.load();
 }

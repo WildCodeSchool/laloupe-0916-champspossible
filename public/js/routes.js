@@ -1,23 +1,49 @@
 const routes = ($routeProvider, $httpProvider) => {
 
-    $routeProvider
-        .when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'mainController',
-            controllerAs: 'vm',
-            resolve: {
-                connected: checkIsConnected
-            }
-        })
-        .when('/login', {
-            templateUrl: 'views/login.html',
-            controller: 'loginController',
-            controllerAs: 'vm'
-        })
-        .otherwise({
-            redirectTo: '/'
-        })
-
+  $routeProvider
+    .when('/', {
+        templateUrl: 'views/accueil.html',
+        controller: 'mainController',
+        controllerAs: 'vm'
+    })
+    .when('/campus', {
+        templateUrl: 'views/campus.html',
+        controller: 'mainController',
+        controllerAs: 'vm'
+    })
+    .when('/actualites', {
+        templateUrl: 'views/actualites.html',
+        controller: 'mainController',
+        controllerAs: 'vm'
+    })
+    .when('/offre', {
+        templateUrl: 'views/offres.html',
+        controller: 'mainController',
+        controllerAs: 'vm',
+    })
+    .when('/partenaires', {
+        templateUrl: 'views/partenaires.html',
+        controller: 'mainController',
+        controllerAs: 'vm',
+    })
+    .when('/candidatures', {
+        templateUrl: 'views/candidatures.html',
+        controller: 'mainController',
+        controllerAs: 'vm',
+    })
+    .when('/rejoindre', {
+        templateUrl: 'views/rejoindre.html',
+        controller: 'mainController',
+        controllerAs: 'vm',
+    })
+    .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'loginController',
+        controllerAs: 'vm'
+    })
+    .otherwise({
+        redirectTo: '/'
+    })
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {
             request(config) {
