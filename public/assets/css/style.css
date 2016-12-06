@@ -1,25 +1,24 @@
-.navbar-yellow {
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    border: none;
-    border-bottom: 2px solid black;
-    border-radius: 0;
-    background-color: #FFF94D;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-brand img {
+.navbar-fixed{
+    width: 70vw;
+}
+
+#logoCDP {
     height: 190px;
-    left: -40px;
+    left: -30px;
     position: relative;
     top: -70px;
     width: 200px;
 }
 
-.imgsocial>img {
-    width: 6%;
-}
-
-.imglogo>img {
-    width: 15%;
+#logoCA {
+    height: 60px;
+    left: -30px;
+    position: relative;
+    top: -130px;
+    width: 95px;
 }
