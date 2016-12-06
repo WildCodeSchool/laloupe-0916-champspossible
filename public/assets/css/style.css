@@ -1,9 +1,9 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar-fixed{
+.navbar-fixed {
     width: 70vw;
 }
 
@@ -23,12 +23,21 @@
     width: 95px;
 }
 
- /** page accueil **/
+
+/** page accueil **/
 
 #carousel_accueil {
     top: 10px;
     width: 100%;
 }
-img {
-  max-width: 100%;
+
+
+/** Footer **/
+
+.imgsocial>img {
+    width: 3%;
+}
+
+.imglogo>img {
+    width: 15%;
 }
