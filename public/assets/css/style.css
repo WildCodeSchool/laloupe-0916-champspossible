@@ -41,3 +41,6 @@
 .imglogo>img {
     width: 15%;
 }
+
+nav ul{
+  transform: translateX(-32%);
