@@ -26,50 +26,13 @@
     width: 88px;
 }
 
-
-/* Barre de navigation mobile/tablette*/
-
-/*@media screen and (min-width: 992px) and (max-width: 1250px) {
-     #side-nav {
-      display: none;
-    }
-}
-
-@media screen and (min-width: 600px) and (max-width: 992px) {
-    #logoCA {
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    #logoCDP {
-        height: 190px;
-        width: 200px;
-        position: relative;
-    }
-    #logoCA {
-        display: none;
-    }
-}*/
-
-
 /* Page accueil */
 
-.slider .slides li .caption {
-    color: #fff;
-    position: absolute;
-    top: 15%;
-    left: 15%;
-    width: 70%;
-    background-color: black;
-    opacity: 0.6!important;
-    padding: 30px;
-    border-radius: 5px;
+#carousel_accueil {
+    top: 10px;
+    width: 100%;
 }
 
-.jesuis{
-    position: absolute;
-}
 
 /* Le Campus */
 
@@ -87,26 +50,19 @@
     padding: 20%;
 }
 
-.campus-p {
+p {
     font-size: 20px;
     line-height: 200%;
     text-indent: 3em;
 }
 
 
-/** page partenaires/habitants **/
+/* Footer */
 
-.activator {
-    height: 100px!important;
+.imgsocial>img {
+    width: 3%;
 }
 
-.titre {
-    position: absolute;
-    width: 100%;
-    z-index: 100;
-}
-
-.materialboxed {
-    position: absolute;
-    width: 100%!important;
+.imglogo>img {
+    width: 15%;
 }
