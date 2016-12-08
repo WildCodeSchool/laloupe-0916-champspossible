@@ -1,52 +1,54 @@
 * {
-  margin  : 0;
-  padding : 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Barre de navigation */
 
 .navbar-fixed {
-  width : 70vw;
+    width: 70vw;
 }
 
 #logoCDP {
-  position : relative;
-  top      : -60px;
-  left     : -30px;
-  width    : 200px;
-  height   : 190px;
+    position: relative;
+    top: -60px;
+    left: -30px;
+    width: 200px;
+    height: 190px;
 }
 
 #logoCA {
-  position : relative;
-  top      : -130px;
-  left     : -30px;
-  width    : 95px;
-  height   : 60px;
+    position: relative;
+    top: -130px;
+    left: -30px;
+    width: 95px;
+    height: 60px;
 }
 
 
 /* Page accueil */
 
 #carousel_accueil {
-  top   : 10px;
-  width : 100%;
+    top: 10px;
+    width: 100%;
 }
 
 .jesuis {
-  position : absolute;
+    position: absolute;
 }
+
 
 /* Le Campus */
 
 .titreCampus {
-  color     : black;
-  font-size : 30px;
+    color: black;
+    font-size: 30px;
 }
 
 .titreCampus2 {
-  color     : black;
-  font-size : 30px;
+    color: black;
+    font-size: 30px;
 }
 
 .blockText {
@@ -63,13 +65,22 @@ p {
 
 /* Notre offre */
 
-.triOffre {
+.blocTriOffre {
+    background-color: black;
+    border-top: 2px solid white;
+    margin: 0;
+    padding: 0;
+}
 
+.triOffre {
+    background-color: black;
+    color: white;
 }
 
 .iconeOffre {
-  height: 50px;
-  width: 50px;
+    color: #f8bbd0;
+    height: 50px;
+    width: 50px;
 }
 
 .imgOffre {
@@ -79,32 +90,35 @@ p {
 }
 
 .titreOffre {
-    font-size: 40px;
+    font-size: 38px;
     text-align: left;
+    font-weight: bolder;
 }
+
 
 /* Footer */
 
 .card {
-  height : 100px!important;
+    height: 100px!important;
 }
 
 .titre {
-  z-index  : 100;
-  position : absolute;
-  width    : 100%;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
 }
+
 
 /* Taille des cards et photos */
 
 .card {
-  height : 200px!important;
+    height: 200px!important;
 }
 
 .activator {
-  height : 100px!important;
+    height: 100px!important;
 }
 
 .imgCategories {
-  width : 99vw!important;
+    width: 99vw!important;
 }
