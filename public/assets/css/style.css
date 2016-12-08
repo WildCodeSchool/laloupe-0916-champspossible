@@ -26,12 +26,20 @@
     width: 95px;
 }
 
+
 /* Page accueil */
 
 #carousel_accueil {
     top: 10px;
     width: 100%;
 }
+
+<<<<<<< HEAD
+=======
+.jesuis {
+    position: absolute;
+}
+>>>>>>> loulappe
 
 
 /* Le Campus */
@@ -45,7 +53,8 @@
     color: black;
     font-size: 30px;
 }
-.blockText{
+
+.blockText {
     padding: 20%;
 }
 
@@ -56,18 +65,36 @@ p {
 }
 
 
+<<<<<<< HEAD
 /* Footer */
 
 .card {
     height: 100px!important;
 }
 
+=======
+/** page partenaires/habitants **/
+>>>>>>> loulappe
 .titre {
     position: absolute;
     width: 100%;
     z-index: 100;
 }
 
+<<<<<<< HEAD
 .imglogo>img {
     width: 15%;
+=======
+.card {
+    height: 200px!important;
+}
+
+.activator {
+    height: 100px!important;
+}
+
+
+.imgCategories {
+    width: 99vw!important;
+>>>>>>> loulappe
 }
