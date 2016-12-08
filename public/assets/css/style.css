@@ -26,6 +26,7 @@
     width: 95px;
 }
 
+
 /* Page accueil */
 
 #carousel_accueil {
@@ -45,7 +46,8 @@
     color: black;
     font-size: 30px;
 }
-.blockText{
+
+.blockText {
     padding: 20%;
 }
 
@@ -53,6 +55,30 @@ p {
     font-size: 20px;
     line-height: 200%;
     text-indent: 3em;
+    text-align: justify;
+}
+
+
+/* Notre offre */
+
+.triOffre {
+
+}
+
+.iconeOffre {
+  height: 50px;
+  width: 50px;
+}
+
+.imgOffre {
+    border: 5px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+.titreOffre {
+    font-size: 40px;
+    text-align: left;
 }
 
 
