@@ -68,18 +68,14 @@ p {
     height: 100px!important;
 }
 
-
-/** page partenaires/habitants **/
-
 .titre {
     position: absolute;
     width: 100%;
     z-index: 100;
 }
 
-.imglogo>img {
-    width: 15%;
-}
+
+/* Taille des cards et photos*/
 
 .card {
     height: 200px!important;
