@@ -26,6 +26,7 @@
     width: 95px;
 }
 
+
 /* Page accueil */
 
 .slider .slides li .caption {
@@ -40,9 +41,10 @@
     border-radius: 5px;
 }
 
-.jesuis{
+.jesuis {
     position: absolute;
 }
+
 
 /* Le Campus */
 
@@ -55,7 +57,8 @@
     color: black;
     font-size: 30px;
 }
-.blockText{
+
+.blockText {
     padding: 20%;
 }
 
@@ -67,18 +70,21 @@
 
 
 /** page partenaires/habitants **/
-
-.card {
-    height: 100px!important;
-}
-
 .titre {
     position: absolute;
     width: 100%;
     z-index: 100;
 }
 
-.materialboxed {
-    position: absolute;
-    width: 100%!important;
+.card {
+    height: 200px!important;
+}
+
+.activator {
+    height: 100px!important;
+}
+
+
+.imgCategories {
+    width: 99vw!important;
 }
