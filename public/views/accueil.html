@@ -1,25 +1,7 @@
 <div class="accueil" id="accueil">
     <div class="carousel carousel-slider" id="carousel_accueil" data-indicators="true">
         <div class="carousel-fixed-item center">
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' href='' data-activates='dropdown1'>
-                Je suis .../...
-            </a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li>
-                    <a href="">Une entreprise</a>
-                </li>
-                <li>
-                    <a href="">Une startup</a>
-                </li>
-                <li>
-                    <a href="">Un expert</a>
-                </li>
-                <li>
-                    <a href="">Un étudiant</a>
-                </li>
-            </ul>
+            <a class="waves-effect waves-light btn" href="#modal1">Je suis...</a>
         </div>
         <a class="carousel-item" href="#one!"><img src="assets/img/image1.jpg"></a>
         <a class="carousel-item" href="#two!"><img src="assets/img/image2.jpg"></a>
@@ -27,15 +9,29 @@
         <a class="carousel-item" href="#four!"><img src="assets/img/image4.jpg"></a>
     </div>
 </div>
-<script type="text/javascript">
-        $('.carousel.carousel-slider').carousel({full_width: true});
 
-        $('.dropdown-button').dropdown({
-            inDuration: 300, outDuration: 225, constrain_width: true, // Does not change width of dropdown to that of the activator
-            hover: true, // Activate on hover
-            gutter: 2, // Spacing from edge
-            belowOrigin: false, // Displays dropdown below the button
-            alignment: 'left' // Displays dropdown with edge aligned to the left of button
+<div id="modal1" class="modal">
+    <div class="modal-content center">
+        <h4>Je suis ...</h4>
+        <a class="btn1 waves-effect btn-large">
+            <i class="material-icons left">cloud</i>Start-up</a>
+        <a class="btn2 waves-effect waves-light btn-large">
+            <i class="material-icons left">thumbs_up_down</i>Partenaire</a>
+        <a class="btn3 waves-effect waves-light btn-large">
+            <i class="material-icons left">face</i>Mentor</a>
+        <a class="btn4 waves-effect waves-light btn-large">
+            <i class="material-icons left">accessibility</i>Etudiant</a>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
 
-        });
+<script>
+    $('.carousel.carousel-slider').carousel({full_width: true});
+
+    $(document).ready(function() {
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
 </script>

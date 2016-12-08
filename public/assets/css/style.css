@@ -31,6 +31,21 @@
     width: 100%;
 }
 
+.btn1 {
+  background: #FF6F69;
+}
+
+.btn2 {
+    background: #C70039;
+}
+
+.btn3 {
+    background: #FF5733;
+}
+
+.btn4 {
+    background: #FFC300;
+}
 
 /** Footer **/
 
