@@ -26,23 +26,25 @@
     width: 95px;
 }
 
-
 /* Page accueil */
 
-#carousel_accueil {
-    top: 10px;
-    width: 100%;
+.slider .slides li .caption {
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    background-color: black;
+    opacity: 0.6!important;
+    padding: 30px;
+    border-radius: 5px;
 }
 
-<<<<<<< HEAD
-=======
-.jesuis {
+.jesuis{
     position: absolute;
 }
 
-
 /* Le Campus */
->>>>>>> dev
 
 .titreCampus {
     color: black;
@@ -53,12 +55,11 @@
     color: black;
     font-size: 30px;
 }
-
-.blockText {
+.blockText{
     padding: 20%;
 }
 
-p {
+.campus-p {
     font-size: 20px;
     line-height: 200%;
     text-indent: 3em;
@@ -66,21 +67,24 @@ p {
 
 
 /** page partenaires/habitants **/
+
+.card {
+    height: 100px!important;
+}
+
 .titre {
     position: absolute;
     width: 100%;
     z-index: 100;
 }
 
-.card {
-    height: 200px!important;
+.materialboxed {
+    position: absolute;
+    width: 100%!important;
 }
 
-.activator {
-    height: 100px!important;
-}
+/** footer **/
 
-
-.imgCategories {
-    width: 99vw!important;
+footer {
+  background: url("../img/black_lozenge.png")
 }
