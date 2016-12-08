@@ -1,30 +1,53 @@
 <div class="navbar-fixed">
     <nav class="navbar navbar-inverse black" role="navigation" ng-controller='navbarController as vm'>
         <div class="nav-wrapper">
-          <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">view_headline</i></a> -->
-            <a class="navbar-brand" href="#/"><img src="assets/img/logo.png" id="logoCDP"/></a>
-            <a class="navbar-brand" href="#/"><img src="assets/img/CA1.jpg" id="logoCA"/></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a class="navbar-brand hide-on-med-and-down" href="#/"><img src="assets/img/logo.png" id="logoCDP"/></a>
+            <a class="navbar-brand hide-on-med-and-down" href="#/"><img src="assets/img/CA1.jpg" id="logoCA"/></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul  id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
-                  <a href="#accueil">Accueil</a>
+                    <a href="#accueil" class="hide-on-med-and-down">Accueil</a>
                 </li>
                 <li>
-                  <a href="#actualites">Actualités</a>
+                    <a href="#actualites" class="hide-on-med-and-down">Actualités</a>
                 </li>
                 <li>
-                    <a href="#campus">Le Campus</a>
+                    <a href="#campus" class="hide-on-med-and-down">Le Campus</a>
                 </li>
                 <li>
-                    <a href="#offres">Notre offre</a>
+                    <a href="#offres" class="hide-on-med-and-down">Notre offre</a>
                 </li>
                 <li>
-                  <a href="#partenaires">Habitants / Partenaires</a>
+                    <a href="#partenaires" class="hide-on-med-and-down">Habitants / Partenaires</a>
                 </li>
                 <li>
-                    <a href="#candidatures" class="waves-effect waves-light btn white black-text">Ephemere</a>
+                    <a href="#candidatures" class="waves-effect waves-light btn white black-text" class="hide-on-med-and-down">Ephemere</a>
                 </li>
                 <li>
-                    <a href="#rejoindre" class="waves-effect waves-light btn white black-text">Rejoignez-Nous</a>
+                    <a href="#rejoindre" class="waves-effect waves-light btn white black-text" class="hide-on-med-and-down">Rejoignez-Nous</a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li>
+                    <a href="#accueil" class="ongletHamburger">Accueil</a>
+                </li>
+                <li>
+                    <a href="#actualites" class="ongletHamburger">Actualités</a>
+                </li>
+                <li>
+                    <a href="#campus" class="ongletHamburger">Le Campus</a>
+                </li>
+                <li>
+                    <a href="#offres" class="ongletHamburger">Notre offre</a>
+                </li>
+                <li>
+                    <a href="#partenaires" class="ongletHamburger">Habitants / Partenaires</a>
+                </li>
+                <li>
+                    <a href="#candidatures" class="ongletHamburger">Ephemere</a>
+                </li>
+                <li>
+                    <a href="#rejoindre" class="ongletHamburger">Rejoignez-Nous</a>
                 </li>
             </ul>
         </div>
