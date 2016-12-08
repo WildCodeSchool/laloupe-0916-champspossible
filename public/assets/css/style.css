@@ -34,8 +34,6 @@
     width: 100%;
 }
 
-<<<<<<< HEAD
-=======
 .jesuis {
     position: absolute;
 }
@@ -65,13 +63,28 @@ p {
 }
 
 
+<<<<<<< HEAD
 /** page partenaires/habitants **/
+=======
+/* Footer */
+
+.card {
+    height: 100px!important;
+}
+
+>>>>>>> dev
 .titre {
     position: absolute;
     width: 100%;
     z-index: 100;
 }
 
+<<<<<<< HEAD
+=======
+
+/* Taille des cards et photos*/
+
+>>>>>>> dev
 .card {
     height: 200px!important;
 }
@@ -79,7 +92,6 @@ p {
 .activator {
     height: 100px!important;
 }
-
 
 .imgCategories {
     width: 99vw!important;
