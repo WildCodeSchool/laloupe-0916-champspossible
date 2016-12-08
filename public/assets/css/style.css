@@ -19,12 +19,38 @@
 }
 
 #logoCA {
-    height: 60px;
+    height: 55px;
     left: -30px;
     position: relative;
     top: -130px;
-    width: 95px;
+    width: 88px;
 }
+
+
+/* Barre de navigation mobile/tablette*/
+
+/*@media screen and (min-width: 992px) and (max-width: 1250px) {
+     #side-nav {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    #logoCA {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #logoCDP {
+        height: 190px;
+        width: 200px;
+        position: relative;
+    }
+    #logoCA {
+        display: none;
+    }
+}*/
 
 
 /* Page accueil */
@@ -46,7 +72,8 @@
     color: black;
     font-size: 30px;
 }
-.blockText{
+
+.blockText {
     padding: 20%;
 }
 
@@ -55,6 +82,7 @@ p {
     line-height: 200%;
     text-indent: 3em;
 }
+
 
 /* Footer */
 
