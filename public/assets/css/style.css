@@ -1,98 +1,85 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin  : 0;
+  padding : 0;
 }
-
 
 /* Barre de navigation */
 
 .navbar-fixed {
-    width: 70vw;
+  width : 70vw;
 }
 
 #logoCDP {
-    height: 190px;
-    left: -30px;
-    position: relative;
-    top: -60px;
-    width: 200px;
+  position : relative;
+  top      : -60px;
+  left     : -30px;
+  width    : 200px;
+  height   : 190px;
 }
 
 #logoCA {
-    height: 60px;
-    left: -30px;
-    position: relative;
-    top: -130px;
-    width: 95px;
+  position : relative;
+  top      : -130px;
+  left     : -30px;
+  width    : 95px;
+  height   : 60px;
 }
-
 
 /* Page accueil */
 
 #carousel_accueil {
-    top: 10px;
-    width: 100%;
+  top   : 10px;
+  width : 100%;
 }
 
 .jesuis {
-    position: absolute;
+  position : absolute;
 }
 
-
 /* Le Campus */
->>>>>>> dev
 
 .titreCampus {
-    color: black;
-    font-size: 30px;
+  color     : black;
+  font-size : 30px;
 }
 
 .titreCampus2 {
-    color: black;
-    font-size: 30px;
+  color     : black;
+  font-size : 30px;
 }
 
 .blockText {
-    padding: 20%;
+  padding : 20%;
 }
 
 p {
-    font-size: 20px;
-    line-height: 200%;
-    text-indent: 3em;
+  text-indent : 3em;
+  font-size   : 20px;
+  line-height : 200%;
 }
 
-
-<<<<<<< HEAD
-/** page partenaires/habitants **/
-=======
 /* Footer */
 
 .card {
-    height: 100px!important;
+  height : 100px!important;
 }
 
->>>>>>> dev
 .titre {
-    position: absolute;
-    width: 100%;
-    z-index: 100;
+  z-index  : 100;
+  position : absolute;
+  width    : 100%;
 }
 
-<<<<<<< HEAD
-=======
+/* Taille des cards et photos */
 
-/* Taille des cards et photos*/
-
->>>>>>> dev
 .card {
-    height: 200px!important;
+  height : 200px!important;
 }
 
 .activator {
-    height: 100px!important;
+  height : 100px!important;
 }
 
 .imgCategories {
-    width: 99vw!important;
+  width : 99vw!important;
 }
