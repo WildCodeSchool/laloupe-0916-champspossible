@@ -1,41 +1,137 @@
 <div class="accueil" id="accueil">
-    <div class="carousel carousel-slider" id="carousel_accueil" data-indicators="true">
-        <div class="carousel-fixed-item center">
-            <!-- Dropdown Trigger -->
-            <a class='dropdown-button btn' href='' data-activates='dropdown1'>
-                Je suis .../...
-            </a>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown1' class='dropdown-content'>
-                <li>
-                    <a href="">Une entreprise</a>
-                </li>
-                <li>
-                    <a href="">Une startup</a>
-                </li>
-                <li>
-                    <a href="">Un expert</a>
-                </li>
-                <li>
-                    <a href="">Un étudiant</a>
-                </li>
-            </ul>
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="assets/img/image1.jpg">
+                <!-- random image -->
+                <div class="caption left-align">
+                    <h3 class="z-depth-3">Venez innover et expérimenter au Campus</h3>
+                    <h5 class="light grey-text text-lighten-3">
+                        Les Champs du Possible</h5>
+                </div>
+            </li>
+            <li>
+                <img src="assets/img/image2.jpg">
+                <!-- random image -->
+                <div class="caption right-align">
+                    <h3>Venez innover et expérimenter au Campus</h3>
+                    <h5 class="light grey-text text-lighten-3">
+                        Les Champs du Possible</h5>
+                </div>
+            </li>
+            <li>
+                <img src="assets/img/image3.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Venez innover et expérimenter au Campus</h3>
+                    <h5 class="light grey-text text-lighten-3">
+                        Les Champs du Possible</h5>
+                </div>
+                Les Champs du Possible
+            </li>
+            <li>
+                <img src="assets/img/image4.jpg">
+                <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Venez innover et expérimenter au Campus</h3>
+                    <h5 class="light grey-text text-lighten-3">
+                        Les Champs du Possible</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--images miniatures-->
+    <div class="miniatures col s12 m12 l12" id="miniatures">
+        <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/image1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Je suis un Entreprise...<i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">This is a link</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+              <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/image2.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Je suis une Startup...<i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">This is a link</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/image3.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Je suis un Expert...<i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">This is a link</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="assets/img/image4.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Je suis un Etudiant...<i class="material-icons right">more_vert</i>
+                        </span>
+                        <p>
+                            <a href="#">This is a link</a>
+                        </p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
+                        </span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <a class="carousel-item" href="#one!"><img src="assets/img/image1.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="assets/img/image2.jpg"></a>
-        <a class="carousel-item" href="#three!"><img src="assets/img/image3.jpg"></a>
-        <a class="carousel-item" href="#four!"><img src="assets/img/image4.jpg"></a>
     </div>
 </div>
-<script type="text/javascript">
-        $('.carousel.carousel-slider').carousel({full_width: true});
+<!-- <script type="text/javascript">
+    $(document).ready(function() {
+        $('.slider').slider({full_width: true});
 
         $('.dropdown-button').dropdown({
-            inDuration: 300, outDuration: 225, constrain_width: true, // Does not change width of dropdown to that of the activator
+            inDuration: 300, outDuration: 225, constrain_width: false, // Does not change width of dropdown to that of the activator
             hover: true, // Activate on hover
-            gutter: 2, // Spacing from edge
+            gutter: 0, // Spacing from edge
             belowOrigin: false, // Displays dropdown below the button
             alignment: 'left' // Displays dropdown with edge aligned to the left of button
-
         });
-</script>
+    });
+</script> -->
