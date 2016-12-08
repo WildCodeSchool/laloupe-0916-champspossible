@@ -29,11 +29,21 @@
 
 /* Page accueil */
 
-#carousel_accueil {
-    top: 10px;
-    width: 100%;
+.slider .slides li .caption {
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    background-color: black;
+    opacity: 0.6!important;
+    padding: 30px;
+    border-radius: 5px;
 }
 
+.jesuis{
+    position: absolute;
+}
 
 /* Le Campus */
 
@@ -56,4 +66,20 @@
     text-indent: 3em;
 }
 
-/* Footer */
+
+/** page partenaires/habitants **/
+
+.activator {
+    height: 100px!important;
+}
+
+.titre {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.materialboxed {
+    position: absolute;
+    width: 100%!important;
+}
