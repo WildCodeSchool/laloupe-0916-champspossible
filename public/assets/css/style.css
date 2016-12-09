@@ -38,6 +38,21 @@
     position: absolute;
 }
 
+.slider .slides li .caption {
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    background-color: black;
+    opacity: 0.6!important;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.jesuis{
+    position: absolute;
+}
 
 /* Le Campus */
 
@@ -58,8 +73,8 @@
 p {
     font-size: 20px;
     line-height: 200%;
-    text-indent: 3em;
     text-align: justify;
+    text-indent: 3em;
 }
 
 
@@ -75,22 +90,32 @@ p {
 .triOffre {
     background-color: black;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .iconeOffre {
     color: #f8bbd0;
-    height: 50px;
-    width: 50px;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .imgOffre {
-    border: 5px solid black;
-    height: 200px;
-    width: 200px;
+    border: 4px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+.textOffre {
+    font-size: 18px;
+    line-height: 200%;
+    text-indent: 3em;
+    text-align: justify;
 }
 
 .titreOffre {
-    font-size: 38px;
+    font-size: 28px;
     text-align: left;
     font-weight: bolder;
 }
@@ -108,6 +133,14 @@ p {
     width: 100%;
 }
 
+.materialboxed {
+    position: absolute;
+    width: 100%!important;
+}
+
+footer {
+  background: url("../img/black_lozenge.png")
+}
 
 /* Taille des cards et photos */
 
