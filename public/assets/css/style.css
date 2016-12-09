@@ -55,7 +55,7 @@
     padding: 20%;
 }
 
-p {
+.textOffre {
     font-size: 20px;
     line-height: 200%;
     text-indent: 3em;
@@ -106,6 +106,10 @@ p {
     z-index: 100;
     position: absolute;
     width: 100%;
+}
+
+.page-footer {
+  background: url('../img/subtle_carbon.png')
 }
 
 
