@@ -1,85 +1,153 @@
 * {
-  margin  : 0;
-  padding : 0;
+    margin: 0;
+    padding: 0;
 }
+
 
 /* Barre de navigation */
 
 .navbar-fixed {
-  width : 70vw;
+    width: 70vw;
 }
 
 #logoCDP {
-  position : relative;
-  top      : -60px;
-  left     : -30px;
-  width    : 200px;
-  height   : 190px;
+    position: relative;
+    top: -60px;
+    left: -30px;
+    width: 200px;
+    height: 190px;
 }
 
 #logoCA {
-  position : relative;
-  top      : -130px;
-  left     : -30px;
-  width    : 95px;
-  height   : 60px;
+    position: relative;
+    top: -130px;
+    left: -30px;
+    width: 95px;
+    height: 60px;
 }
+
 
 /* Page accueil */
 
 #carousel_accueil {
-  top   : 10px;
-  width : 100%;
+    top: 10px;
+    width: 100%;
 }
 
 .jesuis {
-  position : absolute;
+    position: absolute;
+}
+
+.slider .slides li .caption {
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width: 70%;
+    background-color: black;
+    opacity: 0.6!important;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.jesuis{
+    position: absolute;
 }
 
 /* Le Campus */
 
 .titreCampus {
-  color     : black;
-  font-size : 30px;
+    color: black;
+    font-size: 30px;
 }
 
 .titreCampus2 {
-  color     : black;
-  font-size : 30px;
+    color: black;
+    font-size: 30px;
 }
 
 .blockText {
-  padding : 20%;
+    padding: 20%;
 }
 
-p {
-  text-indent : 3em;
-  font-size   : 20px;
-  line-height : 200%;
+.textOffre {
+    font-size: 20px;
+    line-height: 200%;
+    text-align: justify;
+    text-indent: 3em;
 }
+
+
+/* Notre offre */
+
+.blocTriOffre {
+    background-color: black;
+    border-top: 2px solid white;
+    margin: 0;
+    padding: 0;
+}
+
+.triOffre {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.iconeOffre {
+    color: #f8bbd0;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.imgOffre {
+    border: 4px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+.textOffre {
+    font-size: 18px;
+    line-height: 200%;
+    text-indent: 3em;
+    text-align: justify;
+}
+
+.titreOffre {
+    font-size: 28px;
+    text-align: left;
+    font-weight: bolder;
+}
+
 
 /* Footer */
 
 .card {
-  height : 100px!important;
+    height: 100px!important;
 }
 
 .titre {
-  z-index  : 100;
-  position : absolute;
-  width    : 100%;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
 }
+
+.page-footer {
+  background: url('../img/subtle_carbon.png')
+}
+
 
 /* Taille des cards et photos */
 
 .card {
-  height : 200px!important;
+    height: 200px!important;
 }
 
 .activator {
-  height : 100px!important;
+    height: 100px!important;
 }
 
 .imgCategories {
-  width : 99vw!important;
+    width: 99vw!important;
 }
