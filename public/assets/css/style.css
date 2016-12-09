@@ -10,6 +10,12 @@
     width: 70vw;
 }
 
+/*nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+    margin-top: -2px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }*/
+
 #logoCDP {
     position: relative;
     top: -60px;
@@ -34,10 +40,6 @@
     width: 100%;
 }
 
-.jesuis {
-    position: absolute;
-}
-
 .slider .slides li .caption {
     color: #fff;
     position: absolute;
@@ -50,9 +52,6 @@
     border-radius: 5px;
 }
 
-.jesuis{
-    position: absolute;
-}
 
 /* Le Campus */
 
@@ -148,6 +147,9 @@
     height: 100px!important;
 }
 
+
+/** Images en haut des pages**/
+
 .imgCategories {
-    width: 99vw!important;
+    width: 100%!important;
 }
