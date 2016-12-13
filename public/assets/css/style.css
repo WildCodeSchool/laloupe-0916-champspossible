@@ -10,6 +10,7 @@
     width: 70vw;
 }
 
+
 /*nav ul a.btn, nav ul a.btn-large, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
     margin-top: -2px;
     margin-left: 0px;
@@ -96,6 +97,13 @@
     text-align: justify;
 }
 
+.accueil-campus-p {
+    font-size: 18px;
+    line-height: 150%;
+    padding: 2% 2% 2% 2%;
+    text-align: justify;
+}
+
 #titreArticle {
     color: black;
     font-size: 29px;
@@ -112,16 +120,16 @@
 }
 
 .dateArticle {
-  color: black;
-  font-size: 22px;
-  font-style : italic;
-  font-weight: bold;
-  margin: 2% 2% 2% 0%;
+    color: black;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
 }
 
 .boutonSM {
-  height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -199,7 +207,7 @@ footer {
 }
 
 .firstFooter {
-  background: url('../img/subtle_carbon.png')
+    background: url('../img/subtle_carbon.png')
 }
 
 .titre {
