@@ -112,15 +112,16 @@
     margin: 2% 2% 2% 0%;
 }
 
-.blocVideo{
+.blocVideo {
     padding: 0 !important;
-
 }
+
 .responsive-video {
     background-color: black;
     margin: 0;
     padding: 0;
 }
+
 .texteVideo {
     background-color: black;
     color: white;
@@ -130,6 +131,7 @@
     padding: 5% 5% 5% 5%;
     text-align: center;
 }
+
 
 /* Le Campus */
 
@@ -195,6 +197,17 @@
     border: 4px solid black;
     height: 150px;
     width: 150px;
+}
+
+
+/* Taille des cards et photos */
+
+.card {
+    height: 200px!important;
+}
+
+.activator {
+    height: 100px!important;
 }
 
 
