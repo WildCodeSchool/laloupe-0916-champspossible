@@ -19,8 +19,8 @@
             </li>
         </ul>
     </div>
-    <div class="divider"></div>
-    <!--    <div class="divider"></div> Je suis... -->
+
+    <!--Choix d'un profil  -->
     <div class="container">
         <div class="miniatures col s12 m12 l12">
             <div id="choixProfil">Choisissez une offre en fonction de votre profil. Vous êtes ...
@@ -81,7 +81,6 @@
             </div>
         </div>
     </div>
-    <div class="divider"></div>
     <!-- Actualités -->
     <div class="row">
         <div class="col s12 m12 l12 center">
@@ -117,7 +116,6 @@
             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
-    <div class="divider"></div>
     <!-- Présentation du campus + vidéos -->
     <div class="row">
         <div class="col s12 m12 l12 center">
@@ -149,7 +147,6 @@
             </p>
         </div>
     </div>
-    <div class="divider"></div>
     <!-- Slider aveec les partenaires -->
     <div class="row center">
         <div class="col s12 m12 l12">
@@ -166,9 +163,14 @@
         </div>
         <script>
             $(document).ready(function() {
-                $('.carousel').carousel();
+                $('.carousel').carousel({
+                  indicators: true,
+                  dist: -25,
+                  shift: 200,
+                  padding: 10,
+                  speed: 300
+                });
             });
         </script>
     </div>
-
 </div>
