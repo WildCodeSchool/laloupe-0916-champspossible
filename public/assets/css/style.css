@@ -3,13 +3,6 @@
     padding: 0;
 }
 
-.divider {
-    margin: 0 0 0.5% 0;
-    border-width: 1px;
-    border-style: groove;
-    border-color: black;
-    color: black;
-}
 /* Barre de navigation */
 
 .navbar-fixed {
@@ -137,6 +130,7 @@
     padding: 5% 5% 5% 5%;
     text-align: center;
 }
+
 /* Le Campus */
 
 .titreCampus {
