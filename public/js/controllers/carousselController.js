@@ -1,4 +1,4 @@
-function mainController(homeService) {
+function homeController(homeService) {
 
     this.homeService = homeService;
 

@@ -6,9 +6,9 @@ const homeSchema = new mongoose.Schema({
     ordre: Number
 });
 
-let model = mongoose.model('home', homeSchema);
+let model = mongoose.model('Home', homeSchema);
 
-export default class home {
+export default class Home {
 
     findAll(req, res) {
         model.find({}, (err, homes) => {

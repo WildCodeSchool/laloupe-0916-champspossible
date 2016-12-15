@@ -1,12 +1,12 @@
 import express from 'express';
-import home from '../models/home.js';
+import Home from '../models/home.js';
 import Auth from '../middlewares/authorization.js';
 
 let router = express.Router();
 
 module.exports = (app) => {
 
-    var home = new home();
+    var home = new Home();
 
     router.get('/', home.findAll);
 

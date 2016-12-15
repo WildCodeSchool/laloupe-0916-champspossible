@@ -1,4 +1,4 @@
-function mainController(partnerService) {
+function partnerController(partnerService) {
 
     this.partnerService = partnerService;
 

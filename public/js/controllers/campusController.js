@@ -1,4 +1,4 @@
-function mainController(campusService) {
+function campusController(campusService) {
 
     this.campusService = campusService;
 

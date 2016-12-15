@@ -1,4 +1,4 @@
-function mainController(offreService) {
+function offreController(offreService) {
 
     this.offreService = offreService;
 
