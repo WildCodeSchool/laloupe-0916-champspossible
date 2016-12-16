@@ -97,7 +97,6 @@
 }
 
 #imgArticle {
-    /*border: 2px solid black;*/
     float: left;
     height: 250px;
     width: 250px;
@@ -112,9 +111,6 @@
     margin: 2% 2% 2% 0%;
 }
 
-.blocVideo {
-    padding: 0 !important;
-}
 
 .responsive-video {
     background-color: black;
@@ -140,6 +136,12 @@
     margin: 0;
     padding: 13.25% 13.25% 13.25% 13.25%;
     text-align: center;
+}
+
+.carousel {
+    background-color: black;
+    /*margin: 0.75% 0.75% 0.75% 0.75%;
+    padding: 0;*/
 }
 
 /* Le Campus */
