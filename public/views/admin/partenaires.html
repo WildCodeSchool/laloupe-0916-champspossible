@@ -16,140 +16,50 @@
             Habitants</div>
     </div>
 </div>
-<div class="candidature col s12 m12 l12" id="candidatures">
-    <div class="row">
-        <div class="col s6 m4 l2">
-            <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire1.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-titlhoverablee grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
+
+<form class="form-inline">
+    <button ng-click='vm.create()' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
+        <i class="material-icons">add</i>Ajouter un partenaire
+    </button>
+
+</form>
+<br>
+<br>
+<div class="panel panel-default" ng-repeat='partner in vm.partners | orderBy: "partner.nom"'>
+    <div class="panel-body">
+        <form class="form-inline">
+
+            <div class="col l10">
+                <form action="/api/picture" enctype="multipart/form-data" method="post">
+                    <input type="text" class="form-control" ng-model='partner._id'>
+                    <input type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
+                    <input type="text" class="form-control" placeholder="Type" ng-model='partner.type'>
+                    <input type="text" class="form-control" placeholder="Domaine" ng-model='partner.domaine'>
+                    <textarea type="text" class="materialize-textarea" placeholder="Petite description" ng-model='partner.smallDescription'></textarea>
+                    <textarea type="text" class="materialize-textarea" placeholder="Description complète" ng-model='partner.bigDescriptiondescription'></textarea>
+                    <input type="text" class="form-control" placeholder="Téléphone" ng-model='partner.tel'>
+                    <input type="text" class="form-control" placeholder="Mail" ng-model='partner.mail'>
+                    <input type="text" class="form-control" placeholder="Site internet" ng-model='partner.site'>
+                    <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='partner.sortAccueil'>
+                    <!-- <input file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'> -->
+                    <br>
+                    <br>
+                    <!-- <img src="{{partner.logo}}" width="300px" alt="Image partenaire habitant"/> -->
+
+                </form>
             </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire2.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire3.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire4.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire1.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card ">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire2.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s6 m4 l2">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="assets/img/partenaire3.jpg">
-                </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i>
-                    </span>
-                    <p>
-                        <a href="#">This is a link</a>
-                    </p>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i>
-                    </span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                </div>
-            </div>
-        </div>
+
+            <!-- <button ng-click='vm.update(partner, $index)' class="btn-floating btn-large waves-effect transparent " onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
+                  <i class="material-icons">mode_edit</i>
+              </button> -->
+            <button ng-click='vm.update(partner)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
+                <i class="material-icons">mode_edit</i>Enregistrer le partenaire
+            </button>
+
+            <button ng-click='vm.delete(partner)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">
+                <i class="material-icons">delete</i>Supprimer le partenaire
+            </button>
+
+        </form>
     </div>
 </div>

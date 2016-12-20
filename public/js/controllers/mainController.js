@@ -8,26 +8,7 @@ function mainController(todoService) {
         });
     };
 
-    this.create = () => {
-        this.todoService.create(this.todo).then(() => {
-            this.todo = '';
-            this.load();
-        });
-    };
-
-    this.update = (todo) => {
-        this.todoService.update(todo._id, todo.description).then(() => {
-            this.load();
-        });
-    };
-
-    this.delete = (todo) => {
-        this.todoService.delete(todo._id).then(() => {
-            this.load();
-        });
-    };
-
-    //this.load();
+      //this.load();
 
     $(document).ready(function() {
         $('.slider').slider({full_width: true});
@@ -75,6 +56,4 @@ function mainController(todoService) {
         });
 
     });
-
-
 }

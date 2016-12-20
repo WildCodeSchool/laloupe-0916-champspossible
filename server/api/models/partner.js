@@ -10,7 +10,7 @@ const partnerSchema = new mongoose.Schema({
     tel: String,
     mail: String,
     site: String,
-    sortAccueil: Number,
+    sortAccueil: Number
 });
 
 let model = mongoose.model('Partner', partnerSchema);

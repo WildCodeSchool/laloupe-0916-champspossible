@@ -2,9 +2,9 @@ const routes = ($routeProvider, $httpProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: '../views/admin/main.html',
-            // resolve: {
-            //     connected: checkIsConnected
-            // }
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/login', {
             templateUrl: '../views/admin/login.html',
@@ -29,11 +29,12 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/partenaires', {
             templateUrl: '../views/admin/partenaires.html',
             controller: 'partnerController',
-            controllerAs: 'vm',
+            controllerAs: 'vm'
         })
         .otherwise({
             redirectTo: '/'
         })
+
     $httpProvider.interceptors.push(($q, $location, $rootScope, $window, sessionFactory) => {
         return {
             request(config) {
