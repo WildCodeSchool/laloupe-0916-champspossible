@@ -16,7 +16,7 @@ function partnerController(partnerService) {
     };
 
     this.update = (partner) => {
-        this.partnerService.update(partner._id, partner.type, partner.nom, partner.logo, partner.domaine, partner.smallDescription, partner.bigDescription, partner.tel, partner.mail, partner.site, partner.sortAccueil).then(() => {
+        this.partnerService.update(partner._id, partner).then(() => {
             this.load();
         });
     };
