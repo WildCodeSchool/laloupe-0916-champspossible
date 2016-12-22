@@ -12,6 +12,8 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/actualites', {
             templateUrl: 'views/actualites.html',
+            // controller: '',
+            // controllerAs: 'vm',
         })
         .when('/offres', {
             templateUrl: 'views/offres.html',
@@ -25,12 +27,12 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .when('/candidatures', {
             templateUrl: 'views/candidatures.html',
-            // controller: 'mainController',
+            // controller: '',
             // controllerAs: 'vm',
         })
         .when('/rejoindre', {
             templateUrl: 'views/rejoindre.html',
-            // controller: 'mainController',
+            // controller: '',
             // controllerAs: 'vm',
         })
         .otherwise({

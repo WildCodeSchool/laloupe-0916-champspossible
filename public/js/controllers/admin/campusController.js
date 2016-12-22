@@ -7,6 +7,7 @@ function campusController(campusService) {
             this.campuss = res.data;
         });
     };
+    this.load();
 
     this.create = () => {
         this.campusService.create(this.campus).then(() => {

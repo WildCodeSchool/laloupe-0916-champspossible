@@ -7,6 +7,7 @@ function partnerController(partnerService) {
             this.partners = res.data;
         });
     };
+    this.load();
 
     this.create = () => {
         this.partnerService.create(this.partner).then(() => {

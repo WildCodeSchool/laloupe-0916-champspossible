@@ -7,6 +7,7 @@ function offreController(offreService) {
             this.offres = res.data;
         });
     };
+    this.load();
 
     this.create = () => {
         this.offreService.create(this.offre).then(() => {

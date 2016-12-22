@@ -10,7 +10,7 @@ const partnerSchema = new mongoose.Schema({
     tel: String,
     mail: String,
     site: String,
-    sortAccueil: Number
+    sortAccueil: Number,
 });
 
 let model = mongoose.model('Partner', partnerSchema);
@@ -48,7 +48,7 @@ export default class Partner {
                 tel: req.body.tel,
                 mail: req.body.mail,
                 site: req.body.site,
-                sortAccueil: req.body.sortAccueil
+                sortAccueil: req.body.sortAccueil,
             },
             (err, partner) => {
                 if (err) {
@@ -72,7 +72,7 @@ export default class Partner {
             tel: req.body.tel,
             mail: req.body.mail,
             site: req.body.site,
-            sortAccueil: req.body.sortAccueil
+            sortAccueil: req.body.sortAccueil,
         }, (err, partner) => {
             if (err || !partner) {
                 res.status(500).send(err.message);
