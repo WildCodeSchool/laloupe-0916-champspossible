@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    background-color: #D9D9D9;
+}
+
 /* Barre de navigation */
 
 .navbar-fixed {
@@ -25,6 +29,15 @@
     width: 95px;
 }
 
+.side-nav {
+    background-color: #FFFFFF;
+    box-shadow: inherit;
+    height: 340px;
+    margin: 1% 0 0 0;
+    padding: 0;
+    width: 170px;
+}
+
 
 /* Page accueil */
 
@@ -35,17 +48,22 @@
     padding: 1% 2% 0% 2%;
 }
 
+.profilSquare {
+    margin: 3% 3% 3% 3%;
+    padding: 0;
+}
+
 .iconeChoix {
     color: black;
-    font-size: 80px;
+    font-size: 60px;
     margin: 0;
     padding: 0;
 }
 
 .lienOffre {
     color: black;
-    margin: 1% 1% 1% 1%;
-    padding: 1% 1% 1% 1%;
+    margin: 0;
+    padding: 0;
 }
 
 .lienOffre:hover {
@@ -59,8 +77,8 @@
     color: white;
     font-size: 25px;
     font-weight: bold;
-    padding: 1% 1% 1% 1%;
     margin: 0;
+    padding: 1% 1% 1% 1%;
 }
 
 .titreAccueil {
@@ -69,8 +87,8 @@
     color: white;
     font-size: 28px;
     font-weight: bold;
-    padding: 1% 1% 1% 1%;
     margin: 0 0 -1% 0;
+    padding: 1% 1% 1% 1%;
 }
 
 .boutonSM {
@@ -79,10 +97,10 @@
 }
 
 #lastActu {
-    margin: 1% 1% 1% 1%;
+    margin: 1% 0% 1% 1%;
 }
 
-.accueil-p {s
+.accueil-p {
     font-size: 18px;
     line-height: 150%;
     padding: 2% 2% 2% 2%;
@@ -99,8 +117,8 @@
 #imgArticle {
     float: left;
     height: 250px;
-    width: 250px;
     margin: 0% 2% 1% 0%;
+    width: 250px;
 }
 
 .dateArticle {
@@ -111,7 +129,6 @@
     margin: 2% 2% 2% 0%;
 }
 
-
 .responsive-video {
     background-color: black;
     margin: 0;
@@ -119,7 +136,7 @@
 }
 
 .texteVideo {
-    background-color: black;
+    background-color: #D9D9D9;
     color: white;
     font-size: 18px;
     line-height: 150%;
@@ -129,7 +146,7 @@
 }
 
 .texteVideo1 {
-    background-color: black;
+    background-color: #D9D9D9;
     color: white;
     font-size: 18px;
     line-height: 150%;
@@ -139,10 +156,9 @@
 }
 
 .carousel {
-    background-color: black;
-    /*margin: 0.75% 0.75% 0.75% 0.75%;
-    padding: 0;*/
+    background-color: white;
 }
+
 
 /* Le Campus */
 
