@@ -18,6 +18,6 @@ module.exports = (app) => {
 
     router.delete('/:id', partner.delete);
 
-    app.use('/partners', Auth.hasAuthorization, router);
+    app.use('/partners', router);
 
 }

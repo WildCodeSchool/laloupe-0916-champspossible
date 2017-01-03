@@ -1,4 +1,4 @@
-const routes = ($routeProvider, $httpProvider) => {
+const routes = ($routeProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: 'views/accueil.html',
