@@ -10,5 +10,6 @@ angular.module('app', ['ngRoute'])
     .controller('offreController', offreController)
     .controller('homeController', homeController)
     .controller('partnerController', partnerController)
+    .directive('file', findImage)
     .config(routes)
     .run(loginStatus);

@@ -16,8 +16,10 @@
     "express": "",
     "jsonwebtoken": "",
     "method-override": "",
+    "mmmagic": "^0.4.5",
     "mongoose": "",
-    "morgan": ""
+    "morgan": "",
+    "quickthumb": "0.0.12"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
