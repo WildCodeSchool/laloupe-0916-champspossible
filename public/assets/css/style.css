@@ -45,6 +45,7 @@ body {
     background: url('../img/subtle_carbon.png');
     color: white;
     font-size: 22px;
+    margin: 1% 0% 2% 0%;
     padding: 1% 2% 0% 2%;
 }
 
@@ -137,7 +138,7 @@ body {
 
 .texteVideo {
     background-color: #D9D9D9;
-    color: white;
+    color: black;
     font-size: 18px;
     line-height: 150%;
     margin: 0;
@@ -147,13 +148,17 @@ body {
 
 .texteVideo1 {
     background-color: #D9D9D9;
-    color: white;
+    color: black;
     font-size: 18px;
     line-height: 150%;
     margin: 0;
     padding: 13.25% 13.25% 13.25% 13.25%;
     text-align: center;
 }
+
+ .pinkText {
+    color: #E0007C;
+ }
 
 .carousel {
     background-color: white;
