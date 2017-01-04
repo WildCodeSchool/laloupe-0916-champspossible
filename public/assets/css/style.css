@@ -158,6 +158,7 @@ body {
 
  .pinkText {
     color: #E0007C;
+    font-weight: bold;
  }
 
 .carousel {
@@ -168,19 +169,26 @@ body {
 /* Le Campus */
 
 .titreCampus {
-    color: black;
-    font-size: 30px;
+    color: #E0007C;
+    font-size: 35px;
+    text-align: center;
 }
 
 .blockText {
-    padding: 20%;
+    margin: 0;
+    padding: 0;
+}
+
+.blockImg {
+    margin: 0;
+    padding: 0;
 }
 
 .campus-p {
-    font-size: 20px;
-    line-height: 200%;
+    font-size: 18px;
+    line-height: 175%;
+    padding: 2% 5% 5% 5%;
     text-align: justify;
-    text-indent: 3em;
 }
 
 
