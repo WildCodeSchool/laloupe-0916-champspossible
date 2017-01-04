@@ -11,7 +11,6 @@ function partnerController(partnerService) {
 
     this.load();
 
-
     $(document).ready(function() {
         $('.slider').slider({
             full_width: true
@@ -64,6 +63,5 @@ function partnerController(partnerService) {
                 }
             });
         });
-
     });
 }
