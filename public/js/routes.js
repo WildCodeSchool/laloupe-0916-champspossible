@@ -10,11 +10,11 @@ const routes = ($routeProvider) => {
             controller: 'campusController',
             controllerAs: 'vm'
         })
-        .when('/actualites', {
-            templateUrl: 'views/actualites.html',
-            // controller: '',
-            // controllerAs: 'vm',
-        })
+        // .when('/actualites', {
+        //     templateUrl: 'views/actualites.html',
+        //     // controller: '',
+        //     // controllerAs: 'vm',
+        // })
         .when('/offres', {
             templateUrl: 'views/offres.html',
             controller: 'offreController',
@@ -37,5 +37,5 @@ const routes = ($routeProvider) => {
         })
         .otherwise({
             redirectTo: '/'
-        })
+        });
 };

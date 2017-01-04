@@ -266,3 +266,13 @@ footer {
     width: 100%;
     z-index: 100;
 }
+
+@media screen and (max-width: 1157px) {
+  #logoCA {
+    display: none;
+  }
+
+@media screen and (max-width: 1059px) {
+  #logoCDP {
+    display: none;
+  }

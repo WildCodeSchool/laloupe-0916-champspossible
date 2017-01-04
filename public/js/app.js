@@ -10,4 +10,4 @@ angular.module('app', ['ngRoute'])
     .controller('homeController', homeController)
     .controller('partnerController', partnerController)
     .directive('file', findImage)
-    .config(routes)
+    .config(routes);
