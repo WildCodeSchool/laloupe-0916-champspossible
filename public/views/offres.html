@@ -1,71 +1,82 @@
-<div class="offres" id="offres">
-    <div class="row valign-wrapper blocTriOffre">
-        <div class="col s12 m4 l4 center-align valign triOffre">Choisissez votre profil :</div>
-        <div class="col s6 m2 l2 center-align valign triOffre">
-            <i class="material-icons iconeOffre">flight_takeoff</i>
-            Startup</div>
-        <div class="col s6 m2 l2 center-align valign triOffre">
-            <i class="material-icons iconeOffre">business_center</i>
-            Entreprise</div>
-        <div class="col s6 m2 l2 center-align valign triOffre">
-            <i class="material-icons iconeOffre">face</i>
-            Mentor</div>
-        <div class="col s6 m2 l2 center-align valign triOffre">
-            <i class="material-icons iconeOffre">school</i>
-            Étudiant</div>
+<div class="row blocTri" ng-model="query">
+        <div class="col s12 m12 l2 offset-l1 center-align triOffre btn black white-text">VOTRE PROFIL :</div>
+        <div class="col s3 m3 l2">
+            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+                <i class="material-icons left iconeTripartners">flight_takeoff</i>Startup</a>
+        </div>
+        <div class="col s3 m3 l2">
+            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+                <i class="material-icons left iconeTripartners">business_center</i>Entreprise</a>
+        </div>
+        <div class="col s3 m3 l2">
+            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+                <i class="material-icons left iconeTripartners">face</i>Mentor</a>
+        </div>
+        <div class="col s3 m3 l2">
+            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+                <i class="material-icons left iconeTripartners">school</i>Étudiant</a>
+        </div>
+        <!-- Zone de sélection d'affichage (liste): Tous, Habitants ou Partenaires -->
+        <!-- <div class="input-field col s12 l12">
+        <select ng-model="query" class="browser-default">
+            <option value="" disabled selected>Sélection d'affichage</option>
+            <option value="">Option tous</option>
+            <option value="Partenaire">Option a</option>
+            <option value="Habitant">Option b</option>
+        </select>
+    </div> -->
+</div>
+<div class="container">
+    <div class="row valign-wrapper">
+        <div class="col s12 m12 l12 align valign"></div>
     </div>
-    <div class="container">
-        <div class="row valign-wrapper">
-            <div class="col s12 m12 l12 align valign"></div>
+    <div class="row valign-wrapper">
+        <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
+        <div class="col s8 m8 l8 center-align valign">
+            <h2 class="titreOffre">Un accompagnement sur mesure</h2>
+            <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
         </div>
-        <div class="row valign-wrapper">
-            <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
-            <div class="col s8 m8 l8 center-align valign">
-                <h2 class="titreOffre">Un accompagnement sur mesure</h2>
-                <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-            </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row valign-wrapper">
+        <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
+        <div class="col s8 m8 l8 center-align valign">
+            <h2 class="titreOffre">Des équipements mis à votre disposition</h2>
+            <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
         </div>
-        <div class="divider"></div>
-        <div class="row valign-wrapper">
-            <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
-            <div class="col s8 m8 l8 center-align valign">
-                <h2 class="titreOffre">Des équipements mis à votre disposition</h2>
-                <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-            </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row valign-wrapper">
+        <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
+        <div class="col s8 m8 l8 center-align valign">
+            <h2 class="titreOffre">Une offre immobilière attractive</h2>
+            <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
         </div>
-        <div class="divider"></div>
-        <div class="row valign-wrapper">
-            <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
-            <div class="col s8 m8 l8 center-align valign">
-                <h2 class="titreOffre">Une offre immobilière attractive</h2>
-                <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-            </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row valign-wrapper">
+        <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
+        <div class="col s8 m8 l8 center-align valign">
+            <h2 class="titreOffre">Une équipe dynamique à votre écoute</h2>
+            <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
         </div>
-        <div class="divider"></div>
-        <div class="row valign-wrapper">
-            <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
-            <div class="col s8 m8 l8 center-align valign">
-                <h2 class="titreOffre">Une équipe dynamique à votre écoute</h2>
-                <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <div class="row valign-wrapper">
-            <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
-            <div class="col s8 m8 l8 center-align valign">
-                <h2 class="titreOffre">La chambre d'agriculture</h2>
-                <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
-                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-            </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row valign-wrapper">
+        <div class="cols4 m4 l4 center-align valign"><img src="/assets/img/apple.jpg" class="circle imgOffre"/></div>
+        <div class="col s8 m8 l8 center-align valign">
+            <h2 class="titreOffre">La chambre d'agriculture</h2>
+            <p class="textOffre">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
         </div>
     </div>
 </div>

@@ -194,16 +194,15 @@ body {
 
 /* Notre offre */
 
-.blocTriOffre {
+.blocTri {
     background-color: black;
     border-top: 2px solid white;
     font-weight: bolder;
     margin: 0;
-    padding: 0;
+    padding : 0.5% 0.5% 0.5% 0.5%;
 }
 
 .triOffre {
-    align-items: center;
     color: white;
     background-color: black;
 }
@@ -240,7 +239,11 @@ body {
 }
 
 
-/* Taille des cards et photos */
+/* Partenaires et habitants */
+
+.iconeTripartners {
+    color: #E0007C;
+}
 
 .card {
     height: 200px!important;
