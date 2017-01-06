@@ -161,8 +161,12 @@ body {
     font-weight: bold;
  }
 
-.carousel {
-    background-color: white;
+.carousel .carousel-item {
+  opacity: 1 !important;
+}
+
+.slider {
+  margin-top: 0px !important;
 }
 
 
