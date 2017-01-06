@@ -154,9 +154,18 @@
             </div>
         </div>
         <script>
-            $(document).ready(function() {
-                $('.carousel').carousel({indicators: true, dist: -25, shift: 200, padding: 10});
-            });
+        $(document).ready(function(){
+             $('.carousel').carousel({
+                   dist:0,
+                   shift:0,
+                   padding:120,
+             });
+            autoplay()
+             function autoplay() {
+             $('.carousel').carousel('next');
+             setTimeout(autoplay, 4500);
+       }
+       });
         </script>
     </div>
 </div>
