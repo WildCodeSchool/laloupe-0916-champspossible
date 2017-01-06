@@ -7,6 +7,7 @@ body {
     background-color: #D9D9D9;
 }
 
+
 /* Barre de navigation */
 
 .navbar-fixed {
@@ -156,10 +157,10 @@ body {
     text-align: center;
 }
 
- .pinkText {
+.pinkText {
     color: #E0007C;
     font-weight: bold;
- }
+}
 
 .carousel .carousel-item {
   opacity: 1 !important;
@@ -203,7 +204,7 @@ body {
     border-top: 2px solid white;
     font-weight: bolder;
     margin: 0;
-    padding : 0.5% 0.5% 0.5% 0.5%;
+    padding: 0.5% 0.5% 0.5% 0.5%;
 }
 
 .triOffre {
@@ -261,10 +262,6 @@ body {
 /* Footer */
 
 footer {
-    background: url("../img/black_lozenge.png")
-}
-
-.firstFooter {
     background: url('../img/subtle_carbon.png')
 }
 
@@ -274,12 +271,30 @@ footer {
     z-index: 100;
 }
 
-@media screen and (max-width: 1157px) {
-  #logoCA {
-    display: none;
-  }
+.titreFooter {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 5% 0;
+    padding: 0;
+}
 
-@media screen and (max-width: 1059px) {
-  #logoCDP {
-    display: none;
-  }
+
+/*Me quieres un media*/
+
+@media screen and (max-width: 1200px) {
+    #logoCA {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #logoCDP {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .iconeTripartners {
+        display: none;
+    }
+}
