@@ -162,12 +162,8 @@ body {
     font-weight: bold;
 }
 
-.carousel .carousel-item {
-  opacity: 1 !important;
-}
-
-.slider {
-  margin-top: 0px !important;
+.carousel {
+    background-color: white;
 }
 
 
@@ -232,6 +228,7 @@ body {
 }
 
 .titreOffre {
+    color: #E0007C;
     font-size: 28px;
     font-weight: bolder;
     text-align: left;
