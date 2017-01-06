@@ -1,19 +1,18 @@
 <!-- Zone de sélection d'affichage (boutons): Tous, Habitants ou Partenaires -->
 <div class="row blocTri" ng-model="query">
-        <div class="col s12 m12 l2 offset-l2 center-align triOffre btn black white-text">FILTRER PAR :</div>
-        <div class="col s4 m4 l2">
-            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+        <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
+        <div class="col s4 m4 l3 center">
+            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
                 <i class="material-icons left iconeTripartners">language</i>Tous</a>
         </div>
-        <div class="col s4 m4 l2">
-            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
-                <i class="material-icons left iconeTripartners">supervisor_account</i>Partners</a>
+        <div class="col s4 m4 l3 center">
+            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
+                <i class="material-icons left iconeTripartners">supervisor_account</i>Partenaires</a>
         </div>
-        <div class="col s4 m4 l2">
-            <a class="center-align waves-effect waves-light btn black white-text" ng-click="query=''">
+        <div class="col s4 m4 l3 center">
+            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
                 <i class="material-icons left iconeTripartners">assignment_ind</i>Habitants</a>
         </div>
-        <div class="col s0 m0 l2"></div>
 
         <!-- Zone de sélection d'affichage (liste): Tous, Habitants ou Partenaires -->
         <!-- <div class="input-field col s12 l12">

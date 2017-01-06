@@ -255,6 +255,12 @@ body {
     height: 100px!important;
 }
 
+.typePartner {
+  font-size-adjust: auto;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Footer */
 
@@ -271,10 +277,14 @@ footer {
 .titreFooter {
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 5% 0;
+    margin: 0 0 3% 0;
     padding: 0;
 }
 
+.iconeContact:hover {
+    font-size: 4.2rem;
+    cursor: pointer;
+}
 
 /*Me quieres un media*/
 
