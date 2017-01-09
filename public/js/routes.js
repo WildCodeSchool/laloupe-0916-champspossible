@@ -2,7 +2,7 @@ const routes = ($routeProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: 'views/accueil.html',
-            controller: 'homeController',
+            controller: 'partnerController',
             controllerAs: 'vm'
         })
         .when('/campus', {

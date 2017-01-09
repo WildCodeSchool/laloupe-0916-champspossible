@@ -1,5 +1,15 @@
-function homeController(homeService) {
-    //this.load();
+function homeController(partnerService) {
+
+  this.partnerService = partnerService;
+
+
+  this.load = () => {
+      this.partnerService.getAll().then((res) => {
+          this.partners = res.data;
+      });
+  };
+
+  this.load();
 
     $(document).ready(function() {
         $('.slider').slider({
