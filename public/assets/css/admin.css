@@ -96,3 +96,12 @@ figure {
     letter-spacing: 1px;
     font-size: 68.5%;
 }
+
+/*.card-content {
+    .divHidden {
+        visibility: hidden;
+    }
+    .divHidden:hover {
+        visibility: visible;
+    }
+}*/
