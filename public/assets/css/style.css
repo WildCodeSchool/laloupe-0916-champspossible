@@ -33,7 +33,7 @@ body {
 .side-nav {
     background-color: #FFFFFF;
     box-shadow: inherit;
-    height: 340px;
+    height: 320px;
     margin: 1% 0 0 0;
     padding: 0;
     width: 170px;
@@ -74,13 +74,13 @@ body {
 }
 
 .phraseAccroche {
-    background: url('../img/subtle_carbon.png');
+    background: black;
     border-top: 2px solid white;
     color: white;
     font-size: 25px;
     font-weight: bold;
     margin: 0;
-    padding: 1% 1% 1% 1%;
+    padding: 0.5% 0.5% 0.5% 0.5%;
 }
 
 .titreAccueil {
@@ -166,6 +166,9 @@ body {
     background-color: white;
 }
 
+.imgSlider {
+    height: 150%;
+}
 
 /* Le Campus */
 

@@ -1,41 +1,26 @@
 <!-- Zone de sélection d'affichage (boutons): Tous, Habitants ou Partenaires -->
 <div class="row blocTri" ng-model="query">
-        <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
-        <div class="col s4 m4 l3 center">
-            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
-                <i class="material-icons left iconeTripartners">language</i>Tous</a>
-        </div>
-        <div class="col s4 m4 l3 center">
-            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
-                <i class="material-icons left iconeTripartners">supervisor_account</i>Partenaires</a>
-        </div>
-        <div class="col s4 m4 l3 center">
-            <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
-                <i class="material-icons left iconeTripartners">assignment_ind</i>Habitants</a>
-        </div>
-
-    <!-- Zone de sélection d'affichage (boutons): Tous, Habitants ou Partenaires -->
-    <div class="row valign-wrapper blocTriOffre" ng-model="query">
-        <div class="col s12 m4 l4 center-align valign triOffre">Choisissez votre filtre :</div>
-        <button class=" col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
-            <i class="material-icons iconeOffre" value="">language</i>
-            Tous
-        </button>
-        <button class="col s6 m4 l4 center-align valign btn triOffre" ng-click="query='Partenaire'">
-            <i class="material-icons iconeOffre" value="a">supervisor_account</i>
-            Partenaires</button>
-        <button class="col s6 m4 l4 center-align valign btn triOffre" ng-click="query='Habitant'">
-            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
-            Habitants</button>
+    <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
+    <div class="col s4 m4 l3 center">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
+            <i class="material-icons left iconeTripartners">language</i>Tous</a>
+    </div>
+    <div class="col s4 m4 l3 center">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Partenaire'">
+            <i class="material-icons left iconeTripartners">supervisor_account</i>Partenaires</a>
+    </div>
+    <div class="col s4 m4 l3 center">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Habitant'">
+            <i class="material-icons left iconeTripartners">assignment_ind</i>Habitants</a>
     </div>
 </div>
 
 <!-- Affichage des cards -->
 <div class="row">
     <div class="col s6 m4 l2" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:nom'>
-        <div class="card hoverable ">
-            <div class="card-image waves-effect waves-block waves-light" >
-                <img class="activator" src={{partner.logo}}>
+        <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" ng-src="{{partner.logo}}">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{partner.nom}}

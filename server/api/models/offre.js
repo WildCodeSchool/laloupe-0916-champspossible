@@ -74,6 +74,6 @@ export default class Offre {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }
