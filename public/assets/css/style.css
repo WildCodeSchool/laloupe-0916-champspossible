@@ -243,11 +243,11 @@ body {
 /* Taille des cards et photos */
 
 .card {
-    height: 200px!important;
+    height: 250px!important;
 }
 
 .activator {
-    height: 100px!important;
+    height: 150px!important;
 }
 
 
