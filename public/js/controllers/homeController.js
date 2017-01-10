@@ -13,7 +13,8 @@ function homeController(partnerService) {
 
     $(document).ready(function() {
         $('.slider').slider({
-            full_width: true
+            full_width: true,
+            full_height: true
         });
 
         $('.dropdown-button').dropdown({
