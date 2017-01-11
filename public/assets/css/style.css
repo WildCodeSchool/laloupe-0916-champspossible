@@ -43,11 +43,6 @@ body {
     font-weight: bold;
 }
 
-.waves-effect.waves-light {
-    background-color: rgba(233, 30, 99, 0.5);
-}
-
-
 /* Page accueil */
 
 #choixProfil {
@@ -292,10 +287,6 @@ footer {
     padding: 0;
 }
 
-.iconeContact:hover {
-    font-size: 4.2rem;
-    cursor: pointer;
-}
 
 /*Me quieres un media*/
 
