@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const offreSchema = new mongoose.Schema({
     titre: String,
     texte: String,
-    logo: Number,
+    logo: String,
     ordre: Number,
     filtre: Array
 });

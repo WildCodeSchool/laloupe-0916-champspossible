@@ -4,7 +4,7 @@
         <div class="phraseAccroche row valign-wrapper">
             <h1 class="col s12 m6 l8">
                 Partenaires et Habitants</h1>
-            <button ng-click='vm.create()' class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
+            <button ng-click='vm.create()'  href="#newRecord[3]" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
                 <i class="material-icons">add</i>Ajouter un partenaire
             </button>
         </div>
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Affichage des données de la table partenaires/habitants -->
-    <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:order'>
+    <div class="panel panel-default" id="newRecord-{{$index}}" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:order'>
         <div class="divider"></div>
         <br>
         <br>
@@ -37,6 +37,7 @@
             <form class="form-inline">
                 <div class="col l10">
                     <form action="/api/picture" enctype="multipart/form-data" method="post">
+                      <label>{{$index}}</label>
                         <input type="text" class="form-control" ng-model='partner._id'>
                         <input type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
                         <!-- <input type="text" class="form-control" placeholder="Type" ng-model='partner.type'> -->
@@ -55,8 +56,7 @@
                         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
                         <br>
                         <br>
-                        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant"/>
-                        <img id='output' width="300px"/>
+                        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
                     </form>
                 </div>
                 <button ng-click='vm.update(partner, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
@@ -78,8 +78,8 @@
 
         var reader = new FileReader();
         reader.onload = function() {
+          var output = document.getElementById('output');
             var dataURL = reader.result;
-            var output = document.getElementById('output');
             output.src = dataURL;
         };
         reader.readAsDataURL(input.files[0]);
