@@ -43,6 +43,10 @@ body {
     font-weight: bold;
 }
 
+.waves-effect.waves-light {
+    background-color: rgba(233, 30, 99, 0.5);
+}
+
 
 /* Page accueil */
 
