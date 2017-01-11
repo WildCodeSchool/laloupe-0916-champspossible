@@ -1,18 +1,22 @@
 <div class="row blocTri" ng-model="query">
-    <div class="col s12 m12 l2 offset-l1 center-align triOffre btn black white-text">VOTRE PROFIL :</div>
-    <div class="col s3 m3 l2 textTri">
+    <div class="col s12 m12 l2 center-align triOffre btn black white-text">VOTRE PROFIL :</div>
+    <div class="col s6 m6 l2 textTri center">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
+            <i class="material-icons left iconeTripartners">language</i>Tous</a>.
+    </div>
+    <div class="col s6 m6 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='Startup'">
             <i class="material-icons left iconeTripartners">flight_takeoff</i>Startup</a>
     </div>
-    <div class="col s3 m3 l2 textTri">
+    <div class="col s6 m6 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='Entreprise'">
             <i class="material-icons left iconeTripartners">business_center</i>Entreprise</a>
     </div>
-    <div class="col s3 m3 l2 textTri">
+    <div class="col s6 m6 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='Mentor'">
             <i class="material-icons left iconeTripartners">face</i>Mentor</a>
     </div>
-    <div class="col s3 m3 l2pm start textTri">
+    <div class="col s12 m12 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='Etudiant'">
             <i class="material-icons left iconeTripartners">school</i>Étudiant</a>
     </div>

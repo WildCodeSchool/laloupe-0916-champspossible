@@ -5,7 +5,6 @@ class navbarController {
         this.sessionFactory = sessionFactory;
         this.$rootScope = $rootScope;
         this.$location = $location;
-        $(".button-collapse").sideNav();
         $rootScope.$on('loginStatusChanged', (event, isLogged) => {
             this.isLogged = isLogged;
             this.user = sessionFactory.user;
@@ -20,5 +19,4 @@ class navbarController {
         this.isLogged = false;
         this.$location.path('/login');
     }
-
 }
