@@ -1,25 +1,24 @@
 function newsService($http) {
-
     this.$http = $http;
 
-    this.createNews = (data) => {
-        return this.$http.post('/api/news', data);
-    };
+    this.create = (data) => {
+        return this.$http.post('/api/partners/', data)
+    }
 
-    this.getAllNews = () => {
-        return this.$http.get('/api/news');
-    };
+    this.getAll = () => {
+        return this.$http.get('/api/partners')
+    }
 
-    this.getOneNews = (id) => {
-        return this.$http.get('/api/news/' + id);
-    };
+    this.getOne = (id) => {
+        return this.$http.get('/api/partners/' + id)
+    }
 
-    this.updateNews = (id, data) => {
-        return this.$http.put('/api/news/' + id, data);
-    };
+    this.update = (id, data) => {
+        return this.$http.put('/api/partners/' + id, data)
+    }
 
-    this.deleteNews = (id) => {
-        return this.$http.delete('/api/news/' + id);
-    };
+    this.delete = (id) => {
+        return this.$http.delete('/api/partners/' + id)
+    }
 
 }

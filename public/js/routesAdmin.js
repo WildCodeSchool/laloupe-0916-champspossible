@@ -2,7 +2,6 @@ const routes = ($routeProvider, $httpProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: '../views/admin/main.html',
-ec
         })
         .when('/login', {
             templateUrl: '../views/admin/login.html',
@@ -11,8 +10,6 @@ ec
         })
         .when('/accueil', {
             templateUrl: '../views/admin/accueil.html',
-            controller: 'homeController',
-            controllerAs: 'vm'
         })
         .when('/campus', {
             templateUrl: '../views/admin/campus.html',

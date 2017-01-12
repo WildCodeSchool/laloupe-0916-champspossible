@@ -43,6 +43,7 @@ body {
     font-weight: bold;
 }
 
+
 /* Page accueil */
 
 #choixProfil {
@@ -173,6 +174,7 @@ body {
     height: 150%;
 }
 
+
 /* Le Campus */
 
 .titreCampus {
@@ -257,14 +259,19 @@ body {
     height: 250px!important;
 }
 
+.card .card-content .card-title {
+    line-height: 0px;
+    font-size: 15px!important;
+}
+
 .activator {
     height: 150px!important;
 }
 
 .typePartner {
-  font-size-adjust: auto;
-  margin: 0;
-  padding: 0;
+    font-size: auto;
+    margin: 0;
+    padding: 0;
 }
 
 
