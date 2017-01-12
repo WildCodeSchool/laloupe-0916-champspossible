@@ -1,36 +1,24 @@
-function partnerController(partnerService, $timeout) {
+function newsController(newsService, $timeout) {
 
-    this.partnerService = partnerService;
+    this.newsService = newsService;
 
     this.load = () => {
-        this.partnerService.getAll().then((res) => {
-            this.partners = res.data;
-            // $timeout(() => {
-            //     $('.dropdown-button').dropdown({
-            //         inDuration: 300,
-            //         outDuration: 225,
-            //         constrain_width: false, // Does not change width of dropdown to that of the activator
-            //         hover: true, // Activate on hover
-            //         gutter: 0, // Spacing from edge
-            //         belowOrigin: false, // Displays dropdown below the button
-            //         alignment: 'left' // Displays dropdown with edge aligned to the left of button
-            //     });
-            //
-            //     $(".button-collapse").sideNav();
-            // }, 0);
+        this.newsService.getAll().then((res) => {
+            this.newss = res.data;
         });
     };
 
+}
     this.load();
 
     this.create = () => {
-        this.partnerService.create(this.partner).then(() => {
-            this.partner = '';
+        this.newsService.create(this.news).then(() => {
+            this.news = '';
             this.load();
         });
     };
 
-    this.update = (partner, index) => {
+    this.update = (news, index) => {
         var uploadfiles = document.querySelector('#uploadImage-' + index);
         var files = uploadfiles.files;
         for (var i = 0; i < files.length; i++) {
@@ -40,13 +28,11 @@ function partnerController(partnerService, $timeout) {
             xhr.open("POST", url, true);
             xhr.onload = () => {
                 var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-                partner.logo = urlImage;
-                this.partnerService.update(partner._id, partner).then(() => {
+                news.logo = urlImage;
+                this.newsService.update(news._id, news).then(() => {
                     $timeout(() => {
                         this.load();
                     }, 1000);
-                    // $route.reload();
-
                 });
             };
             fd.append("upload_file", files[i]);
@@ -54,8 +40,8 @@ function partnerController(partnerService, $timeout) {
         }
     };
 
-    this.delete = (partner) => {
-        this.partnerService.delete(partner._id).then(() => {
+    this.delete = (news) => {
+        this.newsService.delete(news._id).then(() => {
             this.load();
         });
     };

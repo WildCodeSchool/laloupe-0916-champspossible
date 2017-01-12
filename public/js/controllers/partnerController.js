@@ -6,24 +6,10 @@ function partnerController(partnerService, $timeout) {
     this.load = () => {
         this.partnerService.getAll().then((res) => {
             this.partners = res.data;
-            $timeout(() => {
-                $('.carousel').carousel({
-                    dist: 0,
-                    shift: 0,
-                    padding: 120,
-                });
-                autoplay();
-
-                function autoplay() {
-                    $('.carousel').carousel('next');
-                    setTimeout(autoplay, 4500);
-                }
-            });
         });
     };
 
     this.load();
-
 
     $(document).ready(function() {
 
