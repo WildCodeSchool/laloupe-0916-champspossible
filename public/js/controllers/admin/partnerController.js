@@ -47,7 +47,7 @@ function partnerController(partnerService, $timeout) {
                     this.partnerService.update(partner._id, partner).then(() => {
                         $timeout(() => {
                             this.load();
-                        }, 1000)
+                        }, 1000);
                         // $route.reload();
 
                     });
@@ -64,7 +64,7 @@ function partnerController(partnerService, $timeout) {
 
             });
         }
-    }
+    };
 
     this.delete = (partner) => {
         this.partnerService.delete(partner._id).then(() => {
