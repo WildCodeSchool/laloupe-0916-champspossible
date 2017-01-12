@@ -264,6 +264,11 @@ body {
     height: 250px!important;
 }
 
+.card .card-content .card-title {
+    line-height: 0px;
+    font-size: 15px!important;
+}
+
 .activator {
     height: 150px!important;
 }
