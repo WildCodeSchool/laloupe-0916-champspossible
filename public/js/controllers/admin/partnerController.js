@@ -33,24 +33,36 @@ function partnerController(partnerService, $timeout) {
     this.update = (partner, index) => {
         var uploadfiles = document.querySelector('#uploadImage-' + index);
         var files = uploadfiles.files;
-        for (var i = 0; i < files.length; i++) {
-            var url = '/api/picture';
-            var xhr = new XMLHttpRequest();
-            var fd = new FormData();
-            xhr.open("POST", url, true);
-            xhr.onload = () => {
-                var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-                partner.logo = urlImage;
-                this.partnerService.update(partner._id, partner).then(() => {
-                    $timeout(() => {
-                        this.load();
-                    }, 1000)
-                    // $route.reload();
+        if (files.length > 0) {
+            for (var i = 0; i < files.length; i++) {
+                var url = '/api/picture';
+                var xhr = new XMLHttpRequest();
+                var fd = new FormData();
+                xhr.open("POST", url, true);
+                xhr.onload = () => {
+                    var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
 
-                });
-            };
-            fd.append("upload_file", files[i]);
-            xhr.send(fd);
+                    partner.logo = urlImage;
+                    console.log(partner)
+                    this.partnerService.update(partner._id, partner).then(() => {
+                        $timeout(() => {
+                            this.load();
+                        }, 1000)
+                        // $route.reload();
+
+                    });
+                };
+                fd.append("upload_file", files[i]);
+                xhr.send(fd);
+            }
+        } else {
+            this.partnerService.update(partner._id, partner).then(() => {
+                // $timeout(() => {
+                    this.load();
+                // }, 1000)
+                // $route.reload();
+
+            });
         }
     }
 
@@ -71,6 +83,5 @@ function partnerController(partnerService, $timeout) {
         };
         reader.readAsDataURL(input.files[0]);
     };
-
 
 }
