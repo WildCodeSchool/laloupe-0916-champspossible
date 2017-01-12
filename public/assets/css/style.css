@@ -43,6 +43,7 @@ body {
     font-weight: bold;
 }
 
+
 /* Page accueil */
 
 #choixProfil {
@@ -146,7 +147,7 @@ body {
     font-size: 18px;
     line-height: 150%;
     margin: 0;
-    padding: 15% 15% 15% 15%;
+    padding: 10% 10% 10% 10%;
     text-align: center;
 }
 
@@ -156,7 +157,7 @@ body {
     font-size: 18px;
     line-height: 150%;
     margin: 0;
-    padding: 13.25% 13.25% 13.25% 13.25%;
+    padding: 10% 10% 10% 10%;
     text-align: center;
 }
 
@@ -173,7 +174,13 @@ body {
     height: 150%;
 }
 
+
 /* Le Campus */
+
+.blocCampus {
+    margin: 0;
+    padding: 0;
+}
 
 .titreCampus {
     color: #E0007C;
@@ -194,7 +201,7 @@ body {
 .campus-p {
     font-size: 18px;
     line-height: 175%;
-    padding: 2% 5% 5% 5%;
+    padding: 3% 10% 5% 10%;
     text-align: justify;
 }
 
@@ -210,15 +217,15 @@ body {
 }
 
 .triOffre {
-    color: white;
     background-color: black;
+    color: white;
 }
 
 .iconeOffre {
-    color: #f8bbd0;
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
+  color: #f8bbd0;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
 }
 
 .materialboxed {
@@ -229,8 +236,8 @@ body {
 .textOffre {
     font-size: 18px;
     line-height: 200%;
-    text-indent: 3em;
     text-align: justify;
+    text-indent: 3em;
 }
 
 .titreOffre {
@@ -262,9 +269,9 @@ body {
 }
 
 .typePartner {
-  font-size-adjust: auto;
-  margin: 0;
-  padding: 0;
+    font-size-adjust: auto;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -272,12 +279,6 @@ body {
 
 footer {
     background: url('../img/subtle_carbon.png')
-}
-
-.titre {
-    position: absolute;
-    width: 100%;
-    z-index: 100;
 }
 
 .titreFooter {
