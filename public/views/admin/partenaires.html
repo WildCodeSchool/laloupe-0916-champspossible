@@ -2,9 +2,9 @@
     <!-- Zone de tri et de filtre -->
     <div class="row partenaires" id="partenairesAdm">
         <div class="phraseAccroche row valign-wrapper">
-            <h1 class="col s12 m6 l8">
+            <h2 class="col s12 m6 l8">
                 Partenaires et Habitants</h1>
-            <button ng-click='vm.create()'  href="#newRecord[3]" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
+            <button ng-click='vm.create()' href="#baspage" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
                 <i class="material-icons">add</i>Ajouter un partenaire
             </button>
         </div>
@@ -29,7 +29,7 @@
     </div>
 
     <!-- Affichage des données de la table partenaires/habitants -->
-    <div class="panel panel-default" id="newRecord-{{$index}}" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:order'>
+    <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:order'>
         <div class="divider"></div>
         <br>
         <br>
@@ -38,9 +38,8 @@
                 <div class="col l10">
                     <form action="/api/picture" enctype="multipart/form-data" method="post">
                       <label>{{$index}}</label>
-                        <input type="text" class="form-control" ng-model='partner._id'>
+                        <!--ID  <input type="text" class="form-control" ng-model='partner._id'> -->
                         <input type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
-                        <!-- <input type="text" class="form-control" placeholder="Type" ng-model='partner.type'> -->
                         <!-- liste Habitants, Partenaires () -->
                         <select class="browser-default" placeholder="Type" ng-model='partner.type'>
                             <option value="Habitant">Habitant</option>
@@ -70,8 +69,10 @@
             </form>
         </div>
     </div>
+    <div id="baspage">
+    </div>
 </div>
-
+<!--
 <script>
     var openFile = function(event) {
         var input = event.target;
@@ -84,4 +85,4 @@
         };
         reader.readAsDataURL(input.files[0]);
     };
-</script>
+</script> -->
