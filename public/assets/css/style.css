@@ -177,7 +177,7 @@ body {
 
 /* Le Campus */
 
-.blocCampus {
+.blocCampus, .blockText, .blockImg {
     margin: 0;
     padding: 0;
 }
@@ -188,16 +188,6 @@ body {
     text-align: center;
 }
 
-.blockText {
-    margin: 0;
-    padding: 0;
-}
-
-.blockImg {
-    margin: 0;
-    padding: 0;
-}
-
 .campus-p {
     font-size: 18px;
     line-height: 175%;
@@ -205,6 +195,12 @@ body {
     text-align: justify;
 }
 
+.campus-p1 {
+    font-size: 18px;
+    line-height: 200%;
+    padding: 10% 10% 10% 10%;
+    text-align: justify;
+}
 
 /* Notre offre */
 
