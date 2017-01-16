@@ -20,4 +20,4 @@ module.exports = (app) => {
 
     app.use('/campus', Auth.hasAuthorization, router);
 
-}
+};

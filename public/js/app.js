@@ -4,10 +4,12 @@ angular.module('app', ['ngRoute'])
     .service('offreService', offreService)
     .service('partnerService', partnerService)
     .service('newsService', newsService)
+    .service('ephemereService', ephemereService)
     .controller('navbarController', navbarController)
     .controller('campusController', campusController)
     .controller('offreController', offreController)
     .controller('homeController', homeController)
     .controller('partnerController', partnerController)
+
     .directive('file', findImage)
     .config(routes);

@@ -1,14 +1,14 @@
 import mongoose from 'mongoose';
 
-const homeSchema = new mongoose.Schema({
-    lienImg: String,
-    lienClick: String,
-    ordre: Number
+const ephemereSchema = new mongoose.Schema({
+    titreEphemere: String,
+    lienEphemere: String,
+    cacheEphemere: Boolean
 });
 
-let model = mongoose.model('Home', homeSchema);
+let model = mongoose.model('Ephemere', ephemereSchema);
 
-export default class Home {
+export default class Ephemere {
 
     findAll(req, res) {
         model.find({}, (err, homes) => {
@@ -32,9 +32,9 @@ export default class Home {
 
     create(req, res) {
         model.create({
-                lienImg: req.body.lienImg,
-                lienClick: req.body.lienClick,
-                ordre: req.body.ordre
+                titreEphemere: req.body.lienImg,
+                lienEphemere: req.body.lienClick,
+                cacheEphemere: req.body.cacheEphemere
             },
             (err, home) => {
                 if (err) {
@@ -49,9 +49,9 @@ export default class Home {
         model.update({
             _id: req.params.id
         }, {
-            lienImg: req.body.lienImg,
-            lienClick: req.body.lienClick,
-            ordre: req.body.ordre
+            titreEphemere: req.body.lienImg,
+            lienEphemere: req.body.lienClick,
+            cacheEphemere: req.body.cacheEphemere
         }, (err, home) => {
             if (err || !home) {
                 res.status(500).send(err.message);

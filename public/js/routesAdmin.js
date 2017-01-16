@@ -31,6 +31,11 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'newsController',
             controllerAs: 'vm'
         })
+        .when('/ephemere', {
+            templateUrl: '../views/admin/ephemere.html',
+            controller: 'newsController',
+            controllerAs: 'vm'
+        })
         .otherwise({
             redirectTo: '/'
         });
