@@ -2,12 +2,12 @@
 <div class=" row phraseAccroche center">
     Venez innover et expérimenter au campus Les Champs du Possible !
 </div>
-<div class="row slider">
+<div class="row slider" ng-controller="''">
     <ul class="slides">
-        <!-- <li class="imgSlider" ng-repeat='home in vm.homes'>
+        <li class="imgSlider" ng-repeat='home in vm.homes'>
             <img ng-src="{{home.lienImg}}">
-        </li> -->
-        <li class="imgSlider">
+        </li>
+        <!-- <li class="imgSlider">
             <img src="assets/img/banniere1.jpg">
         </li>
         <li class="imgSlider">
@@ -18,10 +18,9 @@
         </li>
         <li class="imgSlider">
             <img src="assets/img/banniere4.jpg">
-        </li>
+        </li> -->
     </ul>
 </div>
-
 <!--Choix d'un profil  -->
 <div class="container">
     <div class="col s12 m12 l12">
@@ -79,7 +78,20 @@
 </div>
 <div class="row">
     <div class="col s12 m12 l7">
-        <article class="lastActu">
+        <article class="lastActu" ng-repeat='news in vm.newss'>
+            <h2 id="titreArticle">{{news.titre}}</h2>
+            <img ng-src="{{news.image}}" id="imgArticle">
+            <p class="accueil-p">C{{news.texte}}</p>
+            <p class="dateArticle">
+                Posté le
+                <time>{{news.date}}</time>
+                par
+                {{news.auteur}}.
+            </p>
+        </article>
+    </div>
+    <!-- <div class="col s12 m12 l7">
+        <article class="lastActu" ng-repeat='partner in vm.partners'>
             <h2 id="titreArticle">Je suis la dernière actualité</h2>
             <img src="/assets/img/apple.jpg" id="imgArticle">
             <p class="accueil-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
@@ -92,7 +104,7 @@
                 par Tom.
             </p>
         </article>
-    </div>
+    </div> -->
     <div class="col s12 m12 l5 center">
         <iframe
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchampspossible%2F%3Fref%3Dts%26fref%3Dts&tabs=timeline&width=500&height=800&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1222472067795207"
@@ -107,7 +119,9 @@
 <!-- Présentation du campus + vidéos -->
 <div class="row">
     <div class="col s12 m12 l12 center">
-        <a href="/#/campus"><h1 class="titreAccueil" class="right-align">Le Campus</h1></a>
+        <a href="/#/campus">
+            <h1 class="titreAccueil" class="right-align">Le Campus</h1>
+        </a>
     </div>
 </div>
 <div class="row">
@@ -119,14 +133,14 @@
     </div>
     <div class="col s12 m12 l6">
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/jTgedBSf9KY" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jTgedBSf9KY" frameborder="1" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col s12 m12 l6">
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dpSBNf9hjEA" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/dpSBNf9hjEA" frameborder="1" allowfullscreen></iframe>
         </div>
     </div>
     <div class="col s12 m12 l6">
@@ -147,7 +161,7 @@
 </div>
 
 <div class="row col s12 m12 l12">
-    <div class="carousel valign">
-      <a class="carousel-item" href="javascript:void(0)" ng-repeat='partner in vm.partners |filter:vm.greaterThan("sortAccueil", "0") | orderBy:sortAccueil'><img ng-src="{{partner.logo}}" alt="partenaire"></a>
-    </div>
+<div class="carousel valign">
+    <a class="carousel-item" href="javascript:void(0)" ng-repeat='partner in vm.partners |filter:vm.greaterThan("sortAccueil", "0") | orderBy:sortAccueil'><img ng-src="{{partner.logo}}" alt="partenaire"></a>
+</div>
 </div>

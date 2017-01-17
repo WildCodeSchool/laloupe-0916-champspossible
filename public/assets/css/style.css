@@ -309,6 +309,7 @@ footer {
     width: 20px;
 }
 
+
 /*Medias*/
 
 @media screen and (max-width: 1200px) {
@@ -317,14 +318,24 @@ footer {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
     #logoCDP {
-        display: none;
+        height: 120px;
+        left: 0;
+        position: relative;
+        top: -25px;
+        width: 120px;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .iconeTripartners {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #logoCDP {
         display: none;
     }
 }
