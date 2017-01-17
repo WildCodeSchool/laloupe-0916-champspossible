@@ -30,7 +30,6 @@ function newsController(newsService, $timeout) {
                     var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
 
                     news.image = urlImage;
-                    console.log(news)
                     this.newsService.update(news._id, news).then(() => {
                         $timeout(() => {
                             this.load();

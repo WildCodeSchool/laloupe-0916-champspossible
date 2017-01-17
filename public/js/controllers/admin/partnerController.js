@@ -18,38 +18,48 @@ function partnerController(partnerService, $timeout) {
     };
 
     this.update = (partner, index) => {
-        var uploadfiles = document.querySelector('#uploadImage-' + index);
-        var files = uploadfiles.files;
-        if (files.length > 0) {
-            for (var i = 0; i < files.length; i++) {
-                var url = '/api/picture';
-                var xhr = new XMLHttpRequest();
-                var fd = new FormData();
-                xhr.open("POST", url, true);
-                xhr.onload = () => {
-                    var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+        // Contrôle de l'ordre d'affichage  -
+        if (partner.sortAccueil == 0 || (partner.sortAccueil < this.partners.filter(function(obj) {
+                return obj.sortAccueil != 0;
+            }).length && this.partners.filter(function(obj) {
+                return obj.sortAccueil == partner.sortAccueil;
+            }).length === 1)) {
+            // upload images
+            var uploadfiles = document.querySelector('#uploadImage-' + index);
+            var files = uploadfiles.files;
+            if (files.length > 0) {
+                for (var i = 0; i < files.length; i++) {
+                    var url = '/api/picture';
+                    var xhr = new XMLHttpRequest();
+                    var fd = new FormData();
+                    xhr.open("POST", url, true);
+                    xhr.onload = () => {
+                        var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
 
-                    partner.logo = urlImage;
-                    console.log(partner)
-                    this.partnerService.update(partner._id, partner).then(() => {
-                        $timeout(() => {
-                            this.load();
-                        }, 1000);
-                        // $route.reload();
+                        partner.logo = urlImage;
+                        console.log(partner)
+                        this.partnerService.update(partner._id, partner).then(() => {
+                            $timeout(() => {
+                                this.load();
+                            }, 1000);
+                            // $route.reload();
 
-                    });
-                };
-                fd.append("upload_file", files[i]);
-                xhr.send(fd);
+                        });
+                    };
+                    fd.append("upload_file", files[i]);
+                    xhr.send(fd);
+                }
+            } else {
+                this.partnerService.update(partner._id, partner).then(() => {
+                    // $timeout(() => {
+                    this.load();
+                    // }, 1000)
+                    // $route.reload();
+
+                });
             }
         } else {
-            this.partnerService.update(partner._id, partner).then(() => {
-                // $timeout(() => {
-                this.load();
-                // }, 1000)
-                // $route.reload();
-
-            });
+            alert('Ordre de tri invalide');
         }
     };
 

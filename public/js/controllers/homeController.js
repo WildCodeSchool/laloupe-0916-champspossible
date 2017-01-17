@@ -3,6 +3,12 @@ function homeController(partnerService, newsService, $timeout) {
     this.partnerService = partnerService;
     this.newsService = newsService;
 
+    this.greaterThan = function(prop, val) {
+
+        return function(item) {
+            return item[prop] > val;
+        }
+    }
 
     this.load = () => {
         this.partnerService.getAll().then((res) => {

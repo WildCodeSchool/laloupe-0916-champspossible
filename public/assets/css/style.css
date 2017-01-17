@@ -202,6 +202,7 @@ body {
     text-align: justify;
 }
 
+
 /* Notre offre */
 
 .blocTri {
@@ -218,10 +219,10 @@ body {
 }
 
 .iconeOffre {
-  color: #f8bbd0;
-  font-size: 50px;
-  margin: 0;
-  padding: 0;
+    color: #f8bbd0;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 .materialboxed {
@@ -267,6 +268,7 @@ body {
 
 .activator {
     height: 150px!important;
+    font-size: 15px!important;
 }
 
 .typePartner {
