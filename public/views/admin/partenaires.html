@@ -1,9 +1,25 @@
-<div class="container">
     <!-- Zone de tri et de filtre -->
+    <ul id="slide-out" class="side-nav">
+    <li><div class="userView">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        
     <div class="row partenaires" id="partenairesAdm">
         <div class="phraseAccroche row valign-wrapper">
-            <h2 class="col s12 m6 l8">
-                Partenaires et Habitants</h1>
+            <h3 class="col s12 m6 l8">{{vm.partners.length }} - Partenaires et Habitants</h3>
             <button ng-click='vm.create()' href="#baspage" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
                 <i class="material-icons">add</i>Ajouter un partenaire
             </button>
@@ -20,6 +36,9 @@
             <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Habitant'">
                 <i class="material-icons iconeOffre" value="b">assignment_ind</i>
                 Habitants</button>
+
+            <!-- <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'> -->
+
             <select ng-model="order" class="browser-default col s6 m2 l2">
                 <option value="" disabled selected>Ordre d'affichage</option>
                 <option value="nom">par Nom</option>
@@ -29,13 +48,14 @@
     </div>
 
     <!-- Affichage des données de la table partenaires/habitants -->
-    <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:order'>
+    <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} |filter:{nom:recherche} | orderBy:order' >
         <div class="divider"></div>
         <br>
+
         <br>
         <div class="panel-body">
             <form class="form-inline">
-                <div class="col l10">
+                <div class="col l6">
                     <form action="/api/picture" enctype="multipart/form-data" method="post">
                       <label>{{$index}}</label>
                         <!--ID  <input type="text" class="form-control" ng-model='partner._id'> -->
@@ -49,7 +69,7 @@
                         <textarea type="text" class="materialize-textarea" placeholder="Petite description" ng-model='partner.smallDescription'></textarea>
                         <textarea type="text" class="materialize-textarea" placeholder="Description complète" ng-model='partner.bigDescription'></textarea>
                         <input type="text" class="form-control" placeholder="Téléphone" ng-model='partner.tel'>
-                        <input type="text" class="form-control" placeholder="Mail" ng-model='partner.mail'>
+                        <input type="email" class="form-control" placeholder="Mail" ng-model='partner.mail' data-error="wrong" data-success="right" class="validate" id="email"/>
                         <input type="text" class="form-control" placeholder="Site internet" ng-model='partner.site'>
                         <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='partner.sortAccueil'>
                         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
@@ -71,7 +91,6 @@
     </div>
     <div id="baspage">
     </div>
-</div>
 <!--
 <script>
     var openFile = function(event) {
