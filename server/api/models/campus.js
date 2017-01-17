@@ -74,6 +74,6 @@ export default class Campus {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }

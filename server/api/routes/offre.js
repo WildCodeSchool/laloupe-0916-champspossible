@@ -20,4 +20,4 @@ module.exports = (app) => {
 
     app.use('/offre', Auth.hasAuthorization, router);
 
-}
+};

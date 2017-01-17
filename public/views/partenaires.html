@@ -2,7 +2,7 @@
 <div class="row blocTri" ng-model="query">
     <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
     <div class="col s4 m4 l3 center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='' && vm.load()">
             <i class="material-icons left iconeTripartners">language</i>Tous</a>
     </div>
     <div class="col s4 m4 l3 center">
@@ -23,16 +23,18 @@
                 <img class="activator" ng-src="{{partner.logo}}">
             </div>
             <div class="card-content">
+              <i class="material-icons right">more_vert</i>
+
                 <span class="card-title activator grey-text text-darken-4">{{partner.nom}}
-                    <!-- <i class="material-icons right">more_vert</i> -->
-                </span>
+                              </span>
                 <p>
-                    <a href='{{partner.site}}'target="_blank">{{partner.site}}</a>
+                    <a href='{{partner.site}}'target="_blank">Site officiel</a>
                 </p>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{partner.nom}}
-                    <!-- <i class="material-icons right">close</i> -->
+
+                <span class="card-title activator grey-text text-darken-4">{{partner.nom}}
+  <i class="material-icons right">close</i>
                 </span>
                 <p>{{partner.smallDescription}}</p>
             </div>
