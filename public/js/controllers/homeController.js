@@ -1,22 +1,26 @@
-function homeController(partnerService, newsService, $timeout) {
+function homeController(partnerService, newsService, homeService, $timeout) {
 
     this.partnerService = partnerService;
     this.newsService = newsService;
-
+    this.homeService = homeService;
     this.greaterThan = function(prop, val) {
 
         return function(item) {
             return item[prop] > val;
-        }
-    }
+        };
+    };
 
     this.load = () => {
         this.partnerService.getAll().then((res) => {
             this.partners = res.data;
         });
 
+        this.homeService.getAll().then((res) => {
+            this.homes = res.data;
+        });
+
         this.newsService.getAll().then((res) => {
-            this.news = res.data;
+            this.newss = res.data;
 
             $timeout(() => {
                 $('.carousel').carousel({
@@ -53,6 +57,5 @@ function homeController(partnerService, newsService, $timeout) {
         });
 
         $(".button-collapse").sideNav();
-
     });
 }

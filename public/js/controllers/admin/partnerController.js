@@ -37,7 +37,7 @@ function partnerController(partnerService, $timeout) {
                         var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
 
                         partner.logo = urlImage;
-                        console.log(partner)
+                        console.log(partner);
                         this.partnerService.update(partner._id, partner).then(() => {
                             $timeout(() => {
                                 this.load();
