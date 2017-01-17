@@ -20,10 +20,16 @@
         <div class="container center-align">
             <div class="row">
                 <div class="col l12 m12 s12">
-                    <a class="grey-text text-lighten-4 " href="#!">Mentions Légales -</a>
+                    <a class="grey-text text-lighten-4 modal-trigger modal1" href="#modal1">Mentions Légales -</a>
                     <a class="white-text adminAccess" href="../assets/img/paneladmin.png">Administration</a>
+                    <ng-include src="'../views/ML.html'"></ng-include>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.modal1').modal();
+        });
+    </script>
 </footer>
