@@ -1,95 +1,84 @@
-*, *:after, *:before {
-    box-sizing: border-box;
+body {
+  background: url('../../assets/img/mainbackground.jpg');
+  list-style-type: none;
 }
 
-figure {
-    color: #fff;
-    font-family: 'Raleway', Arial, sans-serif;
-    font-weight: 400;
+h1 {
+    font-size: 2em;
 }
 
-#supModal {
-    padding: 60px;
+.btn {
+    background-color: #f44336;
 }
 
-#warning {
-    margin-bottom: 40px;
+.btn-large {
+  background-color: #f44336;
 }
 
-.warning {
-    color: red;
+.btn:hover {
+  background-color: #ff7400;
 }
 
-.grid-image {
-    list-style: none;
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 1em 0 4em;
-    position: relative;
-    text-align: center;
+.btn-large:hover {
+  background-color: #ff7400;
 }
 
-
-/* Common style */
-
-.grid-image figure {
-    cursor: pointer;
-    float: left;
-    margin: 10px 1%;
-    max-height: 360px;
-    max-width: 480px;
-    min-width: 320px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    width: 48%;
+#showjs {
+  display: none;
 }
 
-.grid-image figure figcaption {
-    backface-visibility: hidden;
-    color: #fff;
-    font-size: 1.25em;
-    padding: 2em;
-    text-transform: uppercase;
+.justification {
+  width: 30vw;
 }
 
-.grid-image figure figcaption::before, .grid-image figure figcaption::after {
-    pointer-events: none;
+.justificationabout {
+  width: 45vw;
 }
 
-.grid-image figure figcaption, .grid-image figure figcaption>a {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+.name {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-
-/* For some effects it will show as a button */
-
-.grid-image figure figcaption>a {
-    font-size: 0;
-    opacity: 0;
-    text-indent: 200%;
-    white-space: nowrap;
-    z-index: 1000;
+#panel {
+    background: url('../../assets/img/headerpanel.jpg') !important;
 }
 
-.grid-image figure h2 {
-    font-weight: 300;
-    word-spacing: -0.15em;
+.circle {
+    height: 15%;
+    width: 15%;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.grid-image figure h2 span {
-    font-weight: 800;
+.firstrow {
+    background-image: url("../../assets/img/squarepanel.jpg");
+    height: 245px;
+    background-size: cover;
 }
 
-.grid-image figure h2, .grid-image figure p {
-    margin: 0;
+.boxpanel {
+  font-family: "Raleway";
+  font-size: 45px;
+  font-weight: bolder;
+  color: #a25e83;
+  text-shadow: 0 3px 0px #874e6c,
+  0 15px 10px rgba(0,0,0,.21);
 }
 
-.grid-image figure p {
-    font-size: 68.5%;
-    letter-spacing: 1px;
+.secondrow {
+  background-image: url("../../assets/img/squarepanel.jpg");
+  height: 245px;
+  background-size: cover;
+}
+
+.boxpanel2 {
+  font-family: "Raleway";
+  font-size: 55px;
+  font-weight: bolder;
+  color: #a25e83;
+  text-shadow: 0 3px 0px #874e6c,
+  0 15px 10px rgba(0,0,0,.21);
 }
