@@ -28,19 +28,21 @@
             Experts</button>
 
 
-         <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>
+         <!-- <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'> -->
 
         <select ng-model="order" class="browser-default col s6 m2 l2">
             <option value="" disabled selected>Ordre d'affichage</option>
-            <option value="titre">par Titre</option>
-            <option value="ordre">par Ordre d'affichage</option>
+            <option value="titre">Titre croissant</option>
+            <option value="-titre">Titre décroissant</option>
+            <option value="ordre">Ordre croissant</option>
+            <option value="-ordre">Ordre décroissant</option>
 
           </select>
     </div>
 </div>
 
 <!-- Affichage des données de la table offres -->
-<div class="panel panel-default" ng-repeat='offre in vm.offres |filter:{filtre:query}|filter:{titre:recherche}| orderBy:order' >
+<div class="panel panel-default" ng-repeat='offre in vm.offres |filter:{filtre:query}| orderBy:order' >
     <div class="divider"></div>
     <br>
 
@@ -68,10 +70,10 @@
                 </form>
             </div>
             <button ng-click='vm.update(offre, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
-                <i class="material-icons">mode_edit</i>Enregistrer l'offre'
+                <i class="material-icons">mode_edit</i>Enregistrer l'offre
             </button>
             <button ng-click='vm.delete(offre)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
-                <i class="material-icons">delete</i>Supprimer l'offre'
+                <i class="material-icons">delete</i>Supprimer l'offre
             </button>
         </form>
     </div>
