@@ -18,6 +18,6 @@ module.exports = (app) => {
 
     router.delete('/:id', news.delete);
 
-    app.use('/news', router);
+    app.use('/newss', router);
 
 };
