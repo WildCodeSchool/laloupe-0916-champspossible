@@ -168,6 +168,13 @@ body {
 
 .carousel {
     background-color: white;
+    height: 200px;
+}
+
+.carousel .carousel-item {
+  height: 150px!important;
+  padding-top: 40px !important;
+
 }
 
 .imgSlider {
@@ -264,11 +271,15 @@ body {
 .card .card-content .card-title {
     line-height: 0px;
     font-size: 15px!important;
+    height: 150px!important;
 }
 
 .activator {
-    height: 150px!important;
     font-size: 15px!important;
+}
+
+.card-title {
+    height: 40px!important;
 }
 
 .typePartner {

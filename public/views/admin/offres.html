@@ -1,6 +1,78 @@
-<div class="row" id="offre">
+<div class="row offres" id="offresAdm">
+    <div class="phraseAccroche row valign-wrapper">
+        <h3 class="col s12 m6 l8">{{vm.offres.length }} - Offres</h3>
+        <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
+            <i class="material-icons">add</i>Ajouter une offre
+        </button>
+    </div>
+
+    <div class="row valign-wrapper blocTriOffre" ng-model="query">
+        <div class="col s6 m2 l2 center-align valign triOffre">Filtre :</div>
+
+         <!-- filtre entreprise, startup, etudiants, experts -->
+        <button class=" col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
+            <i class="material-icons iconeOffre" value="">language</i>
+            Tous
+        </button>
+        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Etudiant'">
+            <i class="material-icons iconeOffre" value="a">supervisor_account</i>
+            Etudiants</button>
+        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Entreprise'">
+            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
+            Entreprises</button>
+        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Startup'">
+            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
+            Startups</button>
+        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Expert'">
+            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
+            Experts</button>
+
+
+         <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>
+
+        <select ng-model="order" class="browser-default col s6 m2 l2">
+            <option value="" disabled selected>Ordre d'affichage</option>
+            <option value="titre">par Titre</option>
+            <option value="ordre">par Ordre d'affichage</option>
+
+          </select>
+    </div>
+</div>
+
+<!-- Affichage des données de la table offres -->
+<div class="panel panel-default" ng-repeat='offre in vm.offres |filter:{filtre:query}|filter:{titre:recherche}| orderBy:order' >
     <div class="divider"></div>
-    <div class="phraseAccroche center">
-        Offre
+    <br>
+
+    <br>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="col l6">
+                <form action="/api/picture" enctype="multipart/form-data" method="post">
+                  <label>{{$index}}</label>
+                    <!--ID  <input type="text" class="form-control" ng-model='offre._id'> -->
+                    <input type="text" class="form-control" placeholder="Titre" ng-model='offre.titre'>
+                    <!-- liste  () -->
+                    <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
+                        <option value="Entreprise">Entreprise</option>
+                        <option value="Startup">Startup</option>
+                        <option value="Etudiant">Etudiant</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+                    <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
+                    <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
+                    <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+                    <br>
+                    <br>
+                    <img src="{{offre.logo}}" width="300px" name="showPict" alt="Image offre" id='output'/>
+                </form>
+            </div>
+            <button ng-click='vm.update(offre, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
+                <i class="material-icons">mode_edit</i>Enregistrer l'offre'
+            </button>
+            <button ng-click='vm.delete(offre)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
+                <i class="material-icons">delete</i>Supprimer l'offre'
+            </button>
+        </form>
     </div>
 </div>
