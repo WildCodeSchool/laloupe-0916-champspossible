@@ -4,9 +4,9 @@
 </div>
 <div class="row slider">
     <ul class="slides">
-        <li class="imgSlider" ng-repeat='home in vm.homes'>
+        <!-- <li class="imgSlider" ng-repeat='home in vm.homes'>
             <img ng-src="{{home.lienImg}}">
-        </li>
+        </li> -->
         <!-- <li class="imgSlider">
             <img src="assets/img/banniere1.jpg">
         </li>
@@ -78,17 +78,17 @@
 </div>
 <div class="row">
     <div class="col s12 m12 l7">
-        <article class="lastActu" ng-repeat='news in vm.newss'>
+        <!-- <article class="lastActu" ng-repeat='news in vm.newss'>
             <h2 id="titreArticle">{{news.titre}}</h2>
             <img ng-src="{{news.image}}" id="imgArticle">
-            <p class="accueil-p">C{{news.texte}}</p>
+            <p class="accueil-p">{{news.texte}}</p>
             <p class="dateArticle">
                 Posté le
                 <time>{{news.date}}</time>
                 par
                 {{news.auteur}}.
             </p>
-        </article>
+        </article> -->
     </div>
     <!-- <div class="col s12 m12 l7">
         <article class="lastActu" ng-repeat='partner in vm.partners'>
@@ -133,14 +133,14 @@
     </div>
     <div class="col s12 m12 l6">
         <div class="video-container">
-            <iframe src="https://www.youtube.com/watch?v=jTgedBSf9KY" frameborder="1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jTgedBSf9KY" frameborder="1" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 <div class="row">
     <div class="col s12 m12 l6">
         <div class="video-container">
-            <iframe src="https://www.youtube.com/watch?v=xu9smvcnD6E" frameborder="1" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xu9smvcnD6E" frameborder="1" allowfullscreen></iframe>
         </div>
     </div>
     <div class="col s12 m12 l6">

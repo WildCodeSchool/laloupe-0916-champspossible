@@ -1,6 +1,8 @@
+/* Général*/
+
 body {
-  background-color: pink;
-  list-style-type: none;
+    background-color: pink;
+    list-style-type: none;
 }
 
 h1 {
@@ -12,36 +14,32 @@ h1 {
 }
 
 .btn-large {
-  background-color: #f44336;
+    background-color: #f44336;
 }
 
 .btn:hover {
-  background-color: #ff7400;
+    background-color: #ff7400;
 }
 
 .btn-large:hover {
-  background-color: #ff7400;
+    background-color: #ff7400;
 }
 
-#showjs {
-  display: none;
-}
 
-.justification {
-  width: 30vw;
-}
-
-.justificationabout {
-  width: 45vw;
-}
+/* Accueil */
 
 .name {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #panel {
     background: url('../../assets/img/headerpanel.jpg') !important;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .circle {
@@ -54,27 +52,36 @@ h1 {
 }
 
 .firstrow {
-    background-color : black;
-    height: 245px;
+    background-color: black;
     background-size: cover;
+    height: 245px;
 }
 
 .boxpanel {
-  font-family: "Raleway";
-  font-size: 45px;
-  font-weight: bolder;
-  color: #FFDBFA;
+    font-family: "Raleway";
+    font-size: 45px;
+    font-weight: bolder;
+    color: #FFDBFA;
 }
 
 .secondrow {
-  background-color : black;
-  height: 245px;
-  background-size: cover;
+    background-color: black;
+    background-size: cover;
+    height: 245px;
 }
 
 .boxpanel2 {
-  font-family: "Raleway";
-  font-size: 55px;
-  font-weight: bolder;
-  color: #FFDBFA;
+    font-family: "Raleway";
+    font-size: 55px;
+    font-weight: bolder;
+    color: #FFDBFA;
+}
+
+
+/* Offre */
+aside {
+  position:fixed;
+  top:10px;
+  right:25px;
+  z-index:1000;
 }
