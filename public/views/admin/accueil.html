@@ -1,1 +1,41 @@
-<ng-include src="'views/admin/sidenav.html'"></ng-include>
+<div class="row homes" id="homesAdm">
+    <div class="phraseAccroche row valign-wrapper">
+        <h3 class="col s12 m6 l8">{{vm.homes.length }} - Images carrousel</h3>
+        <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre image', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
+            <i class="material-icons">add</i>Ajouter une image
+        </button>
+    </div>
+    <select ng-model="order" class="browser-default col s6 m2 l2">
+      <option value="" disabled selected>Ordre d'affichage</option>
+      <option value="ordre">Ordre croissant</option>
+      <option value="-ordre">Ordre décroissant</option>
+    </select>
+</div>
+<!-- Affichage des données de la table homes -->
+<div class="panel panel-default" ng-repeat='home in vm.homes | orderBy:order' >
+    <div class="divider"></div>
+    <br>
+
+    <br>
+    <div class="panel-body">
+        <form class="form-inline">
+            <div class="col l6">
+                <form action="/api/picture" enctype="multipart/form-data" method="post">
+                  <label>{{$index}}</label>
+                    <input type="text" class="form-control" placeholder="Lien sur click" ng-model='home.lienClick'>
+                    <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='home.ordre'>
+                    <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+                    <br>
+                    <br>
+                    <img src="{{home.lienImg}}" width="300px" name="showPict" alt="Image home" id='output'/>
+                </form>
+            </div>
+            <button ng-click='vm.update(home, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
+                <i class="material-icons">mode_edit</i>Enregistrer l'home
+            </button>
+            <button ng-click='vm.delete(home)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
+                <i class="material-icons">delete</i>Supprimer l'home
+            </button>
+        </form>
+    </div>
+</div>
