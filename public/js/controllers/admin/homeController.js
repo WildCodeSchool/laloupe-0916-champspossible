@@ -1,27 +1,27 @@
-function offreController(offreService, $timeout) {
+function homeController(homeService, $timeout) {
 
-    this.offreService = offreService;
+    this.homeService = homeService;
 
     this.load = () => {
-        this.offreService.getAll().then((res) => {
-            this.offres = res.data;
+        this.homeService.getAll().then((res) => {
+            this.homes = res.data;
         });
     };
+
     this.load();
 
     this.create = () => {
-        console.log('toto')
-        this.offreService.create(this.offre).then(() => {
-            this.offre = '';
+        this.homeService.create(this.home).then(() => {
+            this.home = '';
             this.load();
         });
     };
 
-    this.update = (offre, index) => {
-        if (offre.ordre == 0 || (offre.ordre <= this.offres.filter(function(obj) {
+    this.update = (home, index) => {
+        if (home.ordre == 0 || (home.ordre <= this.homes.filter(function(obj) {
                 return obj.ordre != 0;
-            }).length && this.offres.filter(function(obj) {
-                return obj.ordre != 0 && obj.ordre == offre.ordre;
+            }).length && this.homes.filter(function(obj) {
+                return obj.ordre != 0 && obj.ordre == home.ordre;
             }).length === 1)) {
             var uploadfiles = document.querySelector('#uploadImage-' + index);
             var files = uploadfiles.files;
@@ -33,8 +33,9 @@ function offreController(offreService, $timeout) {
                     xhr.open("POST", url, true);
                     xhr.onload = () => {
                         var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-                        offre.logo = urlImage;
-                        this.offreService.update(offre._id, offre).then(() => {
+
+                        home.logo = urlImage;
+                        this.homeService.update(home._id, home).then(() => {
                             $timeout(() => {
                                 this.load();
                             }, 1000);
@@ -46,7 +47,7 @@ function offreController(offreService, $timeout) {
                     xhr.send(fd);
                 }
             } else {
-                this.offreService.update(offre._id, offre).then(() => {
+                this.homeService.update(home._id, home).then(() => {
                     // $timeout(() => {
                     this.load();
                     // }, 1000)
@@ -59,12 +60,12 @@ function offreController(offreService, $timeout) {
         }
     };
 
-    this.delete = (offre) => {
-        this.offreService.delete(offre._id).then(() => {
+
+    this.delete = (home) => {
+        this.homeService.delete(home._id).then(() => {
             this.load();
         });
     };
-
 
     var openFile = function(event) {
         var input = event.target;
@@ -77,4 +78,5 @@ function offreController(offreService, $timeout) {
         };
         reader.readAsDataURL(input.files[0]);
     };
+
 }
