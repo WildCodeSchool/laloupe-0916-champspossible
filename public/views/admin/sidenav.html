@@ -1,0 +1,56 @@
+<aside style='position:fixed;top:10px;right:25px;z-index:1000' ng-controller='sidebarController as vm'>
+    <div class="container" ng-show='vm.isLogged'>
+        <ul class="side-nav fixed">
+            <li>
+                <div class="userView">
+                    <a>
+                        <span class="name">Panneau d'administration</span>
+                    </a>
+                    <a>
+                        <span class="email">Que souhaitez-vous faire ?</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a href="#/">
+                    <i class="material-icons">web</i>Accueil</a>
+            </li>
+            <li>
+                <a href="#/actualite">
+                    <i class="material-icons">font_download</i>Actualité</a>
+            </li>
+            <li>
+                <a href="#/apropos">
+                    <i class="material-icons">edit_location</i>À propos</a>
+            </li>
+            <li>
+                <a href="#/boutons">
+                    <i class="material-icons">radio_button_unchecked</i>Bouton</a>
+            </li>
+            <li>
+                <a href="#/contacts">
+                    <i class="material-icons">email</i>Contact</a>
+            </li>
+            <li>
+                <a href="#/marches">
+                    <i class="material-icons">attach_money</i>Marché</a>
+            </li>
+            <li>
+                <a href="#/presse">
+                    <i class="material-icons">font_download</i>Presse</a>
+            </li>
+            <li>
+                <a href="#/utilisateurs">
+                    <i class="material-icons">face</i>Utilisateur</a>
+            </li>
+            <li>
+                <a href="#/services">
+                    <i class="material-icons">business_center</i>Service</a>
+            </li>
+            <li>
+                <a href="#/stats">
+                    <i class="material-icons">timeline</i>Statistique</a>
+            </li>
+            <li>
+                <a ng-click='vm.logout()'>
+                    <i class="material-icons">exit_to_app</i>r</a> </li> <li> <a href="../"> <i class="material-icons">keyboard_backspace</i>Retour au site</a> </li> </ul> </div> </aside>
