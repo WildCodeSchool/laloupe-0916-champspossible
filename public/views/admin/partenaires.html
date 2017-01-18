@@ -1,4 +1,5 @@
-    <!-- Zone de tri et de filtre -->
+<!-- SideNav -->
+
     <ul id="slide-out" class="side-nav">
     <li><div class="userView">
       <div class="background">
@@ -16,81 +17,118 @@
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-        
-    <div class="row partenaires" id="partenairesAdm">
-        <div class="phraseAccroche row valign-wrapper">
-            <h3 class="col s12 m6 l8">{{vm.partners.length }} - Partenaires et Habitants</h3>
-            <button ng-click='vm.create()' href="#baspage" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 " onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
-                <i class="material-icons">add</i>Ajouter un partenaire
-            </button>
-        </div>
-        <div class="row valign-wrapper blocTriOffre" ng-model="query">
-            <div class="col s6 m2 l2 center-align valign triOffre">Filtre :</div>
-            <button class=" col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
-                <i class="material-icons iconeOffre" value="">language</i>
-                Tous
-            </button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Partenaire'">
-                <i class="material-icons iconeOffre" value="a">supervisor_account</i>
-                Partenaires</button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Habitant'">
-                <i class="material-icons iconeOffre" value="b">assignment_ind</i>
-                Habitants</button>
+  <!-- Zone de tri et de filtre -->
+  <div class="row">
+      <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
 
-            <!-- <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'> -->
+          <div class="row partenaires" id="partenairesAdm">
+              <div class="phraseAccroche row valign-wrapper">
+                  <h3 class="col s12 m6 l8">{{vm.partners.length }} - Partenaires et Habitants</h3>
+              </div>
+              <div class="row valign-wrapper blocTriOffre" ng-model="query">
+                  <div class="col s6 m2 l2 center-align valign triOffre">Filtre :</div>
+                  <button class=" col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
+                      <i class="material-icons iconeOffre" value="">language</i>
+                      Tous
+                  </button>
+                  <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Partenaire'">
+                      <i class="material-icons iconeOffre" value="a">supervisor_account</i>
+                      Partenaires</button>
+                  <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Habitant'">
+                      <i class="material-icons iconeOffre" value="b">assignment_ind</i>
+                      Habitants</button>
 
-            <select ng-model="order" class="browser-default col s6 m2 l2">
-                <option value="" disabled selected>Ordre d'affichage</option>
-                <option value="nom">par Nom</option>
-                <option value="sortAccueil">par ordre</option>
-            </select>
-        </div>
-    </div>
+                  <!-- <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'> -->
+
+                  <select ng-model="order" class="browser-default col s6 m2 l2">
+                      <option value="" disabled selected>Ordre d'affichage</option>
+                      <option value="nom">par Nom</option>
+                      <option value="sortAccueil">par ordre</option>
+                  </select>
+              </div>
+          </div>
+          <div class="row">
+              <h1 class="center-align">Ajouter un Contact</h1>
+              <div class="input-field col s6 offset-s3">
+                  <i class="material-icons prefix">account_circle</i>
+                  <input id="input_text" type="text" length="40">
+                  <label for="input_text">Nom du Service</label>
+              </div>
+              <div class="input-field col s6 offset-s3">
+                  <i class="material-icons prefix">phone</i>
+                  <input id="input_text" type="text" length="30">
+                  <label for="input_text">Numéro</label>
+              </div>
+              <div class="input-field col s6 offset-s3">
+                  <i class="material-icons prefix">contact_phone</i>
+                  <input id="input_text" type="text" length="8">
+                  <label for="input_text">Numéro du Responsable</label>
+              </div>
+              <div class="input-field col s6 offset-s3">
+                  <i class="material-icons prefix">email</i>
+                  <input id="input_text" type="text" length="30">
+                  <label for="input_text">Email</label>
+              </div>
+          </div>
+          <div class="row">
+            <button ng-click='vm.create()' href="#baspage" class="waves-effect waves-light btn-large col s6 offset-s3 modal-trigger" onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
+                Ajouter un partenaire
+            </button>
+          </div>
+          <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} |filter:{nom:recherche} | orderBy:order' >
+              <div class="divider"></div>
+              <br>
+              <br>
+              <div class="panel-body">
+                  <form class="form-inline">
+                      <div class="col l6">
+                          <form action="/api/picture" enctype="multipart/form-data" method="post">
+                            <label>{{$index}}</label>
+                              <!--ID  <input type="text" class="form-control" ng-model='partner._id'> -->
+                              <input type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
+                              <!-- liste Habitants, Partenaires () -->
+                              <select class="browser-default" placeholder="Type" ng-model='partner.type'>
+                                  <option value="Habitant">Habitant</option>
+                                  <option value="Partenaire" selected>Partenaire</option>
+                              </select>
+                              <input type="text" class="form-control" placeholder="Domaine" ng-model='partner.domaine'>
+                              <textarea type="text" class="materialize-textarea" placeholder="Petite description" ng-model='partner.smallDescription'></textarea>
+                              <textarea type="text" class="materialize-textarea" placeholder="Description complète" ng-model='partner.bigDescription'></textarea>
+                              <input type="text" class="form-control" placeholder="Téléphone" ng-model='partner.tel'>
+
+                              <div class="input-field col s6 offset-s3">
+                                  <i class="material-icons prefix">email</i>
+                                  <input type="email" length="30" class="form-control" placeholder="Email" ng-model='partner.mail' data-error="wrong" data-success="right" class="validate"/>
+                                  <label for="input_text">Email</label>
+                              </div>
+
+
+                              <input type="text" class="form-control" placeholder="Site internet" ng-model='partner.site'>
+                              <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='partner.sortAccueil'>
+                              <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+                              <br>
+                              <br>
+                              <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
+                          </form>
+                      </div>
+                      <button ng-click='vm.update(partner, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
+                          <i class="material-icons">mode_edit</i>Enregistrer le partenaire
+                      </button>
+
+                      <button ng-click='vm.delete(partner)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">
+                          <i class="material-icons">delete</i>Supprimer le partenaire
+                      </button>
+
+                  </form>
+              </div>
+          </div>
+          <div id="baspage">
+          </div>
+      </form>
+  </div>
 
     <!-- Affichage des données de la table partenaires/habitants -->
-    <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} |filter:{nom:recherche} | orderBy:order' >
-        <div class="divider"></div>
-        <br>
 
-        <br>
-        <div class="panel-body">
-            <form class="form-inline">
-                <div class="col l6">
-                    <form action="/api/picture" enctype="multipart/form-data" method="post">
-                      <label>{{$index}}</label>
-                        <!--ID  <input type="text" class="form-control" ng-model='partner._id'> -->
-                        <input type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
-                        <!-- liste Habitants, Partenaires () -->
-                        <select class="browser-default" placeholder="Type" ng-model='partner.type'>
-                            <option value="Habitant">Habitant</option>
-                            <option value="Partenaire" selected>Partenaire</option>
-                        </select>
-                        <input type="text" class="form-control" placeholder="Domaine" ng-model='partner.domaine'>
-                        <textarea type="text" class="materialize-textarea" placeholder="Petite description" ng-model='partner.smallDescription'></textarea>
-                        <textarea type="text" class="materialize-textarea" placeholder="Description complète" ng-model='partner.bigDescription'></textarea>
-                        <input type="text" class="form-control" placeholder="Téléphone" ng-model='partner.tel'>
-                        <input type="email" class="form-control" placeholder="Mail" ng-model='partner.mail' data-error="wrong" data-success="right" class="validate" id="email"/>
-                        <input type="text" class="form-control" placeholder="Site internet" ng-model='partner.site'>
-                        <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='partner.sortAccueil'>
-                        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
-                        <br>
-                        <br>
-                        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
-                    </form>
-                </div>
-                <button ng-click='vm.update(partner, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire enregistré', 2500, 'rounded') ">
-                    <i class="material-icons">mode_edit</i>Enregistrer le partenaire
-                </button>
-
-                <button ng-click='vm.delete(partner)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">
-                    <i class="material-icons">delete</i>Supprimer le partenaire
-                </button>
-
-            </form>
-        </div>
-    </div>
-    <div id="baspage">
-    </div>
 <!--
 <script>
     var openFile = function(event) {
