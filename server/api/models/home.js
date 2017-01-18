@@ -3,7 +3,11 @@ import mongoose from 'mongoose';
 const homeSchema = new mongoose.Schema({
     lienImg: String,
     lienClick: String,
-    ordre: Number
+    ordre: {
+        type: Number,
+        default: 0,
+        required: true
+    },
 });
 
 let model = mongoose.model('Home', homeSchema);

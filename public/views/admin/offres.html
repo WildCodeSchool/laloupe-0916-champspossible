@@ -1,4 +1,4 @@
-<ng-include src="'../views/admin/sidenav.html'"></ng-include>
+<!-- <ng-include src="'../views/admin/sidenav.html'"></ng-include> -->
 <div class="row offres" id="offresAdm">
     <div class="phraseAccroche row valign-wrapper">
         <h3 class="col s12 m6 l8">{{vm.offres.length }} - Offres</h3>
@@ -24,7 +24,7 @@
         <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Startup'">
             <i class="material-icons iconeOffre" value="b">assignment_ind</i>
             Startups</button>
-        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Expert'">
+        <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Mentor'">
             <i class="material-icons iconeOffre" value="b">assignment_ind</i>
             Experts</button>
 
@@ -60,7 +60,7 @@
                         <option value="Entreprise">Entreprise</option>
                         <option value="Startup">Startup</option>
                         <option value="Etudiant">Etudiant</option>
-                        <option value="Expert">Expert</option>
+                        <option value="Mentor">Mentor</option>
                     </select>
                     <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
                     <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>

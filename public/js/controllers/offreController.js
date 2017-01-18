@@ -7,4 +7,6 @@ function offreController(offreService) {
             this.offres = res.data;
         });
     };
+
+    this.load()
 }
