@@ -3,7 +3,10 @@ import mongoose from 'mongoose';
 const newsSchema = new mongoose.Schema({
     titre: String,
     texte: String,
-    date: Date,
+    date: {
+        type: Date,
+        default: Date.now
+    },
     image: String,
     auteur: String
 });
@@ -13,11 +16,11 @@ let model = mongoose.model('News', newsSchema);
 export default class News {
 
     findAll(req, res) {
-        model.find({}, (err, news) => {
+        model.find({}, (err, newss) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(news);
+                res.json(newss);
             }
         });
     }
