@@ -18,6 +18,6 @@ module.exports = (app) => {
 
     router.delete('/:id', offre.delete);
 
-    app.use('/offre', Auth.hasAuthorization, router);
+    app.use('/offre', router);
 
 };

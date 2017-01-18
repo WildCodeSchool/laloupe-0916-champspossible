@@ -18,6 +18,6 @@ module.exports = (app) => {
 
     router.delete('/:id', ephemere.delete);
 
-    app.use('/ephemeres', Auth.hasAuthorization, router);
+    app.use('/ephemeres', router);
 
 };
