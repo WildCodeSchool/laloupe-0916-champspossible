@@ -4,8 +4,12 @@ const offreSchema = new mongoose.Schema({
     titre: String,
     texte: String,
     logo: String,
-    ordre: Number,
-    filtre: Array
+    ordre: {
+        type: Number,
+        default: 0,
+        required: true
+    },
+    filtre: String
 });
 
 let model = mongoose.model('Offre', offreSchema);
@@ -59,10 +63,10 @@ export default class Offre {
             ordre: req.body.ordre,
             filtre: req.body.filtre
         }, (err, offre) => {
-            if (err || !offres) {
+            if (err || !offre) {
                 res.status(500).send(err.message);
             } else {
-                res.json(offres);
+                res.json(offre);
             }
         });
     }

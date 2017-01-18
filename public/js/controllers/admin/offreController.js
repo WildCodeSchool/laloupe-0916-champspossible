@@ -1,4 +1,4 @@
-function offreController(offreService) {
+function offreController(offreService, $timeout) {
 
     this.offreService = offreService;
 
@@ -16,10 +16,47 @@ function offreController(offreService) {
         });
     };
 
-    this.update = (offre) => {
-        this.offreService.update(offre._id, offre.titre, offre.texte, offre.logo, offre.ordre, offre.filtre).then(() => {
-            this.load();
-        });
+    this.update = (offre, index) => {
+        if (offre.ordre == 0 || (offre.ordre <= this.offres.filter(function(obj) {
+                return obj.ordre != 0;
+            }).length && this.offres.filter(function(obj) {
+                return obj.ordre != 0 && obj.ordre == offre.ordre;
+            }).length === 1)) {
+            var uploadfiles = document.querySelector('#uploadImage-' + index);
+            var files = uploadfiles.files;
+            if (files.length > 0) {
+                for (var i = 0; i < files.length; i++) {
+                    var url = '/api/picture';
+                    var xhr = new XMLHttpRequest();
+                    var fd = new FormData();
+                    xhr.open("POST", url, true);
+                    xhr.onload = () => {
+                        var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
+
+                        offre.logo = urlImage;
+                        this.offreService.update(offre._id, offre).then(() => {
+                            $timeout(() => {
+                                this.load();
+                            }, 1000);
+                            // $route.reload();
+
+                        });
+                    };
+                    fd.append("upload_file", files[i]);
+                    xhr.send(fd);
+                }
+            } else {
+                this.offreService.update(offre._id, offre).then(() => {
+                    // $timeout(() => {
+                    this.load();
+                    // }, 1000)
+                    // $route.reload();
+
+                });
+            }
+        } else {
+            alert('Ordre de tri invalide');
+        }
     };
 
     this.delete = (offre) => {
@@ -27,4 +64,17 @@ function offreController(offreService) {
             this.load();
         });
     };
+
+    var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.getElementById('output');
+            var dataURL = reader.result;
+            output.src = dataURL;
+        };
+        reader.readAsDataURL(input.files[0]);
+    };
+
 }

@@ -18,13 +18,11 @@ function partnerController(partnerService, $timeout) {
     };
 
     this.update = (partner, index) => {
-        // Contrôle de l'ordre d'affichage  -
-        if (partner.sortAccueil == 0 || (partner.sortAccueil < this.partners.filter(function(obj) {
+            if (partner.sortAccueil == 0 || (partner.sortAccueil <= this.partners.filter(function(obj) {
                 return obj.sortAccueil != 0;
             }).length && this.partners.filter(function(obj) {
-                return obj.sortAccueil == partner.sortAccueil;
+                return obj.sortAccueil != 0 && obj.sortAccueil == partner.sortAccueil;
             }).length === 1)) {
-            // upload images
             var uploadfiles = document.querySelector('#uploadImage-' + index);
             var files = uploadfiles.files;
             if (files.length > 0) {
