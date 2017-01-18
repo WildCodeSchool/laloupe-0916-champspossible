@@ -4,8 +4,8 @@
 
 figure {
     color: #fff;
-    font-weight: 400;
     font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 400;
 }
 
 #supModal {
@@ -21,11 +21,11 @@ figure {
 }
 
 .grid-image {
-    position: relative;
-    margin: 0 auto;
-    padding: 1em 0 4em;
-    max-width: 1000px;
     list-style: none;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 1em 0 4em;
+    position: relative;
     text-align: center;
 }
 
@@ -33,24 +33,24 @@ figure {
 /* Common style */
 
 .grid-image figure {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    margin: 10px 1%;
-    min-width: 320px;
-    max-width: 480px;
-    max-height: 360px;
-    width: 48%;
-    text-align: center;
     cursor: pointer;
+    float: left;
+    margin: 10px 1%;
+    max-height: 360px;
+    max-width: 480px;
+    min-width: 320px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 48%;
 }
 
 .grid-image figure figcaption {
-    padding: 2em;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.25em;
     backface-visibility: hidden;
+    color: #fff;
+    font-size: 1.25em;
+    padding: 2em;
+    text-transform: uppercase;
 }
 
 .grid-image figure figcaption::before, .grid-image figure figcaption::after {
@@ -58,30 +58,27 @@ figure {
 }
 
 .grid-image figure figcaption, .grid-image figure figcaption>a {
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
 }
-
-
-/* Anchor will cover the whole item by default */
 
 
 /* For some effects it will show as a button */
 
 .grid-image figure figcaption>a {
-    z-index: 1000;
-    text-indent: 200%;
-    white-space: nowrap;
     font-size: 0;
     opacity: 0;
+    text-indent: 200%;
+    white-space: nowrap;
+    z-index: 1000;
 }
 
 .grid-image figure h2 {
-    word-spacing: -0.15em;
     font-weight: 300;
+    word-spacing: -0.15em;
 }
 
 .grid-image figure h2 span {
@@ -93,15 +90,6 @@ figure {
 }
 
 .grid-image figure p {
-    letter-spacing: 1px;
     font-size: 68.5%;
+    letter-spacing: 1px;
 }
-
-/*.card-content {
-    .divHidden {
-        visibility: hidden;
-    }
-    .divHidden:hover {
-        visibility: visible;
-    }
-}*/
