@@ -34,7 +34,7 @@ function homeController(homeService, $timeout) {
                     xhr.onload = () => {
                         var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
 
-                        home.logo = urlImage;
+                        home.lienImg = urlImage;
                         this.homeService.update(home._id, home).then(() => {
                             $timeout(() => {
                                 this.load();
@@ -59,7 +59,6 @@ function homeController(homeService, $timeout) {
             alert('Ordre de tri invalide');
         }
     };
-
 
     this.delete = (home) => {
         this.homeService.delete(home._id).then(() => {

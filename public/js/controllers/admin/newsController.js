@@ -52,6 +52,7 @@ function newsController(newsService, $timeout) {
             this.load();
         });
     };
+
     var openFile = function(event) {
         var input = event.target;
 
