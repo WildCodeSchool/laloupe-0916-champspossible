@@ -11,11 +11,6 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/accueil', {
             templateUrl: '../views/admin/accueil.html',
         })
-        .when('/campus', {
-            templateUrl: '../views/admin/campus.html',
-            controller: 'campusController',
-            controllerAs: 'vm'
-        })
         .when('/offres', {
             templateUrl: '../views/admin/offres.html',
             controller: 'offreController',
