@@ -1,33 +1,27 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
 <!-- Zone de tri et de filtre -->
-<div class="row">
-    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
-        <div class="row partenaires" id="partenairesAdm">
-            <div class="phraseAccroche row valign-wrapper">
-                <h3 class="col s12 m6 l8">{{vm.partners.length }}
-                    - Partenaires et Habitants</h3>
-            </div>
-            <div class="row valign-wrapper blocTriOffre" ng-model="query">
-                <div class="col s6 m2 l2 center-align valign triOffre">
-                    Filtre :
-                </div>
-                <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
-                    <i class="material-icons iconeOffre" value="">language</i>Tous</button>
-                <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Partenaire'">
-                    <i class="material-icons iconeOffre" value="a">supervisor_account</i>Partenaires</button>
-                <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Habitant'">
-                    <i class="material-icons iconeOffre" value="b">assignment_ind</i>Habitants</button>
-                <!--
-                <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>
-                 -->
-                <select ng-model="order" class="browser-default col s6 m2 l2">
-                    <option value="" disabled selected>Ordre d'affichage</option>
-                    <option value="nom">Par Nom</option>
-                    <option value="sortAccueil">Par Ordre</option>
-                </select>
-
-            </div>
+<div class="container">
+    <div class="row col l12">
+        <div class="phraseAccroche row">
+            <h3 class="titreAdmin center-align">Partenaires et Habitants</h3>
         </div>
+        <div class="row blocTriOffre col l12" ng-model="query">
+            <div class="col l2 center-align valign">Filtre :</div>
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query=''">
+                <i class="material-icons iconeOffre" value="">language</i>Tous</button>
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query='Partenaire'">
+                <i class="material-icons iconeOffre" value="a">supervisor_account</i>Partenaires</button>
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query='Habitant'">
+                <i class="material-icons iconeOffre" value="b">assignment_ind</i>Habitants</button>
+            <!--<input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>-->
+            <select ng-model="order" class="browser-default col l2">
+                <option value="" disabled selected>Ordre d'affichage</option>
+                <option value="nom">Par Nom</option>
+                <option value="sortAccueil">Par Ordre</option>
+            </select>
+        </div>
+    </div>
+    <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Modifiez votre Bouton', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
             <i class="material-icons">add</i>Ajouter un partenaire
         </button>
@@ -54,7 +48,6 @@
                     </div>
                     <!-- Affichage des données de la table partenaires/habitants -->
                     <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query}|filter:{nom:recherche}| orderBy:order'>
-                        <br>
                         <br>
                         <div class="panel-body">
                             <form class="form-inline" action="/api/picture" enctype="multipart/form-data" method="post">
@@ -88,7 +81,7 @@
                                     <i class="material-icons prefix">mode_edit</i>
                                     <textarea id="textarea1" type="text" class="materialize-textarea" ng-model='partner.smallDescription'></textarea>
                                     <label for="textarea1">Petite description</label>
-                                </div>
+                                </div>titreAdmin
                                 <div class="input-field col s6 offset-s3">
                                     <i class="material-icons prefix">mode_edit</i>
                                     <textarea id="textarea1" type="text" class="materialize-textarea" ng-model='partner.bigDescription'></textarea>
@@ -119,8 +112,8 @@
                                     <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
                                 </div>
                                 <div class="row">
-                                    <button ng-click='vm.update(partner, $index)' class="col s6 m4 l4 center-align valign btn triOffre modal-trigger" onclick="Materialize.toast('Partenaire enregistré', 2500, 'rounded')">Enregistrer</button>
-                                    <button ng-click='vm.delete(partner)' class="col s6 m4 l4 center-align valign btn triOffre modal-trigger" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">Supprimer</button>
+                                    <button ng-click='vm.update(partner, $index)' class="col l4 offset-l2  center-align valign btn" onclick="Materialize.toast('Partenaire enregistré', 2500, 'rounded')">Enregistrer</button>
+                                    <button ng-click='vm.delete(partner)' class="col l4 offset-l2 center-align valign btn" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">Supprimer</button>
                                 </div>
                             </form>
                         </div>
