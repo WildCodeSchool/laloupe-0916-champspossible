@@ -16,13 +16,14 @@ function ephemereController(ephemereService) {
         });
     };
 
-    this.update = (ephemere) => {
-        this.ephemereService.update(ephemere._id, ephemere.titreEphemere, ephemere.lienEphemere, ephemere.cacheEphemere).then(() => {
+    this.update = (ephemere, index) => {
+        this.ephemereService.update(ephemere._id, ephemere).then(() => {
             this.load();
         });
     };
 
     this.delete = (ephemere) => {
+        console.log (ephemere)
         this.ephemereService.delete(ephemere._id).then(() => {
             this.load();
         });
