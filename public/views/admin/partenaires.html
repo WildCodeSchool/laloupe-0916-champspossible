@@ -28,9 +28,9 @@
 
             </div>
         </div>
-        <div class="row">
-            <button ng-click='vm.create()' href="#baspage" class="waves-effect waves-light btn-large col s6 offset-s3 modal-trigger" onclick=" Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">Ajouter un partenaire</button>
-        </div>
+        <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Modifiez votre Bouton', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
+            <i class="material-icons">add</i>Ajouter un partenaire
+        </button>
         <div class="panel panel-default" ng-repeat='partner in vm.partners |filter:{type:query} |filter:{nom:recherche} | orderBy:order'>
             <div class="divider"></div>
             <br>
@@ -124,7 +124,5 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
-                    <div id="baspage"></div>
-                </form>
+                    </form>
             </div>

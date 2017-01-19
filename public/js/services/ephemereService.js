@@ -2,28 +2,24 @@ function ephemereService($http) {
 
     this.$http = $http;
 
-    this.connect = (data) => {
-        return this.$http.post('/api/login', data);
-    };
-
-    this.create = (user) => {
-        return this.$http.post('/api/users', user);
+    this.create = (data) => {
+        return this.$http.post('/api/ephemere', data);
     };
 
     this.getAll = () => {
-        return this.$http.get('/api/users');
+        return this.$http.get('/api/ephemere');
     };
 
     this.getOne = (id) => {
-        return this.$http.get('/api/users/' + id);
+        return this.$http.get('/api/ephemere/' + id);
     };
 
-    this.update = (id, user) => {
-        return this.$http.put('/api/users/' + id, user);
+    this.update = (id, data) => {
+        return this.$http.put('/api/ephemere/' + id, data);
     };
 
     this.delete = (id) => {
-        return this.$http.put('/api/users/' + id);
+        return this.$http.put('/api/ephemere/' + id);
     };
 
 }

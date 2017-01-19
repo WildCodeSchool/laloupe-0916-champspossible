@@ -11,36 +11,36 @@ let model = mongoose.model('Ephemere', ephemereSchema);
 export default class Ephemere {
 
     findAll(req, res) {
-        model.find({}, (err, homes) => {
+        model.find({}, (err, ephemeres) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(homes);
+                res.json(ephemeres);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, home) => {
-            if (err || !home) {
+        model.findById(req.params.id, (err, ephemere) => {
+            if (err || !ephemere) {
                 res.sendStatus(403);
             } else {
-                res.json(home);
+                res.json(ephemere);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                titreEphemere: req.body.lienImg,
-                lienEphemere: req.body.lienClick,
+                titreEphemere: req.body.titreEphemere,
+                lienEphemere: req.body.lienEphemere,
                 cacheEphemere: req.body.cacheEphemere
             },
-            (err, home) => {
+            (err, ephemere) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(home);
+                    res.json(ephemere);
                 }
             });
     }
@@ -49,14 +49,14 @@ export default class Ephemere {
         model.update({
             _id: req.params.id
         }, {
-            titreEphemere: req.body.lienImg,
-            lienEphemere: req.body.lienClick,
+            titreEphemere: req.body.titreEphemere,
+            lienEphemere: req.body.lienEphemere,
             cacheEphemere: req.body.cacheEphemere
-        }, (err, home) => {
-            if (err || !home) {
+        }, (err, ephemere) => {
+            if (err || !ephemere) {
                 res.status(500).send(err.message);
             } else {
-                res.json(home);
+                res.json(ephemere);
             }
         });
     }
