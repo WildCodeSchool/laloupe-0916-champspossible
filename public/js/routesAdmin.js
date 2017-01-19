@@ -2,6 +2,9 @@ const routes = ($routeProvider, $httpProvider) => {
     $routeProvider
         .when('/', {
             templateUrl: '../views/admin/main.html',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/login', {
             templateUrl: '../views/admin/login.html',
@@ -28,10 +31,9 @@ const routes = ($routeProvider, $httpProvider) => {
             controller: 'newsController',
             controllerAs: 'vm'
         })
-
         .when('/ephemere', {
             templateUrl: '../views/admin/ephemere.html',
-            controller: 'newsController',
+            controller: 'ephemereController',
             controllerAs: 'vm'
         })
         .otherwise({
