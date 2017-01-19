@@ -18,8 +18,8 @@
                 <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Habitant'">
                     <i class="material-icons iconeOffre" value="b">assignment_ind</i>Habitants</button>
                 <!--
-				<input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>
-				 -->
+                <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'>
+                 -->
                 <select ng-model="order" class="browser-default col s6 m2 l2">
                     <option value="" disabled selected>Ordre d'affichage</option>
                     <option value="nom">Par Nom</option>
@@ -41,8 +41,8 @@
                         <form action="/api/picture" enctype="multipart/form-data" method="post">
                             <label>{{$index}}</label>
                             <!--ID
-							<input type="text" class="form-control" ng-model='partner._id'>
-							 -->
+                            <input type="text" class="form-control" ng-model='partner._id'>
+                             -->
                             <select ng-model="order" class="browser-default col s6 m6 l6">
                                 <option value="" disabled selected>Ordre d'affichage</option>
                                 <option value="nom">Nom</option>
@@ -60,8 +60,8 @@
                             <form class="form-inline" action="/api/picture" enctype="multipart/form-data" method="post">
                                 <label>{{$index}}</label>
                                 <!--ID
-										<input type="text" class="form-control" ng-model='partner._id'>
-										 -->
+                                        <input type="text" class="form-control" ng-model='partner._id'>
+                                         -->
                                 <div class="input-field col s6 offset-s3">
                                     <i class="material-icons prefix">assignment_ind</i>
                                     <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.nom'>
@@ -125,4 +125,7 @@
                             </form>
                         </div>
                     </form>
+                </div>
             </div>
+        </form>
+    </div>

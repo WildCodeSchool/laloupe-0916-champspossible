@@ -25,8 +25,17 @@ h1 {
     background-color: #ff7400;
 }
 
+.titreAdmin {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px black;
+}
 
 /* SideNav Admin */
+
+#sideNavAdmin {
+    position: absolute;
+}
 
 #titrePanneau {
     color: #D9009F;
@@ -39,7 +48,7 @@ h1 {
 }
 
 .userView {
-    padding : 25% 10% 45% 10%!important;
+    padding : 25% 10% 40% 10%!important;
 }
 
 .itemSideNavAdmin {
@@ -89,4 +98,8 @@ h1 {
 }
 
 
-/* Offre */
+/* Actualités */
+
+.boutonAdminNews {
+    margin: 0 0 1% 0;
+}
