@@ -1,5 +1,7 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
 <div class="row newss" id="newssAdm">
+  <div class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
+
     <div class="phraseAccroche row valign-wrapper">
         <h3 class="col s12 m6 l8">{{vm.newss.length }}
             - Actualités</h3>
@@ -29,6 +31,8 @@
             <form class="form-inline">
                 <div class="col l6">
                     <form action="/api/picture" enctype="multipart/form-data" method="post">
+                      <div class="row">
+
                         <label>{{$index}}</label>
                         <!--ID  <input type="text" class="form-control" ng-model='news._id'> -->
                         <input type="text" class="form-control" placeholder="Titre" ng-model='news.titre'>
@@ -39,16 +43,19 @@
                         <br>
                         <img src="{{news.image}}" width="300px" name="showPict" alt="Image news" id='output'/>
                         <input type="text" class="form-control" placeholder="Auteur" ng-model='news.auteur'>
-
-                    </form>
+                      </div>
                 </div>
-                <button ng-click='vm.update(news, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
+                <div class="row">
+                <button ng-click='vm.update(news, $index)' class="col s6 m4 l4 center-align valign btn" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
                     <i class="material-icons">mode_edit</i>Enregistrer l'actualité
                 </button>
-                <button ng-click='vm.delete(news)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
+                <button ng-click='vm.delete(news)' class="col s6 m4 l4 center-align valign btn" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
                     <i class="material-icons">delete</i>Supprimer l'actualité
                 </button>
+              </form>
+              </div>
             </form>
         </div>
     </div>
+</div>
 </div>
