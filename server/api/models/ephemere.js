@@ -3,7 +3,10 @@ import mongoose from 'mongoose';
 const ephemereSchema = new mongoose.Schema({
     titreEphemere: String,
     lienEphemere: String,
-    cacheEphemere: Boolean
+    cacheEphemere: {
+        type: Boolean,
+        default: false
+    }
 });
 
 let model = mongoose.model('Ephemere', ephemereSchema);
