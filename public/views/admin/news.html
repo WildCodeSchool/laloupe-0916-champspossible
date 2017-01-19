@@ -1,18 +1,18 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
 <div class="container">
     <div class="row col l12">
-        <h3 class="center-align">Actualités</h3>
+        <h3 class="center-align titreAdmin">Actualités</h3>
         <!-- {{vm.newss.length }} -->
     </div>
     <div class="row col l12">
         <div class="col offset-l2 l5">
             <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre actualité', 2500, 'rounded')" class="col l4 center-align valign btn triOffre waves-effect">
-                <i class="material-icons">add</i>Ajouter une actualité
+                Ajouter
             </button>
         </div>
         <div class="row col l2 offset-l1" ng-model="query">
             <select ng-model="order" class="browser-default">
-                <option value=""disabled selected>-Ordre d'affichage-</option>
+                <option value="" disabled selected>-Ordre d'affichage-</option>
                 <option value="auteur">Auteur croissant</option>
                 <option value="-auteur">Auteur décroissant</option>
                 <option value="date">Date croissant</option>
@@ -22,37 +22,31 @@
             </select>
         </div>
     </div>
-    <div class="row col l12">
+    <div class="row col l12" ng-repeat='news in vm.newss |filter:{filtre:query}| orderBy:order'>
         <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
             <!-- Affichage des données de la table news -->
-            <div class="panel panel-default" ng-repeat='news in vm.newss |filter:{filtre:query}| orderBy:order'>
-                <div class="divider"></div>
-                <br>
-                <div class="panel-body">
-                    <form class="form-inline">
-                        <div>
-                            <form action="/api/picture" enctype="multipart/form-data" method="post">
-                                <!-- <label>{{$index + 1}}</label> -->
-                                <!--ID  <input type="text" class="form-control" ng-model='news._id'> -->
-                                <input type="text" class="form-control" placeholder="Veuillez saisir un titre pour l'actualité" ng-model='news.titre'>
-                                <textarea type="text" class="materialize-textarea" placeholder="Saisissez le contenu de l'actualité" ng-model='news.texte'></textarea>
-                                <input type="text" class="form-control" placeholder="Auteur de l'article" ng-model='news.auteur'>
-                                <input type="text" ng-model='news.date' class='date'>
-                                <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
-                                <br>
-                                <img src="{{news.image}}" width="300px" name="showPict" alt="Image téléchargée" id='output'/>
-                            </form>
-                        </div>
-                        <div>
-                            <button ng-click='vm.update(news, $index)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
-                                <i class="material-icons">mode_edit</i>Enregistrer
-                            </button>
-                            <button ng-click='vm.delete(news)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
-                                <i class="material-icons">delete</i>Supprimer
-                            </button>
-                        </div>
+            <div class="panel panel-default">
+                <form class="form-inline">
+                    <form action="/api/picture" enctype="multipart/form-data" method="post">
+                        <!-- <label>{{$index + 1}}</label> -->
+                        <!--ID  <input type="text" class="form-control" ng-model='news._id'> -->
+                        <input type="text" class="form-control" placeholder="Veuillez saisir un titre pour l'actualité" ng-model='news.titre'>
+                        <textarea type="text" class="materialize-textarea" placeholder="Saisissez le contenu de l'actualité" ng-model='news.texte'></textarea>
+                        <input type="text" class="form-control" placeholder="Auteur de l'article" ng-model='news.auteur'>
+                        <input type="text" ng-model='news.date' class='date'>
+                        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+                        <br>
+                        <img src="{{news.image}}" width="300px" name="showPict" alt="Image téléchargée" id='output'/>
                     </form>
-                </div>
+                    <div>
+                        <button ng-click='vm.update(news, $index)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
+                            Enregistrer
+                        </button>
+                        <button ng-click='vm.delete(news)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
+                            Supprimer
+                        </button>
+                    </div>
+                </form>
             </div>
         </form>
     </div>
