@@ -37,7 +37,6 @@
                     <div class="input-field col l6 offset-l3">
                         <i class="material-icons prefix">assignment_ind</i>
                         <input id="input_text" length="100" type="text" class="form-control" ng-model='partner.nom'>
-                        <label for="input_text">Nom</label>
                     </div>
                     <!-- liste Partenaires -->
                     <div class="col offset-l3 l6">
@@ -55,7 +54,6 @@
                     <div class="input-field col l6 offset-l3">
                         <i class="material-icons prefix">mode_edit</i>
                         <textarea id="textarea1" type="text" class="materialize-textarea" ng-model='partner.smallDescription'></textarea>
-                        <label for="textarea1">Description</label>
                     </div>
                     <!-- <div class="input-field col s6 offset-s3">
                                     <i class="material-icons prefix">mode_edit</i>
@@ -75,13 +73,11 @@
                     <div class="input-field col l6 offset-l3">
                         <i class="material-icons prefix">airplay</i>
                         <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.site'>
-                        <label for="input_text">Site Internet</label>
                     </div>
 
                     <div class="input-field col l6 offset-l3">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.sortAccueil'>
-                        <label for="input_text">Ordre</label>
                     </div>
                     <div class="input-field col l6 offset-l3">
                         <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>
