@@ -1,10 +1,17 @@
-function homeController(partnerService, newsService, homeService, $timeout) {
+function homeController(partnerService, newsService, homeService, offreService, $timeout, $location) {
 
     this.partnerService = partnerService;
     this.newsService = newsService;
     this.homeService = homeService;
-    this.greaterThan = function(prop, val) {
+    this.offreService = offreService;
+    this.$location = $location;
 
+
+    this.offreFilter = (query) => {
+        $location.path("/offres/" + query);
+    };
+
+    this.greaterThan = function(prop, val) {
         return function(item) {
             return item[prop] > val;
         };

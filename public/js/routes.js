@@ -8,11 +8,19 @@ const routes = ($routeProvider) => {
         .when('/campus', {
             templateUrl: 'views/campus.html',
         })
+
         .when('/offres', {
             templateUrl: 'views/offres.html',
             controller: 'offreController',
             controllerAs: 'vm',
         })
+
+        .when('/offres/:query', {
+            templateUrl: 'views/offres.html',
+            controller: 'offreController',
+            controllerAs: 'vm',
+        })
+
         .when('/partenaires', {
             templateUrl: 'views/partenaires.html',
             controller: 'partnerController',
