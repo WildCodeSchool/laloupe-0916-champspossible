@@ -17,24 +17,22 @@ function homeController(partnerService, newsService, homeService, $timeout) {
 
         this.homeService.getAll().then((res) => {
             this.homes = res.data;
-        });
-
-        this.newsService.getAll().then((res) => {
-            this.newss = res.data;
-
             $timeout(() => {
+                function autoplay() {
+                    $('.carousel').carousel('next');
+                    setTimeout(autoplay, 4500);
+                }
                 $('.carousel').carousel({
                     dist: 0,
                     shift: 0,
                     padding: 120,
                 });
                 autoplay();
+            }, 0);
+        });
 
-                function autoplay() {
-                    $('.carousel').carousel('next');
-                    setTimeout(autoplay, 4500);
-                }
-            });
+        this.newsService.getAll().then((res) => {
+            this.newss = res.data;
         });
     };
 

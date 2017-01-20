@@ -7,8 +7,6 @@ const routes = ($routeProvider) => {
         })
         .when('/campus', {
             templateUrl: 'views/campus.html',
-            controller: 'campusController',
-            controllerAs: 'vm'
         })
         .when('/offres', {
             templateUrl: 'views/offres.html',
