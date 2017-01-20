@@ -1,11 +1,12 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
-<div class="row offres" id="offresAdm">
+<div class="row offres col l6 z-depth-6 card-panel" id="offresAdm">
     <div class="phraseAccroche row valign-wrapper">
         <h3 class="col s12 m6 l8">{{vm.offres.length }} - Offres</h3>
         <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
             <i class="material-icons">add</i>Ajouter une offre
         </button>
     </div>
+<div class="col l12">
 
     <div class="row valign-wrapper blocTriOffre" ng-model="query">
         <div class="col s6 m2 l2 center-align valign triOffre">Filtre :</div>
@@ -78,4 +79,5 @@
             </button>
         </form>
     </div>
+</div>
 </div>
