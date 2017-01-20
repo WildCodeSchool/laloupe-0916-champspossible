@@ -19,7 +19,7 @@ function ephemereService($http) {
     };
 
     this.delete = (id) => {
-        return this.$http.put('/api/ephemere/' + id);
+        return this.$http.delete('/api/ephemere/' + id);
     };
 
 }
