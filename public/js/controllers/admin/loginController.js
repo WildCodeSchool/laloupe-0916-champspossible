@@ -23,10 +23,10 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
             this.$rootScope.$emit('loginStatusChanged', false);
             this.loginMessage = {};
             this.loginMessage.type = "error";
-            this.loginMessage.title = "Sign in error";
-            this.loginMessage.message = "Error login or password";
+            this.loginMessage.title = "Erreur de connexion.";
+            this.loginMessage.message = "Mot de passe incorrect.";
         });
-    }
+    };
 
     this.createAccount = () => {
         this.userService.create({
@@ -39,8 +39,8 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
             this.$rootScope.$emit('loginStatusChanged', true);
             this.loginMessage = {};
             this.loginMessage.type = "success";
-            this.loginMessage.title = "Account created !";
-            this.loginMessage.message = "Redirecting...";
+            this.loginMessage.title = "Vous avez créé un compte !";
+            this.loginMessage.message = "Redirection...";
             this.$timeout(() => {
                 this.loginMessage = null;
                 this.$location.path('/');
@@ -50,9 +50,8 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
             this.$rootScope.$emit('loginStatusChanged', false);
             this.loginMessage = {};
             this.loginMessage.type = "error";
-            this.loginMessage.title = "Sign up error";
+            this.loginMessage.title = "Vous n'avez pas correctement rempli les champs.";
             this.loginMessage.message = res.data;
         });
-    }
-
+    };
 }
