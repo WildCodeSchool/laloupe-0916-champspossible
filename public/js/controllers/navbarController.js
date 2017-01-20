@@ -25,7 +25,7 @@ function navbarController(sessionFactory, $rootScope, $window, $location, epheme
             this.ephemeres = res.data;
         });
     }
-    
+
     this.load();
 
 }
