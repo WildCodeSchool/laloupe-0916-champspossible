@@ -1,46 +1,47 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
-<div class="row offres col l6 z-depth-6 card-panel" id="offresAdm">
-    <div class="phraseAccroche row valign-wrapper">
-        <h3 class="col s12 m6 l8">{{vm.offres.length }} - Offres</h3>
-        <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
-            <i class="material-icons">add</i>Ajouter une offre
-        </button>
+<div class="container">
+    <div class="row col l12">
+        <h3 class="center-align titreAdmin">Offres</h3>
     </div>
-    <div class="col l12">
 
-        <div class="row valign-wrapper blocTriOffre" ng-model="query">
-            <div class="col s6 m2 l2 center-align valign triOffre">Filtre :</div>
 
+
+    <div class="row">
+        <div class="col l12">
+            <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
+        Ajouter
+          </button>
+        </div>
+
+        <div class="col l12" ng-model="query">
             <!-- filtre entreprise, startup, etudiants, experts -->
-            <button class=" col s6 m2 l2 center-align valign btn triOffre" ng-click="query=''">
+            <button class="center-align valign btn triOffre" ng-click="query=''">
             <i class="material-icons iconeOffre" value="">language</i>
             Tous
-        </button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Etudiant'">
+            </button>
+            <button class="center-align valign btn triOffre" ng-click="query='Etudiant'">
             <i class="material-icons iconeOffre" value="a">supervisor_account</i>
             Etudiants</button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Entreprise'">
+            <button class="center-align valign btn triOffre" ng-click="query='Entreprise'">
             <i class="material-icons iconeOffre" value="b">assignment_ind</i>
             Entreprises</button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Startup'">
+            <button class="center-align valign btn triOffre" ng-click="query='Startup'">
             <i class="material-icons iconeOffre" value="b">assignment_ind</i>
             Startups</button>
-            <button class="col s6 m2 l2 center-align valign btn triOffre" ng-click="query='Mentor'">
+            <button class="center-align valign btn triOffre" ng-click="query='Mentor'">
             <i class="material-icons iconeOffre" value="b">assignment_ind</i>
             Experts</button>
 
-
-            <!-- <input type="text" class=" col s6 m2 l2" placeholder="Recherche" ng-model='recherche'> -->
-
-            <select ng-model="order" class="browser-default col s6 m2 l2">
-            <option value="" disabled selected>Ordre d'affichage</option>
-            <option value="titre">Titre croissant</option>
-            <option value="-titre">Titre décroissant</option>
-            <option value="ordre">Ordre croissant</option>
-            <option value="-ordre">Ordre décroissant</option>
-
-          </select>
+            <!-- Tri -->
+            <select ng-model="order" class="browser-default">
+                <option value="" disabled selected>Ordre d'affichage</option>
+                <option value="titre">Titre croissant</option>
+                <option value="-titre">Titre décroissant</option>
+                <option value="ordre">Ordre croissant</option>
+                <option value="-ordre">Ordre décroissant</option>
+            </select>
         </div>
+
     </div>
 
     <!-- Affichage des données de la table offres -->
@@ -51,7 +52,7 @@
         <br>
         <div class="panel-body">
             <form class="form-inline">
-                <div class="col l6">
+                <div class="col l12">
                     <form action="/api/picture" enctype="multipart/form-data" method="post">
                         <label>{{$index}}</label>
                         <!--ID  <input type="text" class="form-control" ng-model='offre._id'> -->

@@ -28,6 +28,15 @@ function loginController(userService, sessionFactory, $timeout, $location, $root
         });
     };
 
+    this.logout = () => {
+        this.sessionFactory.isLogged = false;
+        this.sessionFactory.user = {};
+        this.sessionFactory.token = null;
+        this.$rootScope.$emit('loginStatusChanged', false);
+        this.isLogged = false;
+        this.$location.path('/login');
+    };
+
     this.createAccount = () => {
         this.userService.create({
             email: this.email,

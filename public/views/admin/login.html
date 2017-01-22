@@ -1,32 +1,35 @@
 <div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
-        <div class='text-center'>
-            <h1>Todo List</h1>
-            <h2>Sign in to your account</h2>
-        </div>
-        <form class="form-horizontal" name="formConnect">
-            <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" id="email" placeholder="Email" ng-model='vm.email' ng-required='true'>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="password" placeholder="Password" ng-model='vm.password' ng-required='true'>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="btn btn-primary pull-right">Sign in</button>
-                    <button ng-click='vm.createAccount()' ng-disabled="formConnect.$invalid" class="btn btn-link pull-right">Sign up</button>
-                </div>
-            </div>
-        </form>
-        <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
-            <h4><span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
-            <p>{{vm.loginMessage.message}}</p>
+    <div class="col l12">
+        <div class='center'>
+          : <h1>Campus Les Champs du Possible</h1>
+            <h2>Identification</h2>
         </div>
     </div>
+    <div class="col l6 m8 s12 offset-l3 offset-m2 input-field">
+        <i class="material-icons prefix">email</i>
+        <input type="email" name="email" data-error="wrong" data-success="right" class="validate" id="email" ng-model='vm.email' ng-required='true'/>
+        <label for="email" class="validate">Email :</label>
+    </div>
+    <div class="col l6 m8 s12 offset-l3 offset-m2 input-field">
+        <i class="material-icons prefix">https</i>
+        <input ng-keyup="$event.keyCode == 13 && vm.login() "type="password" name="pass" data-error="wrong" data-success="right" class="validate" id="password" ng-model='vm.password' ng-required='true'/>
+        <label for="tel" class="validate">Mot de passe :</label>
+    </div>
+    <div class="col l6 m8 s12 offset-l3 offset-m2 input-field input-field">
+        <div ng-show="(vm.loginMessage)" class="alert" ng-class="{'alert-danger': vm.loginMessage.type == 'error', 'alert-success': vm.loginMessage.type == 'success', 'alert-info': vm.loginMessage.type == 'info'}">
+            <h4>
+                <span class="glyphicon glyphicon-exclamation-sign pull-left"></span>&nbsp;{{vm.loginMessage.title}}</h4>
+            <p>{{vm.loginMessage.message}}</p>
+        </div>
+        <button id="btnConnectLog" ng-click='vm.login()' ng-disabled="formConnect.$invalid" class="waves-effect amber lighten-4 btn black modal-trigger right">Connexion</button>
+            </div>
+        <div class="col l12 m12 s12">
+          <p style="text-align: center">
+            <a href="/#/">Retour sur le site</a>
+          </p>
+        </div>
+
+<!--
+        <button ng-click='vm.createAccount()' ng-disabled="formConnect.$invalid" class="waves-effect amber lighten-4 btn black modal-trigger">S'enregistrer</button>
+-->
 </div>

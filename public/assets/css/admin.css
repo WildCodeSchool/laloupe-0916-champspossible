@@ -10,11 +10,7 @@ h1 {
 }
 
 .btn {
-    background-color: #f44336;
-}
-
-.btn-large {
-    background-color: #f44336;
+    background-color: grey;
 }
 
 .btn:hover {
@@ -30,6 +26,7 @@ h1 {
     font-size: 50px;
     text-shadow: 1px 1px black;
 }
+
 
 /* SideNav Admin */
 
@@ -48,7 +45,7 @@ h1 {
 }
 
 .userView {
-    padding : 25% 10% 40% 10%!important;
+    padding: 5% 0% 0% 0%!important;
 }
 
 .itemSideNavAdmin {
@@ -100,6 +97,21 @@ h1 {
 
 /* Actualités */
 
-.boutonAdminNews {
-    margin: 0 0 1% 0;
+.boutonAdmin {
+    /*margin: 0 0 1% 0;*/
+    height: 40px;
+    background-color: grey;
+    width: 250px!important;
+}
+
+.boutonAdd {
+    background-color: blue;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.browser-default {
+    background-color: grey;
+    height: 40px;
+    width: 250px!important;
 }
