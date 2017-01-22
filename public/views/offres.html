@@ -5,7 +5,7 @@
         <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.transfert(''); vm.OpenFilter(filter)">            <i class="material-icons left iconeTripartners">language</i>Tous</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='startupt' ; vm.transfert('Startup'); vm.OpenFilter(filter)">
+        <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='startup' ; vm.transfert('Startup'); vm.OpenFilter(filter)">
             <i class="material-icons left iconeTripartners">flight_takeoff</i>Startup</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
@@ -22,7 +22,7 @@
     </div>
 </div>
 
-<div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter:{filtre: query} | orderBy:ordre'>
+<div class="row valign-wrapper" ng-repeat='offre in vm.offres | orderBy:ordre'>
     <div class="col s3 m3 l3 center-align valign"><img ng-src="{{offre.logo}}" class="circle imgOffre"/></div>
     <div class="col s9 m9 l9 center-align valign">
         <h2 class="titreOffre">{{offre.titre}}</h2>

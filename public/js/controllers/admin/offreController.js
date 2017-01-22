@@ -10,8 +10,7 @@ function offreController(offreService, $timeout) {
     this.load();
 
     this.create = () => {
-        console.log('toto')
-        this.offreService.create(this.offre).then(() => {
+            this.offreService.create(this.offre).then(() => {
             this.offre = '';
             this.load();
         });
