@@ -1,86 +1,67 @@
 <ng-include src="'../views/admin/sidenav.html'"></ng-include>
+
 <div class="container">
+
+    <!-- Titre -->
     <div class="row col l12">
         <h3 class="center-align titreAdmin">Offres</h3>
     </div>
 
-
-
+    <!-- Boutons ajout, tri, recherches -->
     <div class="row">
-        <div class="col l12">
-            <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')" class=" waves-effect amber lighten-4 black modal-trigger col s12 m6 l4 ">
-        Ajouter
-          </button>
-        </div>
+        <!-- Ajout -->
+        <button class="boutonAdmin boutonAdd" ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')">
+              Ajouter
+        </button>
 
-        <div class="col l12" ng-model="query">
-            <!-- filtre entreprise, startup, etudiants, experts -->
-            <button class="center-align valign btn triOffre" ng-click="query=''">
-            <i class="material-icons iconeOffre" value="">language</i>
-            Tous
-            </button>
-            <button class="center-align valign btn triOffre" ng-click="query='Etudiant'">
-            <i class="material-icons iconeOffre" value="a">supervisor_account</i>
-            Etudiants</button>
-            <button class="center-align valign btn triOffre" ng-click="query='Entreprise'">
-            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
-            Entreprises</button>
-            <button class="center-align valign btn triOffre" ng-click="query='Startup'">
-            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
-            Startups</button>
-            <button class="center-align valign btn triOffre" ng-click="query='Mentor'">
-            <i class="material-icons iconeOffre" value="b">assignment_ind</i>
-            Experts</button>
+        <!-- filtre entreprise, startup, etudiants, experts -->
+        <select ng-model="query" class="browser-default col s2 m2 l2">
+                <option value="" disabled selected>Selection type</option>
+                <option value="">Tous</option>
+                <option value="Entreprise">Entreprise</option>
+                <option value="Etudiant">Etudiant</option>
+                <option value="Expert">Expert</option>
+                <option value="Startup">Startup</option>
+            </select>
 
-            <!-- Tri -->
-            <select ng-model="order" class="browser-default">
+        <!-- Tri -->
+        <select ng-model="order" class="browser-default col s2 m2 l2">
                 <option value="" disabled selected>Ordre d'affichage</option>
                 <option value="titre">Titre croissant</option>
                 <option value="-titre">Titre décroissant</option>
                 <option value="ordre">Ordre croissant</option>
                 <option value="-ordre">Ordre décroissant</option>
             </select>
-        </div>
-
     </div>
 
     <!-- Affichage des données de la table offres -->
-    <div class="panel panel-default" ng-repeat='offre in vm.offres |filter:{filtre:query}| orderBy:order'>
-        <div class="divider"></div>
-        <br>
-
-        <br>
-        <div class="panel-body">
-            <form class="form-inline">
-                <div class="col l12">
-                    <form action="/api/picture" enctype="multipart/form-data" method="post">
-                        <label>{{$index}}</label>
-                        <!--ID  <input type="text" class="form-control" ng-model='offre._id'> -->
-                        <input type="text" class="form-control" placeholder="Titre" ng-model='offre.titre'>
-                        <!-- liste  () -->
-                        <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
+    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres |filter:{filtre:query}| orderBy:order'>
+        <input type="text" class="form-control" placeholder="Titre" ng-model='offre.titre'>
+        <!-- liste des types - entreprise, startup, etudiants, experts -->
+        <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
                         <option value="Entreprise">Entreprise</option>
                         <option value="Startup">Startup</option>
                         <option value="Etudiant">Etudiant</option>
                         <option value="Mentor">Mentor</option>
                     </select>
-                        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
-                        <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
-                        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
-                        <br>
-                        <br>
-                        <img src="{{offre.logo}}" width="300px" name="showPict" alt="Image offre" id='output' />
-                    </form>
-                </div>
-                <button ng-click='vm.update(offre, $index)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
-                <i class="material-icons">mode_edit</i>Enregistrer l'offre
+        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
+        <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
+        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+        <br>
+        <img src="{{offre.logo}}" width="300px" name="showPict" alt="Image offre" id='output' />
+
+        <!-- Boutons Enregistrer Supprimer-->
+        <div class="row">
+            <button ng-click='vm.update(offre, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité enregistrée', 2500, 'rounded') ">
+              Enregistrer
             </button>
-                <button ng-click='vm.delete(offre)' class="waves-effect amber lighten-4 black modal-trigger" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
-                <i class="material-icons">delete</i>Supprimer l'offre
-            </button>
-            </form>
+            <button ng-click='vm.delete(offre)' class="col col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité supprimée', 2500, 'rounded')">
+              Supprimer
+          </button>
         </div>
     </div>
+
+    <!-- script visualisation image avant enregistrement -->
     <script type="text/javascript">
         var openFile = function(event) {
             var input = event.target;
