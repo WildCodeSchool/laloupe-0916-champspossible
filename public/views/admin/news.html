@@ -22,7 +22,7 @@
             </select>
         </div>
     </div>
-    <div class="row col l12" ng-repeat='news in vm.newss |filter:{filtre:query}| orderBy:order'>
+    <div class="row col l12" ng-repeat='news in vm.newss | orderBy:order'>
         <form class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
             <!-- Affichage des données de la table news -->
             <div class="panel panel-default">
@@ -33,16 +33,16 @@
                         <input type="text" class="form-control" placeholder="Veuillez saisir un titre pour l'actualité" ng-model='news.titre'>
                         <textarea type="text" class="materialize-textarea" placeholder="Saisissez le contenu de l'actualité" ng-model='news.texte'></textarea>
                         <input type="text" class="form-control" placeholder="Auteur de l'article" ng-model='news.auteur'>
-                        <input type="text" ng-model='news.date' class='date'>
+                        <input  type="date" name="inputdate" ng-bind="new.date | date:'MM/dd/yyyy'"    />
                         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
                         <br>
                         <img src="{{news.image}}" width="300px" name="showPict" alt="Image téléchargée" id='output'/>
                     </form>
                     <div>
-                        <button ng-click='vm.update(news, $index)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
+                        <button ng-click='vm.update(news, $index)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité enregistrée', 2500, 'rounded') ">
                             Enregistrer
                         </button>
-                        <button ng-click='vm.delete(news)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
+                        <button ng-click='vm.delete(news)' class="col l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité supprimée', 2500, 'rounded')">
                             Supprimer
                         </button>
                     </div>
@@ -50,4 +50,17 @@
             </div>
         </form>
     </div>
+    <script type="text/javascript">
+        var openFile = function(event) {
+            var input = event.target;
+
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('output');
+                var dataURL = reader.result;
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+    </script>
 </div>

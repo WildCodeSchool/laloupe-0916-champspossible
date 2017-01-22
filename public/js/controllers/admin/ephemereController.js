@@ -23,7 +23,6 @@ function ephemereController(ephemereService) {
     };
 
     this.delete = (ephemere) => {
-        console.log (ephemere)
         this.ephemereService.delete(ephemere._id).then(() => {
             this.load();
         });

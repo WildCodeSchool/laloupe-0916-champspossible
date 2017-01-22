@@ -67,11 +67,10 @@ function partnerController(partnerService, $timeout) {
         });
     };
 
-    var openFile = function(event) {
-        var input = event.target;
-
+    this.openFile = () => {
+        // var input = event.target;
         var reader = new FileReader();
-        reader.onload = function() {
+        reader.onload = function(event) {
             var output = document.getElementById('output');
             var dataURL = reader.result;
             output.src = dataURL;

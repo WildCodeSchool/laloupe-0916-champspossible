@@ -52,17 +52,4 @@ function newsController(newsService, $timeout) {
             this.load();
         });
     };
-
-    var openFile = function(event) {
-        var input = event.target;
-
-        var reader = new FileReader();
-        reader.onload = function() {
-            var output = document.getElementById('output');
-            var dataURL = reader.result;
-            output.src = dataURL;
-        };
-        reader.readAsDataURL(input.files[0]);
-    };
-
 }

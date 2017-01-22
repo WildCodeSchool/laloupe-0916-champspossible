@@ -1,14 +1,12 @@
-function homeController(partnerService, newsService, homeService, offreService, $timeout, $location) {
+function homeController(partnerService, newsService, homeService, offreService, $timeout) {
 
     this.partnerService = partnerService;
     this.newsService = newsService;
     this.homeService = homeService;
     this.offreService = offreService;
-    this.$location = $location;
 
-
-    this.offreFilter = (query) => {
-        $location.path("/offres/" + query);
+    this.transfert = (filtre) => {
+        localStorage.setItem("filtre", filtre)
     };
 
     this.greaterThan = function(prop, val) {

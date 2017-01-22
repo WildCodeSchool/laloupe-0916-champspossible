@@ -97,6 +97,11 @@ body {
     padding: 1% 1% 1% 1%;
 }
 
+.titreActu {
+    font-size: 38px;
+    font-weight: bold;
+}
+
 .boutonSM {
     height: 50px;
     width: 50px;
@@ -105,7 +110,23 @@ body {
 #lastActu {
     margin: 1% 0% 1% 1%;
 }
+/*Actualités -Social*/
 
+#actu {
+    background: white;
+    border: 2px inset #a1a1a1;
+    border-left: 0px;
+    border-right: 0px;
+    height: :600px!important;
+    margin-top: 35px;
+    max-height: 600px;
+    overflow-y: auto!important;
+    padding: 20px;
+}
+
+.socialLogo{
+  margin-top: 15px;
+}
 .accueil-p {
     font-size: 18px;
     line-height: 150%;
@@ -123,7 +144,7 @@ body {
 #imgArticle {
     float: left;
     height: 250px;
-    margin: 0% 2% 1% 0%;
+    margin: 3% 2% 1% 0%;
     width: 250px;
 }
 
@@ -172,9 +193,8 @@ body {
 }
 
 .carousel .carousel-item {
-  height: 150px!important;
-  padding-top: 40px !important;
-
+    height: 150px!important;
+    padding-top: 40px !important;
 }
 
 .imgSlider {
@@ -211,6 +231,10 @@ body {
 
 
 /* Notre offre */
+
+#filtreOffre {
+    color: white;
+}
 
 .blocTri {
     background-color: black;

@@ -15,11 +15,11 @@ const routes = ($routeProvider) => {
             controllerAs: 'vm',
         })
 
-        .when('/offres/:query', {
-            templateUrl: 'views/offres.html',
-            controller: 'offreController',
-            controllerAs: 'vm',
-        })
+        // .when('/offres/:query', {
+        //     templateUrl: 'views/offres.html',
+        //     controller: 'offreController',
+        //     controllerAs: 'vm',
+        // })
 
         .when('/partenaires', {
             templateUrl: 'views/partenaires.html',
