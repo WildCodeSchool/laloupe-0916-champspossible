@@ -1,7 +1,7 @@
 /* Général*/
 
 body {
-    background-color: pink;
+    background-color: #ffe0b2;
     list-style-type: none;
 }
 
@@ -12,8 +12,9 @@ h1 {
 .btn {
     background-color: grey;
 }
+
 #sidenav-overlay {
-  display: none!important;
+    display: none!important;
 }
 
 .btn:hover {
@@ -27,6 +28,17 @@ h1 {
 .titreAdmin {
     color: white;
     font-size: 50px;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+}
+
+
+/* Login */
+
+#titreLogin {
+    color: grey;
+    font-size: 50px;
+    font-weight: bold;
     text-shadow: 1px 1px black;
 }
 
@@ -78,7 +90,7 @@ h1 {
 }
 
 .boxpanel {
-    font-family: " class="userView" class="userView" class="userView"";
+    font-family: "Raleway";
     font-size: 45px;
     font-weight: bolder;
     color: #FFDBFA;
@@ -101,14 +113,14 @@ h1 {
 /* Actualités */
 
 .boutonAdmin {
-    /*margin: 0 0 1% 0;*/
-    height: 40px;
-    background-color: grey;
+    color: white;
+    height: 35px;
     width: 250px!important;
 }
 
 .boutonAdd {
-    background-color: blue;
+    background-color: red;
+    color: white;
     margin-right: 20px;
     margin-left: 20px;
 }

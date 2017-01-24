@@ -6,21 +6,21 @@
 </div>
 
 <div class="row">
-    <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Modifiez votre Bouton', 2500, 'rounded')" class="col offset-l2 l3 center-align btn">
-        Ajouter un bouton ephemere</button>
+    <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Modifiez votre Bouton', 2500, 'rounded')" class="col offset-l2 l center-align btn red">
+        Ajouter</button>
 </div>
 
-<div class="row">
+<div class="row" ng-model="order" ng-repeat='ephemere in vm.ephemeres |orderBy:order'>
     <div class="col offset-l2 l8 offset-l2 z-depth-6 card-panel">
         <!-- Affichage des données de la table ephemeres -->
-        <div class="panel panel-default" ng-model="order" ng-repeat='ephemere in vm.ephemeres |orderBy:order'>
+        <div class="panel panel-default" >
             <div class="panel-body">
                 <form class="form-inline">
                     <div class="row">
                         <div class="col l12">
                             <form action="/api/picture" enctype="multipart/form-data" method="post">
-                                <input type="text" class="form-control" placeholder="Titre" ng-model='ephemere.titreEphemere'>
-                                <input type="text" class="form-control" placeholder="Lien sur click" ng-model='ephemere.lienEphemere'>
+                                <input type="text" class="form-control" placeholder="Intitulé du bouton" ng-model='ephemere.titreEphemere'>
+                                <input type="text" class="form-control" placeholder="Lien" ng-model='ephemere.lienEphemere'>
                                 <div class="switch">
                                     <label>
                                         Off
@@ -32,10 +32,10 @@
                             </form>
                         </div>
                         <div class="row">
-                            <button ng-click='vm.update(ephemere, $index)' class="col offset-l2 l3 center-align valign btn" onclick=" Materialize.toast('Nouvelle enregistrée', 2500, 'rounded') ">
-                                Enregistrer le bouton</button>
-                            <button ng-click='vm.delete(ephemere)' class="col l3 offset-l2 center-align valign btn" onclick=" Materialize.toast('Nouvelle supprimée', 2500, 'rounded')">
-                                Supprimer le bouton</button>
+                            <button ng-click='vm.update(ephemere, $index)' class="col offset-l2 l3 center-align valign btn blue" onclick=" Materialize.toast('Bouton enregistré', 2500, 'rounded') ">
+                                Enregistrer</button>
+                            <button ng-click='vm.delete(ephemere)' class="col l3 offset-l2 center-align valign btn blue" onclick=" Materialize.toast('Bouton supprimé', 2500, 'rounded')">
+                                Supprimer</button>
                         </div>
                     </div>
                 </form>
