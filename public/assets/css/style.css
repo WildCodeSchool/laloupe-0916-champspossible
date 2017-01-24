@@ -13,7 +13,9 @@ body {
 .navbar-fixed {
     width: 70vw;
 }
-
+#sidenav-overlay {
+  display: none!important;
+}
 #logoCDP {
     height: 190px;
     left: -35px;

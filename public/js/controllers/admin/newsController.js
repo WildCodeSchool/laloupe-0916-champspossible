@@ -5,14 +5,17 @@ function newsController(newsService, $timeout) {
     this.load = () => {
         this.newsService.getAll().then((res) => {
             this.newss = res.data;
+            this.newss.map((n)=> {
+              n.date = new Date(n.date);
+              return n;
+            })
         });
     };
 
     this.load();
 
     this.create = () => {
-        this.newsService.create(this.news).then(() => {
-            this.news = '';
+        this.newsService.create({}).then(() => {
             this.load();
         });
     };

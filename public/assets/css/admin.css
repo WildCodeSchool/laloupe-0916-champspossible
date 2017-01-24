@@ -12,6 +12,9 @@ h1 {
 .btn {
     background-color: grey;
 }
+#sidenav-overlay {
+  display: none!important;
+}
 
 .btn:hover {
     background-color: #ff7400;

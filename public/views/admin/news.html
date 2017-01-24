@@ -28,7 +28,7 @@
         <input type="text" class="form-control" placeholder="Veuillez saisir un titre pour l'actualité" ng-model='news.titre'>
         <textarea type="text" class="materialize-textarea" placeholder="Saisissez le contenu de l'actualité" ng-model='news.texte'></textarea>
         <input type="text" class="form-control" placeholder="Auteur de l'article" ng-model='news.auteur'>
-        <input type="date" class="date-default" name="inputdate" ng-model="news.date" />
+        <input type="date" placeholder='DD/MM/YYYY' class="date-default" name="inputdate" ng-model="news.date" />
         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
         <br>
         <img src="{{news.image}}" width="300px" name="showPict" alt="Image téléchargée" id='output' />
