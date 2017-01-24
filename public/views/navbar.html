@@ -6,16 +6,16 @@
 
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="#accueil" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Accueil</a>
+                    <a href="#!accueil" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Accueil</a>
                 </li>
                 <li>
-                    <a href="#campus" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Le Campus</a>
+                    <a href="#!campus" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Le Campus</a>
                 </li>
                 <li>
-                    <a href="#offres" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Notre offre</a>
+                    <a href="#!offres" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Notre offre</a>
                 </li>
                 <li>
-                    <a href="#partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
+                    <a href="#!partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
                 </li>
                 <li>
                 <div ng-repeat = "ephemere in vm.ephemeres">
@@ -28,16 +28,16 @@
             </ul>
             <ul class="side-nav" id="mobile">
                 <li>
-                    <a href="/#/accueil" class="rubriqueNav">Accueil</a>
+                    <a href="#!/accueil" class="rubriqueNav">Accueil</a>
                 </li>
                 <li>
-                    <a href="/#/campus" class="rubriqueNav">Le Campus</a>
+                    <a href="#!/campus" class="rubriqueNav">Le Campus</a>
                 </li>
                 <li>
-                    <a href="/#/offres" class="rubriqueNav">Notre offre</a>
+                    <a href="#!/offres" class="rubriqueNav">Notre offre</a>
                 </li>
                 <li>
-                    <a href="/#/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
+                    <a href="#!/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
                 </li>
                 <div ng-repeat = "ephemere in vm.ephemeres">
                     <a href='{{ephemere.lienEphemere}}'  class="rubriqueNav"   ng-if="ephemere.cacheEphemere!==false" >{{ephemere.titreEphemere}}</a>
