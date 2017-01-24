@@ -45,7 +45,8 @@ function homeController(homeService, $timeout) {
                     };
                     fd.append("upload_file", files[i]);
                     xhr.send(fd);
-                }
+                }                        this.offreService.update(offre._id, offre).then(() => {
+
             } else {
                 this.homeService.update(home._id, home).then(() => {
                     // $timeout(() => {
