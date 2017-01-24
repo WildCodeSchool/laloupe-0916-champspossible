@@ -1,28 +1,26 @@
 <div class="navbar-fixed">
     <nav class="navbar navbar-inverse black" role="navigation" ng-controller='navbarController as vm'>
         <div class="nav-wrapper">
-            <a class="navbar hide-on-med-and-down" href="#/"><img class="responsive-img" src="assets/img/logo.png" id="logoCDP"/></a>
-            <a class="navbar hide-on-med-and-down" href="http://www.levillagebyca.com/village/le-village-by-ca-chateaudun-2/" target=_blank><img class="responsive-img" src="assets/img/CA1.jpg" id="logoCA"/></a>
+            <a class="navbar hide-on-med-and-down" href="#/"><img class="responsive-img" src="assets/img/logo.png" id="logoCDP" /></a>
+            <a class="navbar hide-on-med-and-down" href="http://www.levillagebyca.com/village/le-village-by-ca-chateaudun-2/" target=_blank><img class="responsive-img" src="assets/img/CA1.jpg" id="logoCA" /></a>
 
             <ul class="right hide-on-med-and-down">
                 <li>
-                    <a href="#!accueil" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Accueil</a>
+                    <a href="#!/accueil" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Accueil</a>
                 </li>
                 <li>
-                    <a href="#!campus" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Le Campus</a>
+                    <a href="#!/campus" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Le Campus</a>
                 </li>
                 <li>
-                    <a href="#!offres" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Notre offre</a>
+                    <a href="#!/offres" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Notre offre</a>
                 </li>
                 <li>
-                    <a href="#!partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
+                    <a href="#!/partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
+                </li>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-hide="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav" ng-hide="ephemere.cacheEphemere">{{ephemere.titreEphemere}}</a>
                 </li>
                 <li>
-                <div ng-repeat = "ephemere in vm.ephemeres">
-                    <a href='{{ephemere.lienEphemere}}'  class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav"   ng-if="ephemere.cacheEphemere!==false" >{{ephemere.titreEphemere}}</a>
-                </div>
-                </li>
-                      <li>
                     <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav">Rejoignez-Nous</a>
                 </li>
             </ul>
@@ -39,9 +37,9 @@
                 <li>
                     <a href="#!/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
                 </li>
-                <div ng-repeat = "ephemere in vm.ephemeres">
-                    <a href='{{ephemere.lienEphemere}}'  class="rubriqueNav"   ng-if="ephemere.cacheEphemere!==false" >{{ephemere.titreEphemere}}</a>
-                </div>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-hide="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' class="rubriqueNav">{{ephemere.titreEphemere}}</a>
+                </li>
                 <li>
                     <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="rubriqueNav">Rejoignez-Nous</a>
                 </li>
@@ -50,7 +48,7 @@
                 <i class="material-icons">menu</i>
             </a>
             <script>
-            	  $(".button-collapse").sideNav();
+                $(".button-collapse").sideNav();
             </script>
 
         </div>

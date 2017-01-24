@@ -14,27 +14,42 @@ const routes = ($routeProvider, $httpProvider) => {
         .when('/accueil', {
             templateUrl: '../views/admin/accueil.html',
             controller: 'homeController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/offres', {
             templateUrl: '../views/admin/offres.html',
             controller: 'offreController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/partenaires', {
             templateUrl: '../views/admin/partenaires.html',
             controller: 'partnerController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/news', {
             templateUrl: '../views/admin/news.html',
             controller: 'newsController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .when('/ephemere', {
             templateUrl: '../views/admin/ephemere.html',
             controller: 'ephemereController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            resolve: {
+                connected: checkIsConnected
+            }
         })
         .otherwise({
             redirectTo: '/'
