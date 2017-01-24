@@ -1,5 +1,4 @@
 function homeController(homeService, $timeout) {
-
     this.homeService = homeService;
 
     this.load = () => {
