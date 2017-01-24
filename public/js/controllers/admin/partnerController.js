@@ -1,6 +1,7 @@
 function partnerController(partnerService, $timeout) {
 
     this.partnerService = partnerService;
+    this.query = '';
 
     this.load = () => {
         this.partnerService.getAll().then((res) => {

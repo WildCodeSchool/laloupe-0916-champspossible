@@ -21,12 +21,6 @@ const routes = ($routeProvider) => {
             controllerAs: 'vm',
         })
 
-        // .when('/offres/:query', {
-        //     templateUrl: 'views/offres.html',
-        //     controller: 'offreController',
-        //     controllerAs: 'vm',
-        // })
-
         .when('/partenaires', {
             templateUrl: 'views/partenaires.html',
             controller: 'partnerController',
@@ -34,18 +28,15 @@ const routes = ($routeProvider) => {
         })
         .when('/candidatures', {
             templateUrl: 'views/candidatures.html',
-            // controller: '',
-            // controllerAs: 'vm',
+
         })
         .when('/rejoindre', {
             templateUrl: 'views/rejoindre.html',
-            // controller: '',
-            // controllerAs: 'vm',
+
         })
         .when('/admin', {
             templateUrl: 'admin/index.html',
-            // controller: '',
-            // controllerAs: 'vm',
+
         })
         .otherwise({
             redirectTo: '/'

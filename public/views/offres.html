@@ -1,7 +1,8 @@
 <div class="row blocTri">
     <div class="col s12 m12 l2 center-align triOffre btn black white-text">VOTRE PROFIL :</div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter = ''"> <i class="material-icons left iconeTripartners">language</i>Tous</a>
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter = ''">
+          <i class="material-icons left iconeTripartners">{{vm.filter == '' ? "check_circle" : "language"}}</i>Tous</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Startup'">
@@ -17,10 +18,10 @@
     </div>
     <div class="col s6 m4 l2 textTri center">
         <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Etudiant';">
-            <i class="material-icons left iconeTripartners">{{vm.filter == 'Étudiant' ? "check_circle" : "school"}}</i>Étudiant</a>
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'Etudiant' ? "check_circle" : "school"}}</i>Étudiant</a>
     </div>
 </div>
-
+<br>
 <div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter: {filtre: vm.filter} | orderBy:ordre'>
     <div class="col s3 m3 l3 center-align valign"><img ng-src="{{offre.logo}}" class="circle imgOffre" /></div>
     <div class="col s9 m9 l9 center-align valign">

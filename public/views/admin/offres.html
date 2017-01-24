@@ -16,7 +16,7 @@
 
         <!-- filtre entreprise, startup, etudiants, experts -->
         <select ng-model="vm.query" class="browser-default col s2 m2 l2">
-                <option value="">Tous</option>
+                <option value="">-Tous-</option>
                 <option value="Entreprise">Entreprise</option>
                 <option value="Etudiant">Etudiant</option>
                 <option value="Expert">Expert</option>
@@ -25,7 +25,7 @@
 
         <!-- Tri -->
         <select ng-model="vm.order" class="browser-default col s2 m2 l2">
-                <option value="-_id">Trier</option>
+                <option value="-_id">-Trier-</option>
                 <option value="titre">Titre croissant</option>
                 <option value="-titre">Titre décroissant</option>
                 <option value="ordre">Ordre croissant</option>
@@ -35,7 +35,7 @@
 
     <!-- Affichage des données de la table offres -->
     <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres | filter:{filtre:vm.query} | orderBy:vm.order'>
-        <input type="text" class="form-control" placeholder="Titre" ng-model='offre.titre'>
+        <input type="text" class="form-control" placeholder="Titre de l'offre" ng-model='offre.titre'>
         <!-- liste des types - entreprise, startup, etudiants, experts -->
         <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
                         <option value="Entreprise">Entreprise</option>
@@ -43,7 +43,7 @@
                         <option value="Etudiant">Etudiant</option>
                         <option value="Expert">Expert</option>
                     </select>
-        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
+        <textarea type="text" class="materialize-textarea" placeholder="Description de l'offre" ng-model='offre.texte'></textarea>
         <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
         <br>
@@ -51,10 +51,10 @@
 
         <!-- Boutons Enregistrer Supprimer-->
         <div class="row">
-            <button ng-click='vm.update(offre, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
+            <button ng-click='vm.update(offre, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdmin" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
               Enregistrer
             </button>
-            <button ng-click='vm.delete(offre)' class="col col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
+            <button ng-click='vm.delete(offre)' class="col col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdmin" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
               Supprimer
           </button>
         </div>
