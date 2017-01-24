@@ -48,11 +48,11 @@ h1 {
 }
 
 .userView {
-    padding: 5% 10% 20% 10%!important;
+    padding: 5% 0% 0% 0%!important;
 }
 
 .itemSideNavAdmin {
-    padding: 0 0 15% 15%!important;
+    padding: 0 0 5% 15%!important;
 }
 
 
