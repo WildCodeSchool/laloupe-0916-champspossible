@@ -36,6 +36,11 @@ const routes = ($routeProvider) => {
             // controller: '',
             // controllerAs: 'vm',
         })
+        .when('/admin', {
+            templateUrl: 'admin/index.html',
+            // controller: '',
+            // controllerAs: 'vm',
+        })
         .otherwise({
             redirectTo: '/'
         });
