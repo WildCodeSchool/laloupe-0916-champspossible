@@ -75,22 +75,21 @@ const loginStatus = ($rootScope, $window, sessionFactory) => {
         sessionFactory.isLogged = isLogged;
     });
 };
-
 const checkIsConnected = ($q, $http, $location, $window, $rootScope) => {
-    let deferred = $q.defer();
+    let deferred = $q.defer()
 
-    $http.get('/api/loggedin').success(() => {
+    $http.get('/api/loggedin').then(() => {
         $rootScope.$emit('loginStatusChanged', true);
         // Authenticated
-        deferred.resolve();
-    }).error(() => {
+        deferred.resolve()
+    }).catch(() => {
         $window.localStorage.removeItem('token');
         $window.localStorage.removeItem('currentUser');
         $rootScope.$emit('loginStatusChanged', false);
         // Not Authenticated
-        deferred.reject();
-        $location.url('/login');
-    });
+        deferred.reject()
+        $location.url('/login')
+    })
 
-    return deferred.promise;
-};
+    return deferred.promise
+}

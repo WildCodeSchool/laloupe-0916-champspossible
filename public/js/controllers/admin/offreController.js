@@ -1,7 +1,8 @@
 function offreController(offreService, $timeout) {
 
     this.offreService = offreService;
-
+    this.query = '';
+    this.order = '-_id';
     this.load = () => {
         this.offreService.getAll().then((res) => {
             this.offres = res.data;
@@ -10,8 +11,7 @@ function offreController(offreService, $timeout) {
     this.load();
 
     this.create = () => {
-            this.offreService.create(this.offre).then(() => {
-            this.offre = '';
+            this.offreService.create({order: 0, filtre: ''}).then(() => {
             this.load();
         });
     };

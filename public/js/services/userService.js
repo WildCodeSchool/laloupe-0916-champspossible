@@ -23,7 +23,7 @@ function userService($http) {
     };
 
     this.delete = (id) => {
-        return this.$http.put('/api/users/' + id);
+        return this.$http.delete('/api/users/' + id);
     };
 
 }
