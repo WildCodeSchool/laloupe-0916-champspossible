@@ -17,8 +17,8 @@
                 <li>
                     <a href="#!/partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
                 </li>
-                <li ng-repeat="ephemere in vm.ephemeres" ng-hide="ephemere.cacheEphemere">
-                    <a href='{{ephemere.lienEphemere}}' class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav" ng-hide="ephemere.cacheEphemere">{{ephemere.titreEphemere}}</a>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-show="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' target='_blank' class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav">{{ephemere.titreEphemere}}</a>
                 </li>
                 <li>
                     <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav">Rejoignez-Nous</a>
@@ -37,19 +37,16 @@
                 <li>
                     <a href="#!/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
                 </li>
-                <li ng-repeat="ephemere in vm.ephemeres" ng-hide="ephemere.cacheEphemere">
-                    <a href='{{ephemere.lienEphemere}}' class="rubriqueNav">{{ephemere.titreEphemere}}</a>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-show="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' target='_blank' class="rubriqueNav">{{ephemere.titreEphemere}}</a>
                 </li>
                 <li>
                     <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="rubriqueNav">Rejoignez-Nous</a>
                 </li>
             </ul>
-            <a href="#" data-activates="mobile" class="button-collapse">
+            <a href="#" data-activates="mobile" class="button-collapse show-on-large">
                 <i class="material-icons">menu</i>
             </a>
-            <script>
-                $(".button-collapse").sideNav();
-            </script>
 
         </div>
     </nav>
