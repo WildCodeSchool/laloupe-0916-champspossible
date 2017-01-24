@@ -45,7 +45,6 @@ function homeController(homeService, $timeout) {
                     fd.append("upload_file", files[i]);
                     xhr.send(fd);
                 }
-
             } else {
                 this.homeService.update(home._id, home).then(() => {
                     // $timeout(() => {
@@ -65,4 +64,5 @@ function homeController(homeService, $timeout) {
             this.load();
         });
     };
+
 }
