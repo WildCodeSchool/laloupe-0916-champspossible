@@ -1,0 +1,46 @@
+<ul id="slide-out" class="side-nav" ng-controller="loginController as vm">
+    <li>
+        <div class="userView">
+            <a>
+                <span id="titrePanneau">Panneau d'administration</span>
+            </a>
+            <a>
+                <span id="question">Que souhaitez-vous modifier ?</span>
+            </a>
+        </div>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="#!/news">
+            <i class="material-icons">chat</i>Actualité</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="#!/offres">
+            <i class="material-icons">stars</i>Notre Offre</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="#!/accueil">
+            <i class="material-icons">replay</i>Carrousel</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="#!/ephemere">
+            <i class="material-icons">alarm</i>Éphémère</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="#!/partenaires">
+            <i class="material-icons">group</i>Partenaires</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" ng-click='vm.logout()' href="">
+            <i class="material-icons">exit_to_app</i>Se déconnecter</a>
+    </li>
+    <li>
+        <a class="itemSideNavAdmin" href="../">
+            <i class="material-icons">keyboard_backspace</i>Retour au site</a>
+    </li>
+</ul>
+<a href="#" data-activates="slide-out" class="button-collapse col s6 m4 l4 center-align valign btn">
+    <i class="material-icons">menu</i>
+</a>
+<script>
+    $(".button-collapse").sideNav();
+</script>

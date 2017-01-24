@@ -1,0 +1,77 @@
+<ng-include src="'../views/admin/sidenav.html'"></ng-include>
+
+<div class="container">
+
+    <!-- Titre -->
+    <div class="row col l12">
+        <h3 class="center-align titreAdmin">Offres</h3>
+    </div>
+
+    <!-- Boutons ajout, tri, recherches -->
+    <div class="row">
+        <!-- Ajout -->
+        <button class="boutonAdmin boutonAdd" ng-click="vm.create() ; Materialize.toast('Insérez votre offre', 2500, 'rounded')">
+              Ajouter
+        </button>
+
+        <!-- filtre entreprise, startup, etudiants, experts -->
+        <select ng-model="vm.query" class="browser-default col s2 m2 l2">
+                <option value="">Tous</option>
+                <option value="Entreprise">Entreprise</option>
+                <option value="Etudiant">Etudiant</option>
+                <option value="Expert">Expert</option>
+                <option value="Startup">Startup</option>
+            </select>
+
+        <!-- Tri -->
+        <select ng-model="vm.order" class="browser-default col s2 m2 l2">
+                <option value="-_id">Trier</option>
+                <option value="titre">Titre croissant</option>
+                <option value="-titre">Titre décroissant</option>
+                <option value="ordre">Ordre croissant</option>
+                <option value="-ordre">Ordre décroissant</option>
+            </select>
+    </div>
+
+    <!-- Affichage des données de la table offres -->
+    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres | filter:{filtre:vm.query} | orderBy:vm.order'>
+        <input type="text" class="form-control" placeholder="Titre" ng-model='offre.titre'>
+        <!-- liste des types - entreprise, startup, etudiants, experts -->
+        <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
+                        <option value="Entreprise">Entreprise</option>
+                        <option value="Startup">Startup</option>
+                        <option value="Etudiant">Etudiant</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='offre.texte'></textarea>
+        <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
+        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+        <br>
+        <img src="{{offre.logo}}" width="300px" name="showPict" alt="Image offre" id='output' />
+
+        <!-- Boutons Enregistrer Supprimer-->
+        <div class="row">
+            <button ng-click='vm.update(offre, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Offre enregistrée', 2500, 'rounded') ">
+              Enregistrer
+            </button>
+            <button ng-click='vm.delete(offre)' class="col col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Offre supprimée', 2500, 'rounded')">
+              Supprimer
+          </button>
+        </div>
+    </div>
+
+    <!-- script visualisation image avant enregistrement -->
+    <script type="text/javascript">
+        var openFile = function(event) {
+            var input = event.target;
+
+            var reader = new FileReader();
+            reader.onload = function() {
+                var output = document.getElementById('output');
+                var dataURL = reader.result;
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+    </script>
+</div>

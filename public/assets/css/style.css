@@ -1,16 +1,378 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
+* {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+body {
+    background-color: #D9D9D9;
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+
+/* Barre de navigation */
+
+.navbar-fixed {
+    width: 70vw;
+}
+#sidenav-overlay {
+  display: none!important;
+}
+#logoCDP {
+    height: 190px;
+    left: -35px;
+    position: relative;
+    top: -58px;
+    width: 200px;
+}
+
+#logoCA {
+    height: 60px;
+    left: -30px;
+    position: relative;
+    top: -128px;
+    width: 95px;
+}
+
+.side-nav {
+    background-color: #FFFFFF;
+    box-shadow: inherit;
+    height: 320px;
+    margin: 1% 0 0 0;
+    padding: 0;
+    width: 170px;
+}
+
+.rubriqueNav {
+    font-weight: bold;
+}
+
+
+/* Page accueil */
+
+#choixProfil {
+    background: url('../img/subtle_carbon.png');
+    color: white;
+    font-size: 22px;
+    margin: 1% 0% 2% 0%;
+    padding: 1% 2% 0% 2%;
+}
+
+.profilSquare {
+    margin: 3% 3% 3% 3%;
+    padding: 0;
+}
+
+.iconeChoix {
+    color: black;
+    font-size: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.lienOffre {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.lienOffre:hover {
+    color: black;
+    font-weight: bolder;
+}
+
+.phraseAccroche {
+    background: black;
+    border-top: 2px solid white;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.titreAccueil {
+    align-items: left;
+    background: url('../img/subtle_carbon.png');
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 -1% 0;
+    padding: 1% 1% 1% 1%;
+}
+
+.titreActu {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.boutonSM {
+    height: 50px;
+    width: 50px;
+}
+
+#lastActu {
+    margin: 1% 0% 1% 1%;
+}
+/*Actualités -Social*/
+
+#actu {
+    background: white;
+    border: 2px inset #a1a1a1;
+    border-left: 0px;
+    border-right: 0px;
+    height: :600px!important;
+    margin-top: 35px;
+    max-height: 600px;
+    overflow-y: auto!important;
+    padding: 20px;
+}
+
+.socialLogo{
+  margin-top: 15px;
+}
+.accueil-p {
+    font-size: 18px;
+    line-height: 150%;
+    padding: 2% 2% 2% 2%;
+    text-align: justify;
+}
+
+#titreArticle {
+    color: black;
+    font-size: 29px;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
+}
+
+#imgArticle {
+    float: left;
+    height: 250px;
+    margin: 3% 2% 1% 0%;
+    width: 250px;
+}
+
+.dateArticle {
+    color: black;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
+}
+
+.responsive-video {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.texteVideo {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    padding: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.texteVideo1 {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 0;
+    padding: 10% 10% 10% 10%;
+    text-align: center;
+}
+
+.pinkText {
+    color: #E0007C;
+    font-weight: bold;
+}
+
+.carousel {
+    background-color: white;
+    height: 200px;
+}
+
+.carousel .carousel-item {
+    height: 150px!important;
+    padding-top: 40px !important;
+}
+
+.imgSlider {
+    height: 150%;
+}
+
+
+/* Le Campus */
+
+.blocCampus, .blockText, .blockImg {
+    margin: 0;
+    padding: 0;
+}
+
+.titreCampus {
+    color: #E0007C;
+    font-size: 35px;
+    text-align: center;
+}
+
+.campus-p {
+    font-size: 18px;
+    line-height: 175%;
+    padding: 3% 10% 5% 10%;
+    text-align: justify;
+}
+
+.campus-p1 {
+    font-size: 18px;
+    line-height: 200%;
+    padding: 10% 10% 10% 10%;
+    text-align: justify;
+}
+
+
+/* Notre offre */
+
+#filtreOffre {
+    color: white;
+}
+
+.blocTri {
+    background-color: black;
+    border-top: 2px solid white;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.triOffre {
+    background-color: black;
+    color: white;
+}
+
+.iconeOffre {
+    color: #f8bbd0;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.materialboxed {
+    position: absolute;
+    width: 100%!important;
+}
+
+.textOffre {
+    font-size: 18px;
+    line-height: 200%;
+    text-align: justify;
+    text-indent: 3em;
+}
+
+.titreOffre {
+    color: #E0007C;
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.imgOffre {
+    border: 4px solid black;
+    height: 150px;
+    width: 150px;
+}
+
+
+/* Partenaires et habitants */
+
+.iconeTripartners {
+    color: #E0007C;
+}
+
+.card {
+    height: 250px!important;
+}
+
+.card .card-content .card-title {
+    line-height: 0px;
+    font-size: 15px!important;
+    height: 150px!important;
+}
+
+.activator {
+    font-size: 15px!important;
+}
+
+.card-title {
+    height: 40px!important;
+}
+
+.typePartner {
+    font-size-adjust: auto;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Footer */
+
+footer {
+    background: url('../img/subtle_carbon.png')
+}
+
+.titreFooter {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 3% 0;
+    padding: 0;
+}
+
+#ML h6 {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#ML p {
+    color: grey;
+    font-size: 20px;
+    text-align: left;
+}
+
+#logowcs {
+    height: 20px;
+    width: 20px;
+}
+
+
+/*Medias*/
+
+@media screen and (max-width: 1200px) {
+    #logoCA {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    #logoCDP {
+        height: 120px;
+        left: 0;
+        position: relative;
+        top: -25px;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .iconeTripartners {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #logoCDP {
+        display: none;
+    }
 }

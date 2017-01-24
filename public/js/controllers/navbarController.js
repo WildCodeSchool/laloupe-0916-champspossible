@@ -1,7 +1,8 @@
-function navbarController(sessionFactory, $rootScope, $window, $location) {
+function navbarController(sessionFactory, $rootScope, $window, $location, ephemereService) {
 
     this.isLogged = sessionFactory.isLogged;
     this.sessionFactory = sessionFactory;
+    this.ephemereService = ephemereService;
     this.$rootScope = $rootScope;
     this.$location = $location;
 
@@ -18,5 +19,13 @@ function navbarController(sessionFactory, $rootScope, $window, $location) {
         this.isLogged = false;
         this.$location.path('/login');
     };
+
+    this.load = () => {
+        this.ephemereService.getAll().then((res) => {
+            this.ephemeres = res.data;
+        });
+    }
+
+    this.load();
 
 }

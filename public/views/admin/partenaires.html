@@ -1,0 +1,95 @@
+<ng-include src="'../views/admin/sidenav.html'"></ng-include>
+<!-- Zone de tri et de filtre -->
+<div class="container">
+    <div class="row">
+        <h3 class="titreAdmin center-align">Partenaires et Habitants</h3>
+    </div>
+    <div class="row col l12">
+        <div class="row col l12" ng-model="query">
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query=''">
+                Tous</button>
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query='Partenaire'">
+                Partenaires</button>
+            <button class="col l2 offset-l1 center-align valign btn" ng-click="query='Habitant'">
+                Habitants</button>
+            <select ng-model="order" class="browser-default col l2 offset-l1">
+                <option value="" disabled selected>Ordre d'affichage</option>
+                <option value="nom">Nom</option>
+                <option value="-nom">Nom inverse</option>
+                <option value="sortAccueil">Ordre</option>
+                <option value="-sortAccueil">Ordre inverse</option>
+            </select>
+        </div>
+    </div>
+    <div class="col offset-l2 l5">
+        <button ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre actualité', 2500, 'rounded')" class="col l4 center-align valign btn triOffre waves-effect">
+            Ajouter
+        </button>
+    </div>
+    <div class="row col l12" ng-repeat='partner in vm.partners | filter:{type:query}| orderBy:order'>
+        <form class="row col l12 z-depth-6 card-panel">
+            <form action="/api/picture" enctype="multipart/form-data" method="post">
+                <!-- Affichage des données de la table partenaires/habitants -->
+                <div class="panel panel-default">
+                    <br>
+                    <!-- <form class="form-inline" action="/api/picture" enctype="multipart/form-data" method="post"> -->
+                    <label>{{$index}}</label>
+                    <div class="input-field col l6 offset-l3">
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <input id="input_text" length="100" type="text" class="form-control" ng-model='partner.nom'>
+                    </div>
+                    <!-- liste Partenaires -->
+                    <div class="col offset-l3 l6">
+                        <select class="browser-default col l6 offset-3" ng-model='partner.type'>
+                            <option value="" disabled selected>-Choisissez un type-</option>
+                            <option value="Habitant">Habitant</option>
+                            <option value="Partenaire">Partenaire</option>
+                        </select>
+                    </div>
+                    <!-- <div class="input-field col s6 offset-s3">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.domaine'>
+                                    <label for="input_text">Domaine</label>
+                                </div> -->
+                    <div class="input-field col l6 offset-l3">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="textarea1" type="text" class="materialize-textarea" ng-model='partner.smallDescription'></textarea>
+                    </div>
+                    <!-- <div class="input-field col s6 offset-s3">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="textarea1" type="text" class="materialize-textarea" ng-model='partner.bigDescription'></textarea>
+                                    <label for="textarea1">Description complète</label>
+                                </div> -->
+                    <!-- <div class="input-field col s6 offset-s3">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.tel'>
+                                    <label for="input_text">Téléphone</label>
+                                </div> -->
+                    <!-- <div class="input-field col s6 offset-s3">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="input_text" length="40" type="email" class="form-control" ng-model='partner.mail' data-error="wrong" data-success="right" class="validate"/>
+                                    <label for="input_text">Email</label>
+                                </div> -->
+                    <div class="input-field col l6 offset-l3">
+                        <i class="material-icons prefix">airplay</i>
+                        <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.site'>
+                    </div>
+
+                    <div class="input-field col l6 offset-l3">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="input_text" length="40" type="text" class="form-control" ng-model='partner.sortAccueil'>
+                    </div>
+                    <div class="input-field col l6 offset-l3">
+                        <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>
+                        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
+                    </div>
+                    <div class="row">
+                        <button ng-click='vm.update(partner, $index)' class="col offset-l2 l4 center-align valign btn" onclick="Materialize.toast('Partenaire enregistré', 2500, 'rounded')">Enregistrer</button>
+                        <button ng-click='vm.delete(partner)' class="col l4 offset-l2 center-align valign btn" onclick=" Materialize.toast('Partenaire supprimé', 2500, 'rounded')">Supprimer</button>
+                    </div>
+                </form>
+                <!-- </form> -->
+            </div>
+        </form>
+    </div>
+</div>

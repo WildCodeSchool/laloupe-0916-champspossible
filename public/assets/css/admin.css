@@ -1,0 +1,120 @@
+/* Général*/
+
+body {
+    background-color: pink;
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.btn {
+    background-color: grey;
+}
+#sidenav-overlay {
+  display: none!important;
+}
+
+.btn:hover {
+    background-color: #ff7400;
+}
+
+.btn-large:hover {
+    background-color: #ff7400;
+}
+
+.titreAdmin {
+    color: white;
+    font-size: 50px;
+    text-shadow: 1px 1px black;
+}
+
+
+/* SideNav Admin */
+
+#sideNavAdmin {
+    position: absolute;
+}
+
+#titrePanneau {
+    color: #D9009F;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#question {
+    font-size: 17px;
+}
+
+.userView {
+    padding: 5% 0% 0% 0%!important;
+}
+
+.itemSideNavAdmin {
+    padding: 0 0 5% 15%!important;
+}
+
+
+/* Accueil */
+
+#panel {
+    background: url('../../assets/img/headerpanel.jpg') !important;
+}
+
+.circle {
+    height: 15%;
+    width: 15%;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.firstrow {
+    background-color: black;
+    background-size: cover;
+    height: 245px;
+}
+
+.boxpanel {
+    font-family: " class="userView" class="userView" class="userView"";
+    font-size: 45px;
+    font-weight: bolder;
+    color: #FFDBFA;
+}
+
+.secondrow {
+    background-color: black;
+    background-size: cover;
+    height: 245px;
+}
+
+.boxpanel2 {
+    font-family: "Raleway";
+    font-size: 55px;
+    font-weight: bolder;
+    color: #FFDBFA;
+}
+
+
+/* Actualités */
+
+.boutonAdmin {
+    /*margin: 0 0 1% 0;*/
+    height: 40px;
+    background-color: grey;
+    width: 250px!important;
+}
+
+.boutonAdd {
+    background-color: blue;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.browser-default {
+    background-color: grey;
+    height: 40px;
+    width: 250px!important;
+}

@@ -1,32 +1,53 @@
-<nav class="navbar navbar-inverse navbar-yellow" role="navigation" ng-controller='navbarController as vm'>
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#/"><img src="assets/img/logo.png"/></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active" ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-book"></span>&nbsp;Todos</a>
+<div class="navbar-fixed">
+    <nav class="navbar navbar-inverse black" role="navigation" ng-controller='navbarController as vm'>
+        <div class="nav-wrapper">
+            <a class="navbar hide-on-med-and-down" href="#!/"><img class="responsive-img" src="assets/img/logo.png" id="logoCDP"/></a>
+            <a class="navbar hide-on-med-and-down" href="http://www.levillagebyca.com/village/le-village-by-ca-chateaudun-2/" target=_blank><img class="responsive-img" src="assets/img/CA1.jpg" id="logoCA"/></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="#!/accueil" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Accueil</a>
                 </li>
-                <li class='disabled' ng-show='vm.sessionFactory.user.isAdmin'>
-                    <a href="#/"><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Admin</a>
+                <li>
+                    <a href="#!/campus" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Le Campus</a>
                 </li>
-                <li class='disabled' ng-show='vm.isLogged'>
-                    <a href="#/"><span class="glyphicon glyphicon-user"></span>&nbsp;My account</a>
+                <li>
+                    <a href="#!/offres" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Notre offre</a>
                 </li>
-                <li ng-show='vm.isLogged'>
-                    <a href="" ng-click='vm.logout()'><span class="glyphicon glyphicon-log-out"></span>&nbsp;Sign out</a>
+                <li>
+                    <a href="#!/partenaires" class="hide-on-med-and-down rubriqueNav waves-effect waves-red">Habitants / Partenaires</a>
                 </li>
-                <li class='active' ng-hide='vm.isLogged'>
-                    <a href="#/login"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign in</a>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-show="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' target='_blank' class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav">{{ephemere.titreEphemere}}</a>
+                </li>
+                <li>
+                    <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="waves-effect waves-light btn pink white-text hide-on-med-and-down rubriqueNav">Rejoignez-Nous</a>
                 </li>
             </ul>
+            <ul class="side-nav" id="mobile">
+                <li>
+                    <a href="#!/accueil" class="rubriqueNav">Accueil</a>
+                </li>
+                <li>
+                    <a href="#!/campus" class="rubriqueNav">Le Campus</a>
+                </li>
+                <li>
+                    <a href="#!/offres" class="rubriqueNav">Notre offre</a>
+                </li>
+                <li>
+                    <a href="#!/partenaires" class="rubriqueNav">Habitants/Partenaires</a>
+                </li>
+                <li ng-repeat="ephemere in vm.ephemeres" ng-show="ephemere.cacheEphemere">
+                    <a href='{{ephemere.lienEphemere}}' target='_blank' class="rubriqueNav">{{ephemere.titreEphemere}}</a>
+                </li>
+                <li>
+                    <a href="http://campuslcdp.typeform.com/to/tiOqc1" target="_blank" class="rubriqueNav">Rejoignez-Nous</a>
+                </li>
+            </ul>
+            <a href="#" data-activates="mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

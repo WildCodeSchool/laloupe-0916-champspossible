@@ -1,42 +1,50 @@
 import mongoose from 'mongoose';
 
-const todoSchema = new mongoose.Schema({
-    description: String
+const homeSchema = new mongoose.Schema({
+    lienImg: String,
+    lienClick: String,
+    ordre: {
+        type: Number,
+        default: 0,
+        required: true
+    },
 });
 
-let model = mongoose.model('Todo', todoSchema);
+let model = mongoose.model('Home', homeSchema);
 
-export default class Todo {
+export default class Home {
 
     findAll(req, res) {
-        model.find({}, (err, todos) => {
+        model.find({}, (err, homes) => {
             if (err) {
                 res.sendStatus(403);
             } else {
-                res.json(todos);
+                res.json(homes);
             }
         });
     }
 
     findById(req, res) {
-        model.findById(req.params.id, (err, todo) => {
-            if (err || !todo) {
+        model.findById(req.params.id, (err, home) => {
+            if (err || !home) {
                 res.sendStatus(403);
             } else {
-                res.json(todo);
+                res.json(home);
             }
         });
     }
 
     create(req, res) {
         model.create({
-                description: req.body.description
+                lienImg: req.body.lienImg,
+                lienClick: req.body.lienClick,
+                ordre: req.body.ordre
             },
-            (err, todo) => {
+            (err, home) => {
                 if (err) {
                     res.status(500).send(err.message);
                 } else {
-                    res.json(todo);
+                    res.json(home);
                 }
             });
     }
@@ -45,12 +53,14 @@ export default class Todo {
         model.update({
             _id: req.params.id
         }, {
-            description: req.body.description
-        }, (err, todo) => {
-            if (err || !todo) {
+            lienImg: req.body.lienImg,
+            lienClick: req.body.lienClick,
+            ordre: req.body.ordre
+        }, (err, home) => {
+            if (err || !home) {
                 res.status(500).send(err.message);
             } else {
-                res.json(todo);
+                res.json(home);
             }
         });
     }
@@ -62,6 +72,6 @@ export default class Todo {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }
