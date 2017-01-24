@@ -1,29 +1,28 @@
-<div class="row blocTri" >
-    <div class="col s12 m12 l2 center-align triOffre btn black white-text">VOTRE PROFIL : <input id=filtreOffre  ng-model='query'>
-    </div>
-        <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.transfert(''); vm.OpenFilter(filter)">            <i class="material-icons left iconeTripartners">language</i>Tous</a>
+<div class="row blocTri">
+    <div class="col s12 m12 l2 center-align triOffre btn black white-text">VOTRE PROFIL :</div>
+    <div class="col s6 m4 l2 textTri center">
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter = ''"> <i class="material-icons left iconeTripartners">language</i>Tous</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text" ng-click="query='startup' ; vm.transfert('Startup'); vm.OpenFilter(filter)">
-            <i class="material-icons left iconeTripartners">flight_takeoff</i>Startup</a>
+        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Startup'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'Startup' ? "check_circle" : "flight_takeoff"}}</i>Startup</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.transfert('Entreprise'); vm.OpenFilter(filter)">
-            <i class="material-icons left iconeTripartners">business_center</i>Entreprise</a>
+        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Entreprise'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'Entreprise' ? "check_circle" : "business_center"}}</i>Entreprise</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.transfert('Expert'); vm.OpenFilter(filter)">
-            <i class="material-icons left iconeTripartners">face</i>Expert</a>
+        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Expert'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'Expert' ? "check_circle" : "face"}}</i>Expert</a>
     </div>
     <div class="col s6 m4 l2 textTri center">
-        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.transfert('Etudiant'); vm.OpenFilter(filter)">
-            <i class="material-icons left iconeTripartners">school</i>Étudiant</a>
+        <a class="center-align waves-effect waves-light btn black white-text" ng-click="vm.filter = 'Etudiant';">
+            <i class="material-icons left iconeTripartners">{{vm.filter == 'Étudiant' ? "check_circle" : "school"}}</i>Étudiant</a>
     </div>
 </div>
 
-<div class="row valign-wrapper" ng-repeat='offre in vm.offres | orderBy:ordre'>
-    <div class="col s3 m3 l3 center-align valign"><img ng-src="{{offre.logo}}" class="circle imgOffre"/></div>
+<div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter: {filtre: vm.filter} | orderBy:ordre'>
+    <div class="col s3 m3 l3 center-align valign"><img ng-src="{{offre.logo}}" class="circle imgOffre" /></div>
     <div class="col s9 m9 l9 center-align valign">
         <h2 class="titreOffre">{{offre.titre}}</h2>
         <p class="textOffre">{{offre.texte}}</p>
