@@ -29,6 +29,18 @@ function homeController(partnerService, newsService, homeService, offreService, 
                 fade: true,
                 cssEase: 'linear'
             };
+            $timeout(() => {
+                function autoplay() {
+                    $('.carousel').carousel('next');
+                    setTimeout(autoplay, 4500);
+                }
+                $('.carousel').carousel({
+                    dist: 0,
+                    shift: 0,
+                    padding: 120,
+                });
+                autoplay();
+            }, 0);
         });
 
         this.newsService.getAll().then((res) => {
