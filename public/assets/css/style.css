@@ -200,21 +200,18 @@ body {
     padding-top: 40px !important;
 }
 
-.imgSlider {
-    height: 150%;
+.slider {
+  max-width: 100vw;
+  max-height: 100vh;
 }
 
 .slider img {
   width: 100vw;
   height: 60vh;
 }
-  .slider {
-  max-width: 100vw;
-  max-height: 100vh;
-}
 
 .listprofile {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 

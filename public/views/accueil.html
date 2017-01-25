@@ -3,15 +3,17 @@
     Venez innover et expérimenter au campus Les Champs du Possible !
 </div>
 
-        <!-- <li class="imgSlider" ng-repeat='home in vm.homes'>
-            <img ng-src='{{home.lienImg}}'>
-        </li> -->
-
-        <section class="regularslide slider">
-          <div ng-repeat='home in vm.homes'>
-            <img ng-src='{{home.lienImg}}'>
-          </div>
-        </section>
+<section class="slider">
+    <div>
+        <slick settings="vm.slickConfig">
+            <div class="repeat" ng-repeat="home in vm.homes">
+                <a href="{{home.lienClick}}">
+                  <img ng-src='{{home.lienImg}}' />
+                </a>
+            </div>
+        </slick>
+    </div>
+</section>
 
 <!--Choix d'un profil  -->
 <div class="container listprofile">
@@ -74,9 +76,7 @@
                     <p class="accueil-p">{{news.texte}}</p>
                     <p class="dateArticle">
                         Posté le
-                        <span>{{news.date | date:'dd/MM/yyyy'}}</span>
-                        par
-                        {{news.auteur}}.
+                        <span>{{news.date | date:'dd/MM/yyyy'}}</span> par {{news.auteur}}.
                     </p>
                     <br>
                     <br>
@@ -87,22 +87,19 @@
     </div>
     <div class="col s12 m12 l5 center">
         <div class="row socialLogo">
-            <div class="col s4 m4 l4"><a href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw" target="_blank"><img src="/assets/img/youtube.png" class="boutonSM"/></a>
+            <div class="col s4 m4 l4">
+                <a href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw" target="_blank"><img src="/assets/img/youtube.png" class="boutonSM" /></a>
             </div>
-            <div class="col s4 m4 l4"><a href="https://twitter.com/champspossible?lang=fr" target="_blank"><img src="/assets/img/twitter.png" class="boutonSM"/></a>
+            <div class="col s4 m4 l4">
+                <a href="https://twitter.com/champspossible?lang=fr" target="_blank"><img src="/assets/img/twitter.png" class="boutonSM" /></a>
             </div>
-            <div class="col s4 m4 l4"><a href="https://www.facebook.com/champspossible" target="_blank"><img src="/assets/img/facebook.png" class="boutonSM"/></a>
+            <div class="col s4 m4 l4">
+                <a href="https://www.facebook.com/champspossible" target="_blank"><img src="/assets/img/facebook.png" class="boutonSM" /></a>
             </div>
         </div>
 
-        <iframe
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchampspossible%2F%3Fref%3Dts%26fref%3Dts&tabs=timeline&width=500&height=800&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1222472067795207"
-            width="500"
-            height="600"
-            style="border:none;overflow:hidden"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true"></iframe>
+        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchampspossible%2F%3Fref%3Dts%26fref%3Dts&tabs=timeline&width=500&height=800&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1222472067795207"
+            width="500" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </div>
 </div>
 <!-- Présentation du campus + vidéos -->
