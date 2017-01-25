@@ -14,6 +14,10 @@ body {
     width: 70vw;
 }
 
+.rubriqueNav {
+  font-weight: bold;
+}
+
 #sidenav-overlay {
     display: none!important;
 }
@@ -43,12 +47,18 @@ body {
     width: 170px;
 }
 
-.rubriqueNav {
-    font-weight: bold;
-}
-
 
 /* Page accueil */
+
+#phraseAccroche {
+  background: black;
+  border-top: 2px solid white;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+}
 
 #choixProfil {
     background: url('../img/subtle_carbon.png');
@@ -81,15 +91,6 @@ body {
     font-weight: bolder;
 }
 
-.phraseAccroche {
-    background: black;
-    border-top: 2px solid white;
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0.5% 0.5% 0.5% 0.5%;
-}
 
 .titreAccueil {
     align-items: left;
@@ -101,7 +102,7 @@ body {
     padding: 1% 1% 1% 1%;
 }
 
-.titreActu {
+#titreActu {
     font-size: 38px;
     font-weight: bold;
     margin-top: 1%;
@@ -112,7 +113,7 @@ body {
     width: 50px;
 }
 
-#lastActu {
+#actualite {
     margin: 1% 0% 1% 1%;
 }
 
@@ -135,7 +136,7 @@ body {
     margin-top: 15px;
 }
 
-.accueil-p {
+#Article {
     font-size: 18px;
     line-height: 150%;
     padding: 2% 2% 2% 2%;
@@ -156,7 +157,7 @@ body {
     width: 250px;
 }
 
-.dateArticle {
+#dateArticle {
     color: black;
     font-size: 22px;
     font-style: italic;
@@ -170,7 +171,7 @@ body {
     padding: 0;
 }
 
-.texteVideo {
+#texteVideo {
     background-color: #D9D9D9;
     color: black;
     font-size: 18px;
@@ -180,7 +181,7 @@ body {
     text-align: center;
 }
 
-.texteVideo1 {
+#texteVideo1 {
     background-color: #D9D9D9;
     color: black;
     font-size: 18px;
@@ -327,7 +328,7 @@ footer {
     background: url('../img/subtle_carbon.png')
 }
 
-.titreFooter {
+#titreFooter {
     font-size: 30px;
     font-weight: bold;
     margin: 0 0 3% 0;

@@ -1,5 +1,5 @@
 <!-- Bannière -->
-<div class=" row phraseAccroche center">
+<div class=" row center" id="phraseAccroche">
     Venez innover et expérimenter au campus Les Champs du Possible !
 </div>
 <div class="row slider">
@@ -73,15 +73,15 @@
 <div class="row">
     <div class="col s12 m12 l7">
         <div class="col s12 m12 l12">
-            <p class="titreActu pinkText center">
+            <p class="pinkText center" id="titreActu">
                 ACTUALITÉS
             </p>
             <div id="actu">
-                <article class="lastActu" ng-repeat="news in vm.newss | orderBy: '-date'">
+                <article id="actualite" ng-repeat="news in vm.newss | orderBy: '-date'">
                     <h2 id="titreArticle">{{news.titre}}</h2>
                     <img ng-src="{{news.image}}" id="imgArticle">
-                    <p class="accueil-p">{{news.texte}}</p>
-                    <p class="dateArticle">
+                    <p id="textArticle">{{news.texte}}</p>
+                    <p id="dateArticle">
                         <span ng-show="news.date">Posté le {{news.date | date:'dd/MM/yyyy'}}</span>
                         <span ng-show="news.auteur">par {{news.auteur}}.</span>
 
@@ -127,7 +127,7 @@
 </div>
 <div class="row">
     <div class="col s12 m12 l6">
-        <p class="texteVideo">
+        <p id="texteVideo">
             <span class="pinkText">DE LA FORMATION A L'INCUBATION</span><br><br>Le Campus "Les Champs du Possible" est le centre d'innovation et d'expérimentations agricoles.
             <br><br>Ici, startupers, lycéens, étudiants, professionnels, agriculteurs, développeurs, spécialistes du numérique, se rencontrent et inventent, ensemble, l'agriculture du futur !
         </p>
@@ -145,7 +145,7 @@
         </div>
     </div>
     <div class="col s12 m12 l6">
-        <p class="texteVideo1">
+        <p id="texteVideo1">
             <span class="pinkText">VILLAGE BY CA</span><br><br>Le Village by CA de Châteaudun, tourné vers l’agriculture numérique, facilite votre business avec une multitude de partenaires publics et privés locaux, nationaux et internationaux.
             <br><br>Vous bénéficiez d’un vaste réseau dans lequel les startups et les grandes entreprises entrent en relation d’affaires grâce à l’interconnexion entre les Villages.
         </p>

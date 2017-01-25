@@ -9,10 +9,6 @@ h1 {
     font-size: 2em;
 }
 
-.btn {
-    background-color: grey;
-}
-
 #sidenav-overlay {
     display: none!important;
 }
