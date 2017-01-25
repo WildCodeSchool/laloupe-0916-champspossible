@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute', 'slickCarousel'])
     .factory('sessionFactory', sessionFactory)
     .service('offreService', offreService)
     .service('partnerService', partnerService)
