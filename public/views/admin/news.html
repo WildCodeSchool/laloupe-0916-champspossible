@@ -25,8 +25,8 @@
 
     <!-- Affichage des données de la table news -->
     <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='news in vm.newss | orderBy:order'>
-        <input type="text" class="form-control" placeholder="Veuillez saisir un titre pour l'actualité" ng-model='news.titre'>
-        <textarea type="text" class="materialize-textarea" placeholder="Saisissez le contenu de l'actualité" ng-model='news.texte'></textarea>
+        <input type="text" class="form-control" placeholder="Titre de l'actualité" ng-model='news.titre'>
+        <textarea type="text" class="materialize-textarea" placeholder="Contenu de l'actualité" ng-model='news.texte'></textarea>
         <input type="text" class="form-control" placeholder="Auteur de l'article" ng-model='news.auteur'>
         <input type="date" placeholder='DD/MM/YYYY' class="date-default" name="inputdate" ng-model="news.date" />
         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
@@ -35,10 +35,10 @@
 
         <!-- Boutons Enregistrer Supprimer-->
         <div class="raw">
-            <button ng-click='vm.update(news, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité enregistrée', 2500, 'rounded') ">
+            <button ng-click='vm.update(news, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité enregistrée', 2500, 'rounded') ">
               Enregistrer
             </button>
-            <button ng-click='vm.delete(news)' class="col col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité supprimée', 2500, 'rounded')">
+            <button ng-click='vm.delete(news)' class="col col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Actualité supprimée', 2500, 'rounded')">
               Supprimer
             </button>
         </div>

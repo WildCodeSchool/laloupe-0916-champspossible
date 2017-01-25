@@ -2,12 +2,11 @@ function partnerController(partnerService, $timeout) {
 
     this.partnerService = partnerService;
 
-
     this.load = () => {
         this.partnerService.getAll().then((res) => {
             this.partners = res.data;
               $(".button-collapse").sideNav();
-              
+
             // $timeout(() => {
             //     $(".card").mouseenter(function(e) {
             //         if ($(this).find('> .card-reveal').length) {

@@ -1,21 +1,23 @@
 <!-- Zone de sélection d'affichage (boutons): Tous, Habitants ou Partenaires -->
+
 <div class="row blocTri" ng-model="query">
     <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
     <div class="col s4 m4 l3 center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='' && vm.load()">
-            <i class="material-icons left iconeTripartners">language</i>Tous</a>
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
+            <i class="material-icons left iconeTripartners">{{query == "" ? "check_circle" : "language"}}</i>Tous</a>
     </div>
     <div class="col s4 m4 l3 center">
         <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Partenaire'">
-            <i class="material-icons left iconeTripartners">supervisor_account</i>Partenaires</a>
+            <i class="material-icons left iconeTripartners">{{query == "Partenaire" ? "check_circle" : "supervisor_account"}}</i>Partenaires</a>
     </div>
     <div class="col s4 m4 l3 center">
         <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Habitant'">
-            <i class="material-icons left iconeTripartners">assignment_ind</i>Habitants</a>
+            <i class="material-icons left iconeTripartners">{{query == "Habitant" ? "check_circle" : "assignment_ind"}}</i>Habitants</a>
     </div>
 </div>
 
 <!-- Affichage des cards -->
+
 <div class="row">
     <div class="col s6 m4 l2" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:nom'>
         <div class="card hoverable">
@@ -23,18 +25,18 @@
                 <img class="activator" ng-src="{{partner.logo}}">
             </div>
             <div class="card-content">
-              <i class="material-icons right">more_vert</i>
+                <i class="material-icons right">more_vert</i>
 
                 <span class="card-title activator grey-text text-darken-4">{{partner.nom}}
-                              </span>
+                </span>
                 <p>
-                    <a href='{{partner.site}}'target="_blank">{{partner.site}}</a>
+                    <a href='{{partner.site}}' target="_blank">{{partner.site}}</a>
                 </p>
             </div>
             <div class="card-reveal">
 
                 <span class="card-title activator grey-text text-darken-4">{{partner.nom}}
-                  <i class="material-icons right">close</i>
+                    <i class="material-icons right">close</i>
                 </span>
                 <p>{{partner.smallDescription}}</p>
             </div>

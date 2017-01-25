@@ -13,6 +13,7 @@ body {
 .navbar-fixed {
     width: 70vw;
 }
+
 #sidenav-overlay {
   display: none!important;
 }
@@ -101,6 +102,7 @@ body {
 .titreActu {
     font-size: 38px;
     font-weight: bold;
+    margin-top: 1%;
 }
 
 .boutonSM {

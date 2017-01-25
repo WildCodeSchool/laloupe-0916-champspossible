@@ -19,7 +19,6 @@
         </select>
     </div>
 
-
     <!-- Affichage des données de la table home -->
     <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='home in vm.homes | orderBy:order'>
         <input type="text" class="form-control" placeholder="Lien sur click" ng-model='home.lienClick'>
@@ -27,18 +26,19 @@
         <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
         <br>
         <img src="{{home.lienImg}}" width="300px" name="showPict" alt="Image home" id='output' />
+        <div class="row">
+            <button ng-click='vm.update(home, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Image enregistrée', 2500, 'rounded') ">
+              Enregistrer
+            </button>
+            <button ng-click='vm.delete(home)' class="col col s3 m3 l3 offset-l2 center-align valign btn blue waves-effect boutonAdminNews" onclick=" Materialize.toast('Image supprimée', 2500, 'rounded')">
+              Supprimer
+            </button>
+        </div>
     </div>
 
 
     <!-- Boutons Enregistrer Supprimer-->
-    <div class="row">
-        <button ng-click='vm.update(home, $index)' class="col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Image enregistrée', 2500, 'rounded') ">
-          Enregistrer
-        </button>
-        <button ng-click='vm.delete(home)' class="col col s3 m3 l3 offset-l2 center-align valign btn waves-effect boutonAdminNews" onclick=" Materialize.toast('Image supprimée', 2500, 'rounded')">
-          Supprimer
-        </button>
-    </div>
+
 </div>
 
 <!-- script visualisation image avant enregistrement -->
