@@ -15,8 +15,9 @@ body {
 }
 
 #sidenav-overlay {
-  display: none!important;
+    display: none!important;
 }
+
 #logoCDP {
     height: 190px;
     left: -35px;
@@ -114,6 +115,8 @@ body {
 #lastActu {
     margin: 1% 0% 1% 1%;
 }
+
+
 /*Actualités -Social*/
 
 #actu {
@@ -121,16 +124,17 @@ body {
     border: 2px inset #a1a1a1;
     border-left: 0px;
     border-right: 0px;
-    height: :600px!important;
+    height: : 600px!important;
     margin-top: 35px;
     max-height: 600px;
     overflow-y: auto!important;
     padding: 20px;
 }
 
-.socialLogo{
-  margin-top: 15px;
+.socialLogo {
+    margin-top: 15px;
 }
+
 .accueil-p {
     font-size: 18px;
     line-height: 150%;
@@ -297,9 +301,9 @@ body {
 }
 
 .card .card-content .card-title {
-    line-height: 0px;
     font-size: 15px!important;
     height: 150px!important;
+    line-height: 0px;
 }
 
 .activator {

@@ -76,11 +76,11 @@ h1 {
 
 .circle {
     height: 15%;
-    width: 15%;
-    padding: 5px;
     display: block;
+    padding: 5px;
     margin-left: auto;
     margin-right: auto;
+    width: 15%;
 }
 
 .firstrow {
@@ -90,10 +90,10 @@ h1 {
 }
 
 .boxpanel {
+    color: #FFDBFA;
     font-family: "Raleway";
     font-size: 45px;
     font-weight: bolder;
-    color: #FFDBFA;
 }
 
 .secondrow {
@@ -103,10 +103,10 @@ h1 {
 }
 
 .boxpanel2 {
+    color: #FFDBFA;
     font-family: "Raleway";
     font-size: 55px;
     font-weight: bolder;
-    color: #FFDBFA;
 }
 
 
@@ -121,8 +121,8 @@ h1 {
 .boutonAdd {
     background-color: red;
     color: white;
-    margin-right: 20px;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .browser-default {

@@ -46,18 +46,13 @@ function offreController(offreService, $timeout) {
                 }
             } else {
                 this.offreService.update(offre._id, offre).then(() => {
-                    // $timeout(() => {
                     this.load();
-                    // }, 1000)
-                    // $route.reload();
-
                 });
             }
         } else {
             alert('Ordre de tri invalide');
         }
     };
-
     this.delete = (offre) => {
         this.offreService.delete(offre._id).then(() => {
             this.load();

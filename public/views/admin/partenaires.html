@@ -30,7 +30,7 @@
 
     <!-- Affichage des données de la table news -->
     <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='partner in vm.partners | filter: vm.query | orderBy:order'>
-        <input id="input_text" length="100" type="text" class="form-control" ng-model='partner.nom'>
+        <input id="input_text" length="100" type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
 
         <!-- liste Partenaires -->
         <select class="browser-default col l6 offset-3" ng-model='partner.type'>
@@ -38,7 +38,7 @@
             <option value="Habitant">Habitant</option>
             <option value="Partenaire">Partenaire</option>
         </select>
-        <textarea type="text" class="materialize-textarea" placeholder="Description du partenaire" ng-model='partner.smallDescription'></textarea>
+        <textarea type="text" class="materialize-textarea" placeholder="Description" ng-model='partner.smallDescription'></textarea>
         <input placeholder="Lien de site" type="text" class="form-control" ng-model='partner.site'>
         <input placeholder="Ordre d'affichage de l'élément" type="text" class="form-control" ng-model='partner.sortAccueil'>
         <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>

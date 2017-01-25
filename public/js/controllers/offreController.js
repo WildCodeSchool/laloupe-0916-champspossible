@@ -5,6 +5,13 @@ function offreController(offreService, $routeParams) {
     if($routeParams.filter) {
       this.filter = $routeParams.filter;
     }
+
+    this.greaterThan = function(prop, val) {
+        return function(item) {
+            return item[prop] > val;
+        };
+    };
+
     this.load = () => {
         this.offreService.getAll().then((res) => {
             this.offres = res.data;

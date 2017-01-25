@@ -22,7 +22,7 @@
     </div>
 </div>
 <br>
-<div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter: {filtre: vm.filter} | orderBy:ordre'>
+<div class="row valign-wrapper" ng-repeat='offre in vm.offres | filter: {filtre: vm.filter} | orderBy:ordre|filter:vm.greaterThan("ordre", "0")'>
     <div class="col s3 m3 l3 center-align valign"><img ng-src="{{offre.logo}}" class="circle imgOffre" /></div>
     <div class="col s9 m9 l9 center-align valign">
         <h2 class="titreOffre">{{offre.titre}}</h2>

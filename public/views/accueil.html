@@ -77,15 +77,14 @@
                 ACTUALITÉS
             </p>
             <div id="actu">
-                <article class="lastActu" ng-repeat='news in vm.newss'>
+                <article class="lastActu" ng-repeat="news in vm.newss | orderBy: '-date'">
                     <h2 id="titreArticle">{{news.titre}}</h2>
                     <img ng-src="{{news.image}}" id="imgArticle">
                     <p class="accueil-p">{{news.texte}}</p>
                     <p class="dateArticle">
-                        Posté le
-                        <span>{{news.date | date:'dd/MM/yyyy'}}</span>
-                        par
-                        {{news.auteur}}.
+                        <span ng-show="news.date">Posté le {{news.date | date:'dd/MM/yyyy'}}</span>
+                        <span ng-show="news.auteur">par {{news.auteur}}.</span>
+
                     </p>
                     <br>
                     <br>
@@ -96,11 +95,15 @@
     </div>
     <div class="col s12 m12 l5 center">
         <div class="row socialLogo">
-            <div class="col s4 m4 l4"><a href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw" target="_blank"><img src="/assets/img/youtube.png" class="boutonSM"/></a>
+
+            <div class="col s4 m4 l4">
+                <a href="https://www.youtube.com/channel/UC4xKeJLSjDLDAtW1dNfwwVw" target="_blank"><img src="/assets/img/youtube.png" class="boutonSM"/></a>
             </div>
-            <div class="col s4 m4 l4"><a href="https://twitter.com/champspossible?lang=fr" target="_blank"><img src="/assets/img/twitter.png" class="boutonSM"/></a>
+            <div class="col s4 m4 l4">
+                <a href="https://twitter.com/champspossible?lang=fr" target="_blank"><img src="/assets/img/twitter.png" class="boutonSM"/></a>
             </div>
-            <div class="col s4 m4 l4"><a href="https://www.facebook.com/champspossible" target="_blank"><img src="/assets/img/facebook.png" class="boutonSM"/></a>
+            <div class="col s4 m4 l4">
+                <a href="https://www.facebook.com/champspossible" target="_blank"><img src="/assets/img/facebook.png" class="boutonSM"/></a>
             </div>
         </div>
 

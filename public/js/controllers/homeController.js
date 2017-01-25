@@ -6,7 +6,7 @@ function homeController(partnerService, newsService, homeService, offreService, 
     this.offreService = offreService;
 
     this.transfert = (filtre) => {
-        localStorage.setItem("filtre", filtre)
+        localStorage.setItem("filtre", filtre);
     };
 
     this.greaterThan = function(prop, val) {
