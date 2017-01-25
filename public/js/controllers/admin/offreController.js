@@ -26,7 +26,7 @@ function offreController(offreService, $timeout) {
             var files = uploadfiles.files;
             if (files.length > 0) {
                 for (var i = 0; i < files.length; i++) {
-                    var url = '/api/picture';
+                    var url = '/api/picture2';
                     var xhr = new XMLHttpRequest();
                     var fd = new FormData();
                     xhr.open("POST", url, true);
