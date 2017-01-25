@@ -44,10 +44,15 @@ function homeController(partnerService, newsService, homeService, offreService, 
     this.load();
 
     $(document).ready(function() {
-        $('.slider').slider({
-            full_width: true,
-            full_height: true
-        });
+      $(".regularslide").slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: true,
+        speed: 1000,
+        fade: true,
+        cssEase: 'linear'
+      });
 
         $('.dropdown-button').dropdown({
             inDuration: 300,

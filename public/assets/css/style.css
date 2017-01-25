@@ -45,7 +45,6 @@ body {
     font-weight: bold;
 }
 
-
 /* Page accueil */
 
 #choixProfil {
@@ -201,6 +200,19 @@ body {
 
 .imgSlider {
     height: 150%;
+}
+
+.slider img {
+  width: 100vw;
+  height: 60vh;
+}
+  .slider {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.listprofile {
+  margin-top: 200px;
 }
 
 
