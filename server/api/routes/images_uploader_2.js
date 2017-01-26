@@ -13,7 +13,7 @@ module.exports = function(app) {
       */
 
         var
-            wdth = 1000,
+            wdth = 1200,
             hgth = 400,
             new_location = 'public/uploads/';
 

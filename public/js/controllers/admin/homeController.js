@@ -26,13 +26,13 @@ function homeController(homeService, $timeout) {
             var files = uploadfiles.files;
             if (files.length > 0) {
                 for (var i = 0; i < files.length; i++) {
-                    var url = '/api/picture';
+                    var url = '/api/picture2';
                     var xhr = new XMLHttpRequest();
                     var fd = new FormData();
                     xhr.open("POST", url, true);
                     xhr.onload = () => {
                         var urlImage = '/uploads/img_' + document.getElementById('uploadImage-' + index).value.split(/(\|\/)/g).pop().replace('C:\\fakepath\\', '');
-
+                        console.log('url')
                         home.lienImg = urlImage;
                         this.homeService.update(home._id, home).then(() => {
                             $timeout(() => {
