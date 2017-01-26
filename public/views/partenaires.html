@@ -1,25 +1,25 @@
 <!-- Zone de sélection d'affichage (boutons): Tous, Habitants ou Partenaires -->
 
-<div class="row blocTri" ng-model="query">
+<div class="row blocTri">
     <div class="col s12 m12 l3 center-align triOffre btn black white-text center">FILTRER PAR :</div>
     <div class="col s4 m4 l3 center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query=''">
-            <i class="material-icons left iconeTripartners">{{query == "" ? "check_circle" : "language"}}</i>Tous</a>
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter=''">
+            <i class="material-icons left iconeTripartners">{{vm.filter == "" ? "check_circle" : "language"}}</i>Tous</a>
     </div>
     <div class="col s4 m4 l3 center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Partenaire'">
-            <i class="material-icons left iconeTripartners">{{query == "Partenaire" ? "check_circle" : "supervisor_account"}}</i>Partenaires</a>
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter='Partenaire'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == "Partenaire" ? "check_circle" : "supervisor_account"}}</i>Partenaires</a>
     </div>
     <div class="col s4 m4 l3 center">
-        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="query='Habitant'">
-            <i class="material-icons left iconeTripartners">{{query == "Habitant" ? "check_circle" : "assignment_ind"}}</i>Habitants</a>
+        <a class="center-align waves-effect waves-light btn black white-text typePartner" ng-click="vm.filter='Habitant'">
+            <i class="material-icons left iconeTripartners">{{vm.filter == "Habitant" ? "check_circle" : "assignment_ind"}}</i>Habitants</a>
     </div>
 </div>
 
 <!-- Affichage des cards -->
 
 <div class="row">
-    <div class="col s6 m4 l2" ng-repeat='partner in vm.partners |filter:{type:query} | orderBy:nom'>
+    <div class="col s6 m4 l2" ng-repeat='partner in vm.partners |filter:{type:vm.filter} | orderBy:nom'>
         <div class="card hoverable">
             <div class=" card-image waves-effect waves-block waves-light">
                 <img class="activator" ng-src="{{partner.logo}}">
@@ -48,7 +48,9 @@
         if ($(this).find('> .card-reveal').length) {
             if ($(e.target).is($('.card .activator')) || $(e.target).is($('.card .activator i'))) {
                 // Make Reveal animate updiv class="card">
-                $(this).find('.card-reveal').css({display: 'block'}).velocity("stop", false).velocity({
+                $(this).find('.card-reveal').css({
+                    display: 'block'
+                }).velocity("stop", false).velocity({
                     translateY: '-100%'
                 }, {
                     duration: 300,
@@ -70,7 +72,9 @@
             queue: false,
             easing: 'easeInOutQuad',
             complete: function() {
-                $(this).css({display: 'none'});
+                $(this).css({
+                    display: 'none'
+                });
             }
         });
     });
