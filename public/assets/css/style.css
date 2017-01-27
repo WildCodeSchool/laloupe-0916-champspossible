@@ -15,7 +15,7 @@ body {
 }
 
 .rubriqueNav {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #sidenav-overlay {
@@ -51,13 +51,13 @@ body {
 /* Page accueil */
 
 #phraseAccroche {
-  background: black;
-  border-top: 2px solid white;
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  margin: 0;
-  padding: 0.5% 0.5% 0.5% 0.5%;
+    background: black;
+    border-top: 2px solid white;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5% 0.5% 0.5% 0.5%;
 }
 
 #choixProfil {
@@ -90,7 +90,6 @@ body {
     color: black;
     font-weight: bolder;
 }
-
 
 .titreAccueil {
     align-items: left;
@@ -139,6 +138,7 @@ body {
 #Article {
     font-size: 18px;
     line-height: 150%;
+    min-height: 250px;
     padding: 2% 2% 2% 2%;
     text-align: justify;
 }
@@ -207,17 +207,17 @@ body {
 }
 
 .slider {
-  max-width: 100vw;
-  max-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 .slider img {
-  width: 100vw;
-  height: 60vh;
+    width: 100vw;
+    height: 60vh;
 }
 
 .listprofile {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 

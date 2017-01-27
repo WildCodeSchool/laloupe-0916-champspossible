@@ -3,6 +3,7 @@ function offreController(offreService, $timeout) {
     this.offreService = offreService;
     this.query = '';
     this.order = '-_id';
+
     this.load = () => {
         this.offreService.getAll().then((res) => {
             this.offres = res.data;
