@@ -66,6 +66,7 @@ body {
     font-size: 22px;
     margin: 1% 0% 2% 0%;
     padding: 1% 2% 0% 2%;
+    z-index: 100!important;
 }
 
 .profilSquare {
@@ -212,6 +213,11 @@ body {
     width: 100vw;
     height: 60vh;
 }
+
+.slick-list {
+    z-index: -1!important;
+}
+
 
 .listprofile {
     margin-top: 30px;
