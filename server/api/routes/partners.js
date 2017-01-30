@@ -12,11 +12,11 @@ module.exports = (app) => {
 
     router.get('/:id', partner.findById);
 
-    router.post('/', partner.create);
+    router.post('/', Auth.hasAuthorization, partner.create);
 
-    router.put('/:id', partner.update);
+    router.put('/:id', Auth.hasAuthorization, partner.update);
 
-    router.delete('/:id', partner.delete);
+    router.delete('/:id', Auth.hasAuthorization, partner.delete);
 
     app.use('/partners', router);
 

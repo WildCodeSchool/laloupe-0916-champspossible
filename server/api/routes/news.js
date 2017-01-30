@@ -12,11 +12,11 @@ module.exports = (app) => {
 
     router.get('/:id', news.findById);
 
-    router.post('/', news.create);
+    router.post('/', Auth.hasAuthorization, news.create);
 
-    router.put('/:id', news.update);
+    router.put('/:id', Auth.hasAuthorization, news.update);
 
-    router.delete('/:id', news.delete);
+    router.delete('/:id', Auth.hasAuthorization, news.delete);
 
     app.use('/news', router);
 

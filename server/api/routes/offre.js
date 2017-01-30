@@ -12,11 +12,11 @@ module.exports = (app) => {
 
     router.get('/:id', offre.findById);
 
-    router.post('/', offre.create);
+    router.post('/', Auth.hasAuthorization, offre.create);
 
-    router.put('/:id', offre.update);
+    router.put('/:id', Auth.hasAuthorization, offre.update);
 
-    router.delete('/:id', offre.delete);
+    router.delete('/:id', Auth.hasAuthorization, offre.delete);
 
     app.use('/offre', router);
 

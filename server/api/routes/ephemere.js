@@ -12,11 +12,11 @@ module.exports = (app) => {
 
     router.get('/:id', ephemere.findById);
 
-    router.post('/', ephemere.create);
+    router.post('/', Auth.hasAuthorization, ephemere.create);
 
-    router.put('/:id', ephemere.update);
+    router.put('/:id', Auth.hasAuthorization, ephemere.update);
 
-    router.delete('/:id', ephemere.delete);
+    router.delete('/:id', Auth.hasAuthorization, ephemere.delete);
 
     app.use('/ephemere', router);
 

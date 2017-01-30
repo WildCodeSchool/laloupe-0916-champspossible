@@ -312,6 +312,7 @@ body {
 
 .card {
     height: 250px!important;
+    z-index: 1000;
 }
 
 .card .card-content .card-title {
