@@ -1,7 +1,7 @@
 /* Général*/
 
 body {
-    background-color: #ffe0b2;
+    background-color: #eeeeee;
     list-style-type: none;
 }
 
@@ -13,12 +13,8 @@ h1 {
     display: none!important;
 }
 
-.btn:hover {
-    background-color: #ff7400;
-}
-
-.btn-large:hover {
-    background-color: #ff7400;
+.button-collapse {
+    background-color: blue!important;
 }
 
 .titreAdmin {
@@ -56,7 +52,7 @@ h1 {
 }
 
 .userView {
-    padding: 5% 10% 10% 10%!important;
+        padding: 5% 10% 10% 10%!important;
 }
 
 .itemSideNavAdmin {
@@ -115,10 +111,11 @@ h1 {
 }
 
 .boutonAdd {
-    background-color: red;
+    background-color: blue;
     color: white;
     margin-left: 20px;
     margin-right: 20px;
+    height: 40px;
 }
 
 .browser-default {
