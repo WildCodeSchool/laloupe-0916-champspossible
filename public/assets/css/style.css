@@ -221,7 +221,15 @@ body {
 
 .listprofile {
     margin-top: 30px;
+    z-index: 900;
 }
+
+
+.slick-slider {
+  z-index: 500;
+}
+
+
 
 
 /* Le Campus */
