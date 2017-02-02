@@ -44,6 +44,9 @@
             <option value="Etudiant">Etudiant</option>
             <option value="Expert">Expert</option>
         </select>
+        <textarea type="text" class="materialize-textarea" placeholder="Description de l'offre" ng-model='offre.texte'></textarea>
+        <input type="text" class="form-control" placeholder="Ordre d'affichage" ng-model='offre.ordre'>
+        <input onchange='openFile(event)' file-upload type="file" placeholder="Image" id="uploadImage-{{$index}}" accept="image/*" name='file'>
         <br>
         <img src="{{offre.logo}}" width="300px" name="showPict" alt="Image offre" id='output' />
 
