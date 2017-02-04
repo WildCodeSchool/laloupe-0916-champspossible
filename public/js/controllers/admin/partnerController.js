@@ -12,14 +12,17 @@ function partnerController(partnerService, $timeout) {
     this.load();
 
     this.create = () => {
-        this.partnerService.create(this.partner).then(() => {
-            this.partner = '';
+        this.partnerService.create({
+            sortAccueil: 0,
+            type: 'Partenaire'
+        }).then(() => {
+            this.query = '';
             this.load();
         });
     };
 
     this.update = (partner, index) => {
-            if (partner.sortAccueil == 0 || (partner.sortAccueil <= this.partners.filter(function(obj) {
+        if (partner.sortAccueil == 0 || (partner.sortAccueil <= this.partners.filter(function(obj) {
                 return obj.sortAccueil != 0;
             }).length && this.partners.filter(function(obj) {
                 return obj.sortAccueil != 0 && obj.sortAccueil == partner.sortAccueil;

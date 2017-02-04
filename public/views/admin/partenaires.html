@@ -8,28 +8,30 @@
 
     <!-- Boutons ajout, tri, recherches -->
     <div class="row ">
-        <button class="boutonAdmin boutonAdd" ng-click="order='-_id';vm.create() ; Materialize.toast('Insérez votre partenaire', 2500, 'rounded')" class="col l4 center-align valign btn triOffre waves-effect">
+        <button class="boutonAdmin boutonAdd left" ng-click="vm.order='-_id'; vm.create()" ; onclick="Materialize.toast('Insérez votre partenaire', 2500, 'rounded')">
             Ajouter
         </button>
 
         <!-- filtre -->
         <select ng-model="vm.query" class="browser-default col s2 m2 l2">
             <option value="">Tous</option>
-            <option value="Partenaire">Partenaire</option>
-            <option value="Habitant">Habitant</option>
+            <option value ='Partenaire'>Partenaire</option>
+            <option value ='Habitant'>Habitant</option>
         </select>
+        <div class="col">
+        </div>
         <!-- Tri -->
-        <select ng-model="order" class="browser-default col s2 m2 l2">
+        <select ng-model="vm.order" class="browser-default col s2 m2 l2">
             <option value="" disabled selected>Ordre d'affichage</option>
-            <option value="nom">Nom</option>
-            <option value="-nom">Nom inverse</option>
-            <option value="sortAccueil">Ordre</option>
-            <option value="-sortAccueil">Ordre inverse</option>
+            <option value="nom">Nom croissant</option>
+            <option value="-nom">Nom décroissant</option>
+            <option value="sortAccueil">Ordre croissant</option>
+            <option value="-sortAccueil">Ordre décroissant</option>
         </select>
     </div>
 
-    <!-- Affichage des données de la table news -->
-    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='partner in vm.partners | filter: vm.query | orderBy:order'>
+    <!-- Affichage des données de la table partenaires -->
+    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='partner in vm.partners | filter: {type:vm.query} | orderBy:vm.order'>
         <input id="input_text" length="100" type="text" class="form-control" placeholder="Nom" ng-model='partner.nom'>
 
         <!-- liste Partenaires -->
@@ -43,7 +45,7 @@
         <input placeholder="Ordre d'affichage de l'élément" type="text" class="form-control" ng-model='partner.sortAccueil'>
         <input onchange='openFile(event)' file-upload type="file" id="uploadImage-{{$index}}" accept="image/*" name='file'>
         <br>
-        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output'/>
+        <img src="{{partner.logo}}" width="300px" name="showPict" alt="Image partenaire habitant" id='output' />
 
         <!-- Boutons Enregistrer Supprimer-->
         <div class="raw">

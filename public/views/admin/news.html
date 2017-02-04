@@ -9,7 +9,7 @@
 
     <!-- Boutons ajout, tri, recherches -->
     <div class="row ">
-        <button class="boutonAdmin boutonAdd" ng-click="order='-_id'; vm.create() ; Materialize.toast('Insérez votre actualité', 2500, 'rounded')" class="col l4 center-align valign btn triOffre waves-effect">
+        <button class="boutonAdmin boutonAdd left" ng-click="order='-_id'; vm.create()" ; onclick="Materialize.toast('Insérez votre actualité', 2500, 'rounded')" class="col l4 center-align valign btn triOffre waves-effect">
                 Ajouter
         </button>
         <select ng-model="order" class="browser-default col s2 m2 l2">

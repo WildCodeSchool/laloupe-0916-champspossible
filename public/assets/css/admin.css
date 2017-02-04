@@ -1,7 +1,7 @@
 /* Général*/
 
 body {
-    background-color: #eeeeee;
+    background-color: #bdbdbd;
     list-style-type: none;
 }
 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .userView {
-        padding: 5% 10% 10% 10%!important;
+    padding: 5% 10% 10% 10%!important;
 }
 
 .itemSideNavAdmin {
@@ -113,7 +113,6 @@ h1 {
 .boutonAdd {
     background-color: blue;
     color: white;
-    margin-left: 20px;
     margin-right: 20px;
     height: 40px;
 }
@@ -122,4 +121,8 @@ h1 {
     background-color: white;
     height: 40px;
     width: 250px!important;
+}
+
+@media only screen and (min-width: 993px) .row .col.l2 {
+    margin-left: 0;
 }

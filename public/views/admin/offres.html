@@ -10,7 +10,7 @@
     <!-- Boutons ajout, tri, recherches -->
     <div class="row">
         <!-- Ajout -->
-        <button class="boutonAdmin boutonAdd" ng-click="order='-_id';vm.create(); Materialize.toast('Insérez votre offre', 2500, 'rounded')">
+        <button class="boutonAdmin boutonAdd left" ng-click="vm.order='-_id' ; vm.create()";  onclick="Materialize.toast('Insérez votre offre', 2500, 'rounded')">
             Ajouter
         </button>
 
@@ -23,8 +23,11 @@
             <option value="Startup">Startup</option>
         </select>
 
+        <div class="col">
+        </div>
+
         <!-- Tri -->
-        <select ng-model="order" class="browser-default col s2 m2 l2">
+        <select ng-model="vm.order" class="browser-default col s2 m2 l2">
             <option value="" disabled selected>Ordre d'affichage</option>
             <option value="titre">Titre croissant</option>
             <option value="-titre">Titre décroissant</option>
@@ -34,7 +37,7 @@
     </div>
 
     <!-- Affichage des données de la table offres -->
-    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres | filter:filtre:vm.query | orderBy: order'>
+    <div class="row col l12 offset-l2 l8 offset-l2 z-depth-6 card-panel" ng-repeat='offre in vm.offres | filter:{filtre:vm.query} | orderBy: vm.order'>
         <input type="text" class="form-control" placeholder="Titre de l'offre" ng-model='offre.titre'>
         <!-- liste des types - entreprise, startup, etudiants, experts -->
         <select class="browser-default" placeholder="Filtre" ng-model='offre.filtre'>
