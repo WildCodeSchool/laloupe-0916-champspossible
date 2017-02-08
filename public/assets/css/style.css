@@ -25,16 +25,16 @@ body {
 #logoCDP {
     height: 190px;
     left: -35px;
-    position: relative;
+    position: fixed;
     top: -58px;
     width: 200px;
 }
 
 #logoCA {
     height: 60px;
-    left: -30px;
-    position: relative;
-    top: -128px;
+    left: 150px;
+    position: fixed;
+    top: 0px;
     width: 95px;
 }
 
@@ -218,18 +218,14 @@ body {
     z-index: -1!important;
 }
 
-
 .listprofile {
     margin-top: 30px;
     z-index: 900;
 }
 
-
 .slick-slider {
-  z-index: 500;
+    z-index: 500;
 }
-
-
 
 
 /* Le Campus */
@@ -307,8 +303,8 @@ body {
 
 .imgOffre {
     border: 4px solid black;
-    height: 150px;
-    width: 150px;
+    height: 128px;
+    width: 128px;
 }
 
 
@@ -320,7 +316,7 @@ body {
 
 .card {
     height: 250px!important;
-    z-index: 1000;
+    z-index: 800;
 }
 
 .card .card-content .card-title {
@@ -388,7 +384,7 @@ footer {
     #logoCDP {
         height: 120px;
         left: 0;
-        position: relative;
+        position: fixed;
         top: -25px;
         width: 120px;
     }
