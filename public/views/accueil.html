@@ -6,7 +6,7 @@
 <div class="slider">
     <!-- <div> -->
         <slick settings="vm.slickConfig">
-            <div class="repeat" ng-repeat="home in vm.homes | orderBy : ordre ">
+            <div class="repeat" ng-repeat="home in vm.homes | orderBy:'ordre' ">
                 <a href="{{home.lienClick}}" target="_blank">
                     <img ng-src='{{home.lienImg}}' />
                 </a>
